@@ -1,0 +1,185 @@
+@include keyframes(shiftArrowUpRight) {
+    0% {
+        @include transform(translate(100px, -200px));
+    }
+    100% {
+        @include transform(translate(0px, 0px));
+    }
+}
+
+@include keyframes(shiftArrowDownLeft) {
+    0% {
+        @include transform(translate(-100px, 200px));
+    }
+    100% {
+        @include transform(translate(0px, 0px));
+    }
+}
+
+@include keyframes(shiftArrowDownRight) {
+    0% {
+        @include transform(translate(100px, 200px));
+    }
+    100% {
+        @include transform(translate(0px, 0px));
+    }
+}
+
+@include keyframes(shiftArrowUpLeft) {
+    0% {
+        @include transform(translate(-100px, -200px));
+    }
+    100% {
+        @include transform(translate(0px, 0px));
+    }
+}
+
+#pxd-arrow {
+    width: 50px;
+
+    .cls-1 {
+        @include transform(translate(0px, 0px));
+
+        &:nth-of-type(1) {
+            @include animation(shiftArrowUpRight 0.7s ease-in-out 1s 1);
+        }
+        &:nth-of-type(2) {
+            @include animation(shiftArrowDownRight 0.9s ease-in-out 1s 1);
+        }
+        &:nth-of-type(3) {
+            @include animation(shiftArrowDownLeft 0.3s ease-in-out 1s 3);
+        }
+        &:nth-of-type(4) {
+            @include animation(shiftArrowDownRight 1s ease-in-out 1s 1);
+        }
+        &:nth-of-type(5) {
+            @include animation(shiftArrowUpLeft 0.5s ease-in-out 1s 2);
+        }
+        &:nth-of-type(6) {
+            @include animation(shiftArrowDownLeft 0.8s ease-in-out 1s 1);
+        }
+        &:nth-of-type(7) {
+            @include animation(shiftArrowUpLeft 0.4s ease-in-out 1s 2);
+        }
+        &:nth-of-type(8) {
+            @include animation(shiftArrowUpRight 0.6s ease-in-out 1s 1);
+        }
+        &:nth-of-type(9) {
+            @include animation(shiftArrowDownLeft 0.1s ease-in-out 1s 10);
+        }
+        &:nth-of-type(10) {
+            @include animation(shiftArrowUpRight 0.3s ease-in-out 1s 3);
+        }
+        &:nth-of-type(11) {
+            @include animation(shiftArrowDownRight 0.6s ease-in-out 1s 1);
+        }
+        &:nth-of-type(12) {
+            @include animation(shiftArrowDownRight 0.9s ease-in-out 1s 1);
+        }
+        &:nth-of-type(13) {
+            @include animation(shiftArrowDownRight 0.4s ease-in-out 1s 2);
+        }
+        &:nth-of-type(14) {
+            @include animation(shiftArrowUpRight 0.4s ease-in-out 1s 2);
+        }
+        &:nth-of-type(15) {
+            @include animation(shiftArrowUpLeft 0.7s ease-in-out 1s 1);
+        }
+        &:nth-of-type(16) {
+            @include animation(shiftArrowDownLeft 0.1s ease-in-out 1s 10);
+        }
+        &:nth-of-type(17) {
+            @include animation(shiftArrowDownRight 0.7s ease-in-out 1s 1);
+        }
+        &:nth-of-type(18) {
+            @include animation(shiftArrowUpRight 0.9s ease-in-out 1s 1);
+        }
+        &:nth-of-type(19) {
+            @include animation(shiftArrowUpLeft 0.7s ease-in-out 1s 1);
+        }
+        &:nth-of-type(20) {
+            @include animation(shiftArrowDownRight 0.4s ease-in-out 1s 2);
+        }
+        &:nth-of-type(21) {
+            @include animation(shiftArrowUpLeft 0.8s ease-in-out 1s 1);
+        }
+        &:nth-of-type(22) {
+            @include animation(shiftArrowDownLeft 0.2s ease-in-out 1s 5);
+        }
+        &:nth-of-type(23) {
+            @include animation(shiftArrowUpLeft 1s ease-in-out 1s 1);
+        }
+        &:nth-of-type(24) {
+            @include animation(shiftArrowUpLeft 0.1s ease-in-out 1s 10);
+        }
+        &:nth-of-type(25) {
+            @include animation(shiftArrowDownLeft 0.3s ease-in-out 1s 3);
+        }
+        &:nth-of-type(26) {
+            @include animation(shiftArrowUpRight 0.7s ease-in-out 1s 1);
+        }
+        &:nth-of-type(27) {
+            @include animation(shiftArrowUpLeft 1s ease-in-out 1s 1);
+        }
+        &:nth-of-type(28) {
+            @include animation(shiftArrowDownRight 0.8s ease-in-out 1s 1);
+        }
+        &:nth-of-type(29) {
+            @include animation(shiftArrowUpLeft 0.6s ease-in-out 1s 1);
+        }
+        &:nth-of-type(30) {
+            @include animation(shiftArrowDownLeft 0.4s ease-in-out 1s 2);
+        }
+        &:nth-of-type(31) {
+            @include animation(shiftArrowUpLeft 0.6s ease-in-out 1s 1);
+        }
+        &:nth-of-type(32) {
+            @include animation(shiftArrowUpRight 0.9s ease-in-out 1s 1);
+        }
+        &:nth-of-type(33) {
+            @include animation(shiftArrowDownLeft 0.3s ease-in-out 1s 3);
+        }
+        &:nth-of-type(34) {
+            @include animation(shiftArrowDownRight 0.5s ease-in-out 1s 2);
+        }
+        &:nth-of-type(35) {
+            @include animation(shiftArrowDownLeft 0.3s ease-in-out 1s 3);
+        }
+        &:nth-of-type(36) {
+            @include animation(shiftArrowUpRight 0.6s ease-in-out 1s 1);
+        }
+        &:nth-of-type(37) {
+            @include animation(shiftArrowDownLeft 0.1s ease-in-out 1s 10);
+        }
+        &:nth-of-type(38) {
+            @include animation(shiftArrowDownRight 0.5s ease-in-out 1s 2);
+        }
+        &:nth-of-type(39) {
+            @include animation(shiftArrowUpRight 0.2s ease-in-out 1s 5);
+        }
+        &:nth-of-type(40) {
+            @include animation(shiftArrowUpLeft 0.5s ease-in-out 1s 2);
+        }
+        &:nth-of-type(41) {
+            @include animation(shiftArrowDownRight 0.2s ease-in-out 1s 5);
+        }
+        &:nth-of-type(42) {
+            @include animation(shiftArrowUpRight 0.8s ease-in-out 1s 1);
+        }
+        &:nth-of-type(43) {
+            @include animation(shiftArrowDownLeft 0.2s ease-in-out 1s 5);
+        }
+        &:nth-of-type(44) {
+            @include animation(shiftArrowUpRight 0.5s ease-in-out 1s 2);
+        }
+        &:nth-of-type(45) {
+            @include animation(shiftArrowDownLeft 0.2s ease-in-out 1s 5);
+        }
+        &:nth-of-type(46) {
+            @include animation(shiftArrowDownRight 1s ease-in-out 1s 1);
+        }
+        &:nth-of-type(47) {
+            @include animation(shiftArrowUpRight 0.1s ease-in-out 1s 10);
+        }       
+    }
+}

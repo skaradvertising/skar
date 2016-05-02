@@ -46,3 +46,17 @@ $XL:   1537px;
   width: 100% * $percentage;
   float: $float-direction;
 }
+
+@mixin reveal($animation, $value) {
+  @include keyframes($animation) {
+    0% {
+      opacity: 1;
+      @include transform(translateY($value));
+    }
+
+    100% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+  }
+}
