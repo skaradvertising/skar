@@ -10,7 +10,8 @@
     "bootstrap-sass": "3.3.6",
     "bourbon": "^4.2.7",
     "freewall": "^1.0.6",
-    "panelsnap": "^0.15.1"
+    "panelsnap": "^0.15.1",
+    "animate.css": "^3.5.1"
   },
   "overrides": {
     "bootstrap-sass": {
