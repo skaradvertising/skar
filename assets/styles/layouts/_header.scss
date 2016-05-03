@@ -7,7 +7,6 @@
 	z-index: 99999;
 	@include font-smoothing;
 
-
 	@include MQ(M) {
 		height: $header-height-M;
 		background: transparent;
@@ -49,12 +48,23 @@
 			}
 		}
 	}
+
+	&.menu-is-open {
+		position: fixed;
+		top: 0;
+		left: 0;
+		@include transform(translate3d(0,0,0));
+	}
 }
 
 .nav-trigger-container {
 	position: relative;
 	float: right;
-	margin: 30px 30px 0 0;
+	margin: 0 30px 0 0;
+
+	@media only screen and (min-width: 488px) {
+		margin-top: 30px;
+	}
 
 	.email-text, .menu-text {
 		color: #fff;
@@ -143,7 +153,7 @@
 	z-index: 99998;
 	top: 0;
 	right: 0;
-	background-color: rgba(0,0,0, 0.6);
+	background-color: rgba(0,0,0, 0.75);
 	overflow-x: hidden;
 	@include transition(0.5s);
 	@include transform(translateX(100%));
@@ -195,7 +205,18 @@ body.admin-bar {
 		}
 
 		.nav-trigger-container {
-			margin-top: 62px;
+			margin-top: 0;
+
+			@media only screen and (min-width: 488px) {
+				margin-top: 62px;
+			}
+		}
+
+		&.menu-is-open {
+			position: fixed;
+			top: 0;
+			left: 0;
+			@include transform(translate3d(0,0,0));
 		}
 	}
 }

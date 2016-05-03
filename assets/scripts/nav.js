@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	
-	var headerHeight = $('.banner').height();
+	var headerHeight = $('.banner > .header-content').height();
 	$(window).on('scroll',
 	{
         previousTop: 0
@@ -10,15 +10,15 @@ jQuery(document).ready(function($){
 	    //check if user is scrolling up
 	    if (currentTop < this.previousTop ) {
 	    	//if scrolling up...
-	    	if (currentTop > 0 && $('.banner').hasClass('is-fixed')) {
-	    		$('.banner').addClass('is-visible');
+	    	if (currentTop > 0 && $('.banner > .header-content').hasClass('is-fixed')) {
+	    		$('.banner > .header-content').addClass('is-visible');
 	    	} else {
-	    		$('.banner').removeClass('is-visible is-fixed');
+	    		$('.banner > .header-content').removeClass('is-visible is-fixed');
 	    	}
 	    } else {
 	    	//if scrolling down...
-	    	$('.banner').removeClass('is-visible');
-	    	if( currentTop > headerHeight && !$('.banner').hasClass('is-fixed')) $('.banner').addClass('is-fixed');
+	    	$('.banner > .header-content').removeClass('is-visible');
+	    	if( currentTop > headerHeight && !$('.banner > .header-content').hasClass('is-fixed')) $('.banner > .header-content').addClass('is-fixed');
 	    }
 	    this.previousTop = currentTop;
 	});
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 	//open/close primary navigation
 	$('.nav-primary-trigger').on('click', function(){
 		$('.menu-icon').toggleClass('is-clicked'); 
-		$('.banner').toggleClass('menu-is-open');
+		$('.banner > .header-content').toggleClass('menu-is-open');
 		$('.nav-overlay').toggleClass('menu-opened');
 	});
 });
