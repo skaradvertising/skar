@@ -56,3 +56,6 @@ function asset_path($filename) {
     return $dist_path . $directory . $file;
   }
 }
+
+wp_enqueue_script('nav', asset_path('scripts/nav.js'), ['jquery'], null, true);
+

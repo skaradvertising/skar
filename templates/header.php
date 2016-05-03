@@ -1,12 +1,21 @@
 <header class="banner">
-  <div>
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
+    <div class="header-content">
+        <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part( 'templates/svgs/skar', 'logo' ); ?></a>
+        <div class="nav-trigger-container">
+            <span class="email-text">Sign up for email alerts</span><span class="menu-text">Menu</span>
+            <a class="nav-primary-trigger" href="#0">
+                <span class="menu-icon"></span>
+            </a> <!-- primary-nav-trigger -->
+        </div>
+    </div>
+    <nav id="skar-nav" class="nav-overlay">
+        <a href="#" class="nav-closebtn">×</a>
+        <div class="nav-overlay-content">
+            <a href="#">one</a>
+            <a href="#">two</a>
+            <a href="#">three</a>
+            <a href="#">four</a>
+            <a href="#">five</a>
+        </div>
     </nav>
-  </div>
 </header>

@@ -18,6 +18,12 @@ $M:     768px;
 $L:     992px;     
 $XL:   1537px;  
 
+$header-height-S: 50px;
+$header-height-M: 80px;
+
+$admin-header-height-S: 82px;
+$admin-header-height-M: 112px;
+
 // media queries
 
 @mixin MQ($canvas) {
@@ -35,6 +41,27 @@ $XL:   1537px;
   }
   @else if $canvas == XL {
    @media only screen and (min-width: $XL) { @content; } 
+  }
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
   }
 }
 

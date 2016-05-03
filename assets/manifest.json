@@ -17,6 +17,11 @@
         "scripts/customizer.js"
       ]
     },
+    "nav.js": {
+      "files": [
+        "scripts/nav.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }

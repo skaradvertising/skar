@@ -1,0 +1,201 @@
+.banner > .header-content {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: $header-height-S;
+	z-index: 99999;
+	@include font-smoothing;
+
+
+	@include MQ(M) {
+		height: $header-height-M;
+		background: transparent;
+		box-shadow: none;
+
+		&.is-fixed {
+			/* when the user scrolls down, we hide the header right above the viewport */
+			position: fixed;
+			top: -$header-height-M;
+			left: 0;
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+		}
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
+			@include transform(translate3d(0,100%,0));
+		}
+	}
+
+	@include MQ(L) {
+		@include transition(background-color .3s);
+		@include transform(translate3d(0,0,0));
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		
+	}
+
+	.brand {
+		position: relative;
+
+		#skar-logo {
+			width: 150px;
+			margin: 30px 0 0 30px;
+			.skarl {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.nav-trigger-container {
+	position: relative;
+	float: right;
+	margin: 30px 30px 0 0;
+
+	.email-text, .menu-text {
+		color: #fff;
+		font-weight: 300;
+	}
+
+	.email-text {
+		font-size: 12px;
+		border-right: 1px solid #fff;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-right: 15px;
+	}
+
+	.menu-text {
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-right: 55px;
+		padding-left: 15px;
+	}
+
+	.nav-primary-trigger {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50px;
+
+		.menu-icon {
+			/* this span is the central line of the menu icon */
+			display: inline-block;
+			position: absolute;
+			@include center; // mixin inside partials > _mixins.scss
+			width: 35px;
+			height: 2px;
+			background-color: #fff;
+			@include transition(background-color .3s);
+			
+			/* these are the upper and lower lines in the menu icon */
+			&::before, &:after {
+				content: '';
+				width: 100%;
+				height: 100%; 
+				position: absolute;
+				background-color: #fff;
+				right: 0;
+
+				-webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+				-moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+				transition: transform .3s, top .3s, background-color 0s;
+			}
+			
+			&::before {
+				top: -5px;
+			}
+
+			&::after {
+				top: 5px;
+			}
+
+			&.is-clicked {
+				background-color: rgba(#fff, 0);
+
+				&::before, &::after {
+					background-color: rgba(#fff, 1);
+				}
+
+				&::before {
+					top: 0;
+					@include transform(rotate(135deg));
+				}
+
+				&::after {
+					top: 0;
+					@include transform(rotate(225deg));
+				}
+			}
+		}
+	}
+}
+
+.nav-overlay {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 99998;
+	top: 0;
+	right: 0;
+	background-color: rgba(0,0,0, 0.6);
+	overflow-x: hidden;
+	@include transition(0.5s);
+	@include transform(translateX(100%));
+
+	&.menu-opened {
+		@include transform(translateX(0%));
+	}
+
+	.nav-overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+
+		a {
+			padding: 12px;
+			text-decoration: none;
+			font-size: 36px;
+			color: #fff;
+			display: block;
+			@include transition(0.3s);
+		}
+	}
+
+	@include MQ(MS) {
+		width: 400px;
+	}
+}
+
+
+body.admin-bar {
+
+	.banner > .header-content {
+		height: $admin-header-height-S;
+
+		@include MQ(M) {
+			height: $admin-header-height-M;
+
+			&.is-fixed {
+				top: -$admin-header-height-M;
+			}			
+		}
+
+		.brand {
+
+			#skar-logo {
+				margin-top: 62px;
+			}
+		}
+
+		.nav-trigger-container {
+			margin-top: 62px;
+		}
+	}
+}
