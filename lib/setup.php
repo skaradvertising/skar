@@ -104,3 +104,11 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+// Loads the js specific to the home page
+function load_home_js () {
+  if(  is_front_page() ) {
+    wp_enqueue_script('home_scripts', Assets\asset_path('scripts/home_scripts.js'), ['jquery'], null, true);
+  }
+}
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_home_js', 100);

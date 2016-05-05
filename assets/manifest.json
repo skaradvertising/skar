@@ -22,6 +22,11 @@
         "scripts/nav.js"
       ]
     },
+    "home_scripts.js": {
+      "files": [
+        "scripts/home_scripts.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }

@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 	    } else {
 	    	//if scrolling down...
 	    	$('.banner > .header-content').removeClass('is-visible');
-	    	if( currentTop > headerHeight && !$('.banner > .header-content').hasClass('is-fixed')) $('.banner > .header-content').addClass('is-fixed');
+	    	if( currentTop > headerHeight && !$('.banner > .header-content').hasClass('is-fixed')) { $('.banner > .header-content').addClass('is-fixed');}
 	    }
 	    this.previousTop = currentTop;
 	});

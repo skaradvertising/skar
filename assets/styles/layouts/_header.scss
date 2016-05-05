@@ -6,10 +6,10 @@
 	height: $header-height-S;
 	z-index: 99999;
 	@include font-smoothing;
+	background: #39194b;
 
 	@include MQ(M) {
 		height: $header-height-M;
-		background: transparent;
 		box-shadow: none;
 
 		&.is-fixed {

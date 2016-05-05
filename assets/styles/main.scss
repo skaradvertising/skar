@@ -4,6 +4,7 @@
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
 @import "common/global";
@@ -18,6 +19,7 @@
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages/home";
+@import "layouts/pages/industry-boxes";
 @import "layouts/pages/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
