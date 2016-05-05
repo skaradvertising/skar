@@ -17,17 +17,15 @@ jQuery(document).ready(function($){
 		direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 	});*/
 
-	if($(window).width() > 992) {
-		$('.scrolling-home-container').onepage_scroll({
-			sectionContainer: "section.home-section",
-			easing: "ease-in-out",
-			animationTime: 1000,
-			pagination: true,
-			updateURL: false,
-			loop: true,
-			responsiveFallback: 992
-		});
-	}
+	$('.scrolling-home-container').onepage_scroll({
+		sectionContainer: "section.home-section",
+		easing: "ease-in-out",
+		animationTime: 1000,
+		pagination: true,
+		updateURL: false,
+		loop: true,
+		responsiveFallback: 992
+	});
 
 	$('.scroll-down').click(function(){
 		$('.scrolling-home-container').moveDown();
