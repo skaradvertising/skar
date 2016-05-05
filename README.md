@@ -1,4 +1,4 @@
-# [SKAR.com](https://roots.io/sage/)
+# [SKAR.com](https://skar.com)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
