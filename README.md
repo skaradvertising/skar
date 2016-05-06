@@ -1,8 +1,8 @@
-# [Sage](https://roots.io/sage/)
+# [SKAR.com](http://skar.com)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
+Built on top of Sage, a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
 * Source: [https://github.com/roots/sage](https://github.com/roots/sage)
 * Homepage: [https://roots.io/sage/](https://roots.io/sage/)
