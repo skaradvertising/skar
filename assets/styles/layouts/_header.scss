@@ -6,7 +6,7 @@
 	height: $header-height-S;
 	z-index: 99999;
 	@include font-smoothing;
-	background: #39194b;
+	@include background(radial-gradient(rgba(87, 51, 111, 1) 0%, rgba(52, 19, 69, 1) 100%));
 
 	@include MQ(M) {
 		height: $header-height-M;

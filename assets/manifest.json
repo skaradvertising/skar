@@ -27,6 +27,11 @@
         "scripts/home_scripts.js"
       ]
     },
+    "scrollsnap.js": {
+      "files": [
+        "scripts/scrollsnap.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }

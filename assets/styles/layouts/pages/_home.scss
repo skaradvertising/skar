@@ -46,10 +46,6 @@ body.home {
 		}
 	}
 
-	.scrolling-home-container {
-		height: 100vh;
-	}
-
 	.home-section:nth-of-type(1) {
 		float: left;
 		width: 100vw;
@@ -57,25 +53,15 @@ body.home {
 		position: relative;
 	}
 
-	.home-section:nth-of-type(2) {
+	.home-section:nth-of-type(n+2) {
 		position: relative;
 		float: left;
 		height: 100%;
 		width: 100%;
 
-		@media only screen and (min-width: 585px) {
+		@media only screen and (min-width: 992px) {
 			width: 100vw;
 			height: 100vh;
-		}
-	}
-
-	.home-section:nth-of-type(n+2) {
-		.section-wrapper {
-			margin-top: $header-height-S;
-
-			@include MQ(M) {
-				margin-top: $header-height-M;
-			}
 		}
 	}
 
@@ -354,6 +340,18 @@ body.home {
 				        background: #fff;
 				        padding: 10px;
 			      	}	
+			    	
+			    	.paper-airplane {
+				    	width: 125px;
+				    	height: 125px;
+				    	background: #ffd24f;
+
+				    	img {
+				    		margin: 0 auto;
+				    		width: 80%;
+				    		@include vertical-align();
+				    	}
+				    }
 			    }
 			}
   		}
@@ -361,9 +359,10 @@ body.home {
   		
 
   		.return-to-top {
-		    position: absolute;
+		    position: fixed;
 		    right: 50px;
 		    bottom: 36px;
+		    z-index: 999;
 
 		    #pxd-arrow {
 		    	height: 50px;
@@ -409,8 +408,7 @@ body.home {
 
         			@include MQ(L) {
           				margin: 0 auto;
-          				top: 50%;
-          				@include transform(translateY(-50%));
+          				@include vertical-align();
         			}
 
         			div:nth-of-type(1) {
@@ -615,6 +613,11 @@ body.home {
 			        .logo-img-container {
 			          	padding: 20px;
 			          	max-height: 86px;
+
+			          	img {
+			          		@include vertical-align();
+			          		width: 90px;
+			          	}
 
 			          	@media only screen and (min-width: 585px) {
 			          		padding: 20px 40px;
