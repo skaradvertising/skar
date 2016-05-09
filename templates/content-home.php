@@ -110,8 +110,7 @@
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>
-						<?php the_excerpt(); ?>
-							<!--To help unveil Sue Bee's refreshed website that features more than 1,200 recipes, we asked fans on Facebook to create and share their own original honey recipes, including an original photo of their finished product with a bottle of Sue Bee Honey. The contest finished with more than 100 submissions and plenty of chatter on Facebook. Take a look at the results.-->
+							<?php the_excerpt(); ?>
 						</p>
 					</div>
 					<div>
