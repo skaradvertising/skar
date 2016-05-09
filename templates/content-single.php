@@ -1,4 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
+<?php if( is_singular( 'post' ) ) : ?>
+<?php get_template_part( 'templates/single', 'blog-post' ); ?>
+<?php else : ?>
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -12,4 +15,4 @@
     </footer>
     <?php comments_template('/templates/comments.php'); ?>
   </article>
-<?php endwhile; ?>
+<?php endif; endwhile; ?>

@@ -29,4 +29,8 @@ jQuery(document).ready(function($){
 		$('.banner > .header-content').toggleClass('menu-is-open');
 		$('.nav-overlay').toggleClass('menu-opened');
 	});
+
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
 });

@@ -41,10 +41,28 @@
 		position: relative;
 
 		#skar-logo {
-			width: 150px;
-			margin: 30px 0 0 30px;
+			width: 60px;
+			margin: 5px 0 0 5px;
 			.skarl {
 				fill: #fff;
+			}
+
+			@media only screen and (min-width: 365px) {
+				width: 75px;
+			}
+
+			@media only screen and (min-width: 414px) {
+				width: 95px;
+			}
+
+			@media only screen and (min-width: 488px) {
+				width: 125px;
+				margin: 15px 0 0 15px;
+			}
+
+			@include MQ(M) {
+				width: 150px;
+				margin: 30px 0 0 30px;
 			}
 		}
 	}
@@ -60,10 +78,14 @@
 .nav-trigger-container {
 	position: relative;
 	float: right;
-	margin: 0 30px 0 0;
+	margin: 0 15px 0 0;
+
+	@media only screen and (min-width: 365px) {
+		margin: 0 5px 0 0;
+	}
 
 	@media only screen and (min-width: 488px) {
-		margin-top: 30px;
+		margin: 30px 30px 0 0;
 	}
 
 	.email-text, .menu-text {
@@ -72,18 +94,30 @@
 	}
 
 	.email-text {
-		font-size: 12px;
+		font-size: 10px;
 		border-right: 1px solid #fff;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		padding-right: 15px;
+
+		@media only screen and (min-width: 365px)  {
+			font-size: 12px;
+		}
 	}
 
 	.menu-text {
-		font-size: 18px;
+		font-size: 12px;
 		text-transform: uppercase;
 		margin-right: 55px;
 		padding-left: 15px;
+
+		@media only screen and (min-width: 365px) {
+			font-size: 14px;
+		}
+
+		@media only screen and (min-width: 488px) {
+			font-size: 18px;
+		}
 	}
 
 	.nav-primary-trigger {
@@ -91,7 +125,11 @@
 		right: 0;
 		top: 0;
 		height: 100%;
-		width: 50px;
+		width: 30px;
+
+		@media only screen and (min-width: 365px) {
+			width: 50px;
+		}
 
 		.menu-icon {
 			/* this span is the central line of the menu icon */
@@ -205,7 +243,7 @@ body.admin-bar {
 		}
 
 		.nav-trigger-container {
-			margin-top: 0;
+			margin-top: 56px;
 
 			@media only screen and (min-width: 488px) {
 				margin-top: 62px;

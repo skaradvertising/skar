@@ -32,6 +32,11 @@
         "scripts/scrollsnap.js"
       ]
     },
+    "common.js": {
+      "files": [
+        "scripts/common.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }
