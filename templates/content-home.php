@@ -89,23 +89,35 @@
 		<div class="section-3-top">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 case-history">
 				<div class="inner-content">
+				<?php
+					$case_args = array(
+						'post_type' => 'case-studies',
+						'posts_per_page' => 1,
+						'order' => 'DESC'
+					);
+					$case_query = new WP_Query( $case_args );
+					if( $case_query->have_posts() ) : while( $case_query->have_posts() ) : $case_query->the_post();
+				?>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>case history</p>
 						<div  class="inner-content-title">
+						
 							<p>
-								<span>Sue Bee</span>
-								<span>Recipe Contest:</span>
+								<span><?php the_field( 'client_name' ); ?></span>
+								<span><?php the_field( 'case_title' ); ?>:</span>
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>
-							To help unveil Sue Bee's refreshed website that features more than 1,200 recipes, we asked fans on Facebook to create and share their own original honey recipes, including an original photo of their finished product with a bottle of Sue Bee Honey. The contest finished with more than 100 submissions and plenty of chatter on Facebook. Take a look at the results.
+						<?php the_excerpt(); ?>
+							<!--To help unveil Sue Bee's refreshed website that features more than 1,200 recipes, we asked fans on Facebook to create and share their own original honey recipes, including an original photo of their finished product with a bottle of Sue Bee Honey. The contest finished with more than 100 submissions and plenty of chatter on Facebook. Take a look at the results.-->
 						</p>
 					</div>
 					<div>
 						<span><a href="#"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a></span>
 					</div>
+					<?php endwhile; endif; ?>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 recent-article">
@@ -138,7 +150,6 @@
 						<p>
 							<span>Latest Blog Post | <?php echo $title; ?>.</span>
 							<?php echo $excerpt; ?>
-							<!--Latest Article/Blog Post | 5 Tips for Successful Holiday Marketing: These days it seems like back-to-school shopping is barely in the books before retailers start setting up holiday displays for Jolly Ole Saint Nick’s arrival. But it’s not because store managers just can’t wait to pump “Jingle Bell Rock” through the speakers. There’s actually solid rationale behind it. Find out what it is and how to use it to your advantage.-->
 						</p>
 					</div>
 					<div>
