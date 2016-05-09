@@ -54,19 +54,10 @@
 			</div>
 			<div class="col-lg-7 col-md-8 col-sm-9 col-xs-12 section-2-div-2">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 headline-content">
-					<h1><span>Headline</span> <span>Here</span></h1>
+					<?php the_field( 'home_headline' ); ?>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 main-page-content">
-					<p>
-						SKAR is a full-service advertising agency located in Omaha, Nebraska, with expertise in the health care, financial and retail industries while also working with dozens of other regional brands. We’ve even been known to dabble in the nonprofit world when a great cause pulls at our heartstrings.
-
-					</p>
-					<p>
-						Since 1962 we’ve been helping brands across the region – and nation, for that matter – evolve their marketing. We do it with a little bit of everything: meticulous account planning, hard-hitting copywriting, killer design and innovative media placement. 
-					</p>
-					<p>
-						Want to learn more about us? Then click around the site and don't forget to sign up for our monthly newsletter.
-					</p>
+					<?php the_field( 'main_page_content' ); ?>
 					<div class="paper-airplane row">
 						<img class="img-responsive" src="/wp-content/uploads/2016/05/paper-airplane.png">
 					</div>
