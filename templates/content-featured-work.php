@@ -59,7 +59,7 @@
 		</div>
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 		<div>
-			<span><a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 </div>

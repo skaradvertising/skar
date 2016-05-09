@@ -34,16 +34,9 @@
 				</div>
 			</div>
 
-			<!--<div class="row action-container" style="position: absolute; bottom: 52px;">
-				<div class="action-wrapper">
-					<p>We're not like other ad agencies.</p>
-				</div>
-			</div>-->
-
 			<div class="row action-container">
 				<div class="action-wrapper">
-					<p>We're not like other ad agencies.</p>
-					<p>Find out why.</p>
+					<?php the_field( 'home_tag_line' ); ?>
 					<p>
 						<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
 					</p>
@@ -82,7 +75,7 @@
 		</div>
 
 		<?php get_template_part( 'templates/industries', 'boxes' ); ?>
-		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a></span>
+		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 
 	<section class="home-section section three">
@@ -114,7 +107,7 @@
 						</p>
 					</div>
 					<div>
-						<span><a href="#"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a></span>
+						<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 					</div>
 					<?php endwhile; endif; ?>
 				</div>
@@ -152,7 +145,7 @@
 						</p>
 					</div>
 					<div>
-						<span><a href="<?php echo $pl; ?>"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a></span>
+						<span><a href="<?php echo $pl; ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 					</div>
 				</div>
 			</div>
