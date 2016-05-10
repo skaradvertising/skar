@@ -1,0 +1,105 @@
+body.page-template-template-what-we-do {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	
+	.what-we-do-container {
+		position: relative;
+		height: 100%;
+		width: 100%;
+
+		.what-we-do-section {
+			position: relative;
+			padding: 0;
+			width: 100%;
+
+			&.one {
+				height: 100vh;
+				background-size: cover;
+
+				.row {
+					margin-top: 10em;
+
+					.section-1-div-1, .section-1-div-2 {
+						max-width: 66.6667%;
+						margin: 0 auto;
+						float: none;
+
+						@include MQ(L) {
+							float: left;
+						}
+					}
+
+					.section-1-div-1 {
+						 background: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255, 0.15)), rgba(255,255,255,0.15);
+
+						p {
+							font-size: 30px;
+							font-weight: 500;
+							text-transform: uppercase;
+							line-height: 1.2;
+
+							@include MQ(L) {
+								font-size: 3vmin;
+							}
+
+							&:nth-of-type(1) {
+								color: #231f20;
+							}
+
+							&:nth-of-type(2) {
+								color: #593171;
+							}
+						}
+
+						.section-1-div-1-overlay {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							background: #fff;
+							opacity: 0.5;
+							display: none;
+						}
+					}
+
+					.section-1-div-2 {
+
+						p {
+							font-weight: 300;
+							font-size: 14px;
+							color: #fff;
+							padding: 0 1em;
+
+							@include MQ(L) {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+
+			&.two {
+
+				.work-label-container {
+
+					div:nth-of-type(1) {
+
+						span {
+							margin-left: 33.333%;
+						}
+					}
+				}
+
+				.work-container {
+					
+				}
+			}
+
+			@include MQ(L) {
+				height: 100vh;
+			}
+		}
+	}
+}

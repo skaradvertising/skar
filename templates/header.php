@@ -9,13 +9,12 @@
         </div>
     </div>
     <nav id="skar-nav" class="nav-overlay">
-        <a href="#" class="nav-closebtn">×</a>
         <div class="nav-overlay-content">
-            <a href="#">one</a>
-            <a href="#">two</a>
-            <a href="#">three</a>
-            <a href="#">four</a>
-            <a href="#">five</a>
+            <?php
+                if (has_nav_menu('primary_navigation')) :
+                    wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+                endif;
+            ?>
         </div>
     </nav>
 </header>
