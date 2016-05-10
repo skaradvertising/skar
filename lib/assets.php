@@ -58,6 +58,6 @@ function asset_path($filename) {
 }
 
 wp_enqueue_script('nav', asset_path('scripts/nav.js'), ['jquery'], null, true);
-wp_enqueue_script('scrollsnap', asset_path('scripts/scrollsnap.js'), ['jquery'], null, true);
 wp_enqueue_script('common', asset_path('scripts/common.js'), ['jquery'], null, true);
+wp_enqueue_script('scrollsnap', asset_path('scripts/scrollsnap.js'), ['jquery'], null, true);
 

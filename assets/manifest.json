@@ -22,6 +22,11 @@
         "scripts/nav.js"
       ]
     },
+    "common.js": {
+      "files": [
+        "scripts/common.js"
+      ]
+    },
     "home_scripts.js": {
       "files": [
         "scripts/home_scripts.js"
@@ -30,11 +35,6 @@
     "scrollsnap.js": {
       "files": [
         "scripts/scrollsnap.js"
-      ]
-    },
-    "common.js": {
-      "files": [
-        "scripts/common.js"
       ]
     },
     "jquery.js": {

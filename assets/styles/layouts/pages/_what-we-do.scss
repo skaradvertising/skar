@@ -12,6 +12,7 @@ body.page-template-template-what-we-do {
 			position: relative;
 			padding: 0;
 			width: 100%;
+			height: 100%;
 
 			&.one {
 				height: 100vh;
@@ -82,24 +83,243 @@ body.page-template-template-what-we-do {
 
 			&.two {
 
-				.work-label-container {
+				.two-top {
+					margin-bottom: 2em;
+					height: 340px;
 
-					div:nth-of-type(1) {
+					@media only screen and (min-width: 1425px) {
+						height: 200px;
+					}
 
-						span {
-							margin-left: 33.333%;
+					.work-label-container {
+
+						div:nth-of-type(1) {
+
+							span {
+								margin-left: 2em;
+								color: #939598;
+								font-size: 14px;
+								font-weight: 700;
+
+								@media only screen and (min-width: 560px) {
+									margin-left: 33.333%;
+									font-size: 18px;
+								}
+							}
+						}
+
+						div:nth-of-type(2) {
+
+							.work_nav {
+								list-style-type: none;
+								padding: 0;
+
+								li {
+									display: inline-block;
+									font-size: 14px;
+									font-weight: 300;
+									
+									a {
+										color: $skar-purple; 
+									}
+
+									@media only screen and (min-width: 560px) {
+										font-size: 18px;
+									}
+
+									&:last-of-type {
+
+										span {
+											display: none;
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 
 				.work-container {
-					
+					width: 100%;
+					height: calc(100% - 372px);
+
+					@media only screen and (min-width: 1425px) {
+						height: calc(100% - 232px;
+					}
+
+					.work-one, .work-two, .work-three-sm, .work-three-lg, .work-four, .work-five {
+						//height: 50%;
+						height: 100%;
+
+						.inner-content {
+							height: 480px;
+
+							.content-container {
+								position: relative;
+								margin: 10em 4em 0 4em;
+								max-width: 400px;
+
+								p {
+									font-size: 49px;
+									font-weight: 700;
+									line-height: 1;
+
+									&:nth-of-type(1) {
+										color: #fff;
+									}
+
+									&:nth-of-type(2) {
+										color: $skar-green;
+									}
+								}
+
+								@include MQ(L) {
+									margin-top: 4em;
+
+									p {
+										font-size: 44px;
+									}
+								}
+							}
+
+							span {
+								position: absolute;
+								bottom: 4em;
+								left: 0;
+								right: 0;
+								text-align: center;
+
+	            				#alt-arrow {
+	              					@include transform(rotate(270deg));
+	              					width: 50px;
+	            				}
+	          				}
+
+							/*@include MQ(L) {
+								height: 100%;
+							}*/
+						}
+					}
+
+					.work-one {
+						background: url('/wp-content/uploads/2016/05/featured-img-paceholder-01.jpg') center no-repeat;
+						background-size: cover;
+					}
+
+					.work-two {
+						background: url('/wp-content/uploads/2016/05/ne-lottery-benificiary.jpg') center no-repeat;
+						background-size: cover;
+					}
+
+					.work-three-sm {
+						background: url('/wp-content/uploads/2016/05/orville.jpg') 25% no-repeat;
+						background-size: cover;
+
+						@include MQ(L) {
+							display: none;
+						}
+					}
+
+					.work-three-lg {
+						background: url('/wp-content/uploads/2016/05/orville.jpg') 25% no-repeat;
+						background-size: cover;
+						display: none;
+
+						@include MQ(L) {
+							display: block;
+						}
+					}
+
+					.work-four {
+						background: url('/wp-content/uploads/2016/05/WERNER-CONCEPT-3-1.jpg') center no-repeat;
+						background-size: cover;
+
+						.inner-content {
+							.content-container {
+								p:nth-of-type(2) {
+									color: $skar-gray;
+								}
+							}
+						}
+					}
+
+					.work-five {
+						background: url('/wp-content/uploads/2016/05/centris-site.jpg') center no-repeat;
+						background-size: cover;
+					}
 				}
 			}
 
-			@include MQ(L) {
-				height: 100vh;
+			&.three {
+				
+				.container {
+					margin-top: 3em;
+					margin-bottom: 3em;
+					padding: 0 15px 0 0;
+
+					.service {
+
+						.service-container {
+							margin-bottom: 3em;
+							border: 1px solid $skar-green;
+							@include display(flex);
+							padding: 0;
+
+							.service-content, .service-square {
+								padding: 0;
+								margin: 8px;
+							}
+
+							.service-square {
+
+								img {
+									max-width: 100%;
+									height: auto;
+									max-height: 100%;
+									@include vertical-align();
+									position: absolute;
+								}
+							}
+
+							.service-content {
+
+								p {
+									font-weight: 300;
+									text-align: center;
+									font-size: 12px;
+									color: $skar-black;
+									line-height: 1;
+
+									&:nth-of-type(1) {
+										font-size: 25px;
+										border-bottom: 1px solid $skar-green;
+									}
+
+									&.service-hidden {
+										opacity: 0;
+										visibility: hidden;
+										@include transition(all 0.3s ease-in-out);
+									}
+
+									&.service-show {
+										opacity: 1;
+										visibility: visible;
+									}
+								}
+							}
+
+							span {
+								bottom: -2em;
+								left: 50%;
+							}
+						}
+					}
+				}
 			}
+
+			/*@include MQ(L) {
+				height: 100vh;
+			}*/
 		}
 	}
 }
