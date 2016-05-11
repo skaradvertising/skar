@@ -11,7 +11,8 @@
     "bourbon": "^4.2.7",
     "panelsnap": "^0.15.1",
     "animate.css": "^3.5.1",
-    "fullpage.js": "^2.7.9"
+    "fullpage.js": "^2.7.9",
+    "matchHeight": "^0.7.0"
   },
   "overrides": {
     "bootstrap-sass": {

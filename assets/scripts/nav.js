@@ -36,6 +36,11 @@ jQuery(document).ready(function($){
 
 	$('.arrow-icon').click(function(){
 		$(this).toggleClass('is-clicked');
-		$(this).parent().find('.service-content .service-hidden').slideToggle();
 	});
+
+	/*$(function() {
+	    $('.service').matchHeight({
+
+	    });
+	});*/
 });

@@ -1,0 +1,92 @@
+.services-wrapper {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	padding: 0 15px 0 0;
+	width: 100%;
+
+	@media only screen and (min-width: 1200px) {
+		width: 1170px;
+	}
+
+	.services-label {
+		margin-bottom: 1.5em;
+		
+		span {
+			color: #939598;
+			font-size: 14px;
+			font-weight: 700;
+
+			@include MQ(M) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.service {
+		margin-bottom: 2em;
+		max-width: 375px;
+
+		@media only screen and (min-width: 414px) {
+			max-width: 400px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+
+		.service-container {
+			border: 1px solid $skar-green;
+			@include display(flex);
+			padding: 0;
+
+			.service-content, .service-square {
+				padding: 0;
+				margin: 8px;
+			}
+
+			.service-square {
+
+				img {
+					max-width: 100%;
+					height: auto;
+					max-height: 100%;
+					@include vertical-align();
+					position: absolute;
+				}
+			}
+
+			.service-content {
+
+				p {
+					font-weight: 300;
+					text-align: center;
+					font-size: 12px;
+					color: $skar-black;
+					line-height: 1;
+
+					&:nth-of-type(1) {
+						font-size: 25px;
+						border-bottom: 1px solid $skar-green;
+					}
+
+					&.service-hidden {
+						opacity: 0;
+						visibility: hidden;
+						@include transition(all 0.3s ease-in-out);
+					}
+
+					&.service-show {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+
+		span {
+			bottom: -0.5em;
+			left: 50%;
+		}
+	}
+}
