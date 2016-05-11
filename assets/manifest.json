@@ -22,9 +22,9 @@
         "scripts/nav.js"
       ]
     },
-    "common.js": {
+    "skar-scripts.js": {
       "files": [
-        "scripts/common.js"
+        "scripts/skar-scripts.js"
       ]
     },
     "home_scripts.js": {

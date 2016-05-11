@@ -155,20 +155,21 @@
 			$work_query = new WP_Query( $work_args );
 			$work_array = array();
 			if( $work_query->have_posts() ) : while( $work_query->have_posts() ) : $work_query->the_post(); ?>
+				<?php
+
+					if( get_field( 'home_logo' ) ) {
+						$image = get_field( 'home_logo' );
+					} else {
+						$image = get_field( 'logo' );
+					}
+
+					if( !empty($image) ) :
+				?>
 					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 logo-img-container">
-					<?php
-
-						if( get_field( 'home_logo' ) ) {
-							$image = get_field( 'home_logo' );
-						} else {
-							$image = get_field( 'logo' );
-						}
-
-						if( !empty($image) ) :
-					?>
+					
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" /></a>
-					<?php endif; ?>
 					</div>
+				<?php endif; ?>
 				<?php endwhile; wp_reset_postdata(); endif; ?>
 				</div>
 			</div>

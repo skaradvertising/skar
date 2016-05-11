@@ -77,8 +77,8 @@
 				<div class="inner-content">
 					<div class="content-container">
 						<a href="#">
-							<p>Orville Redenbacher's</p>
-							<p>Lenticular Display</p>
+							<p class="work-title">Orville Redenbacher's</p>
+							<p class="work-title">Lenticular Display</p>
 						</a>
 					</div>
 					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
@@ -99,7 +99,8 @@
 				<div class="inner-content">
 					<div class="content-container">
 						<a href="#">
-							<p>Centris Federal Credit Union</p>
+							<!--<p>Centris Federal Credit Union</p>-->
+							<p><?php get_template_part('templates/work', 'featured-on-pages'); ?></p>
 							<p>Website</p>
 						</a>
 					</div>

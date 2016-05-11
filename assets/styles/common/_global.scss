@@ -4,8 +4,17 @@ body {
 	font-family: $primary-font;
 	font-weight: normal;
 
+	.row {
+		margin-left: 0;
+		margin-left: 0;
+	}
+
 	.main {
+		//padding-right: 0;
+		overflow-x: hidden;
+		padding-left: 0;
 		padding-right: 0;
+		max-width: 100vw;
 	}
 
 	a {

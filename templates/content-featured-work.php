@@ -9,16 +9,19 @@
 	$work_array = array();
 	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
 
+	// all "Work" post ids
 	$work_array[] = $post->ID;
 
 	endwhile; wp_reset_postdata(); endif;
 
+	// find the first "work" post that is a featured client. There is only supposed to be one featured post
 	foreach ($work_array as $pid) {
 		if( get_field( 'featured_client', $pid ) ) {
 			$featured_work = $pid;
 			break;
 		}
 
+		// if no "work" posts have featured client checked, returns the most recent "work" post
 		if( !$featured_work ) {
 			$featured_work = $work_array[0];
 		}
@@ -27,7 +30,7 @@
 
 <?php $campaign = get_field( 'campaign', $featured_work ); ?>
 
-<?php
+<?php // chooses the featured campaign
 	if( have_rows('campaign', $featured_work) ): while( have_rows('campaign', $featured_work) ): the_row();
 
 	if( get_sub_field( 'featured' ) ) {

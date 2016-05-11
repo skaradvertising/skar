@@ -160,7 +160,7 @@ body.page-template-template-what-we-do {
 								max-width: 400px;
 
 								p {
-									font-size: 49px;
+									font-size: 40px;
 									font-weight: 700;
 									line-height: 1;
 
@@ -171,13 +171,17 @@ body.page-template-template-what-we-do {
 									&:nth-of-type(2) {
 										color: $skar-green;
 									}
+
+									@include MQ(M) {
+										//font-size: 49px;
+									}
 								}
 
 								@include MQ(L) {
 									margin-top: 4em;
 
 									p {
-										font-size: 44px;
+										font-size: 3.5vmin;
 									}
 								}
 							}

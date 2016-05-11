@@ -29,18 +29,4 @@ jQuery(document).ready(function($){
 		$('.banner > .header-content').toggleClass('menu-is-open');
 		$('.nav-overlay').toggleClass('menu-opened');
 	});
-
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
-
-	$('.arrow-icon').click(function(){
-		$(this).toggleClass('is-clicked');
-	});
-
-	/*$(function() {
-	    $('.service').matchHeight({
-
-	    });
-	});*/
 });
