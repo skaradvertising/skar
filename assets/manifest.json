@@ -37,6 +37,11 @@
         "scripts/what_we_do_scripts.js"
       ]
     },
+    "who_we_are_scripts.js": {
+      "files": [
+        "scripts/who_we_are_scripts.js"
+      ]
+    },
     "scrollsnap.js": {
       "files": [
         "scripts/scrollsnap.js"

@@ -231,34 +231,37 @@
 
 body.admin-bar {
 
-	.banner > .header-content {
-		height: $admin-header-height-S;
+	&.home {
 
-		@include MQ(M) {
-			height: $admin-header-height-M;
+		.banner > .header-content {
+			height: $admin-header-height-S;
 
-			&.is-fixed {
-				top: -$admin-header-height-M;
-			}			
-		}
+			@include MQ(M) {
+				height: $admin-header-height-M;
 
-		.brand {
-
-			#skar-logo {
-				margin-top: 62px;
+				&.is-fixed {
+					top: -$admin-header-height-M;
+				}			
 			}
-		}
 
-		.nav-trigger-container {
-			margin-top: 56px;
+			.brand {
 
-			@media only screen and (min-width: 488px) {
-				margin-top: 62px;
+				#skar-logo {
+					margin-top: 62px;
+				}
 			}
-		}
 
-		&.menu-is-open {
-			position: fixed;
+			.nav-trigger-container {
+				margin-top: 56px;
+
+				@media only screen and (min-width: 488px) {
+					margin-top: 62px;
+				}
+			}
+
+			&.menu-is-open {
+				position: fixed;
+			}
 		}
 	}
 }

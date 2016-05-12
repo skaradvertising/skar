@@ -5,6 +5,7 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../../bower_components/fullpage.js/jquery.fullPage.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
 @import "common/global";
@@ -23,6 +24,8 @@
 @import "layouts/pages/industry-boxes";
 @import "layouts/pages/pages";
 @import "layouts/pages/services-boxes";
+@import "layouts/pages/skar-content";
 @import "layouts/pages/what-we-do";
+@import "layouts/pages/who-we-are";
 @import "layouts/posts";
 @import "layouts/tinymce";

@@ -89,6 +89,7 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
     is_singular( 'post' ),
     is_page_template('template-what-we-do.php'),
+    is_page_template('template-who-we-are.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -122,3 +123,10 @@ function load_what_we_do_js() {
   }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_what_we_do_js', 100);
+
+function load_who_we_are_js() {
+  if(  is_page_template('template-who-we-are.php') ) {
+    wp_enqueue_script('who_we_are_scripts', Assets\asset_path('scripts/who_we_are_scripts.js'), ['jquery'], null, true);
+  }
+}
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_who_we_are_js', 100);

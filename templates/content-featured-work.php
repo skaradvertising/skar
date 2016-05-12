@@ -18,7 +18,7 @@
 	foreach ($work_array as $pid) {
 		if( get_field( 'featured_client', $pid ) ) {
 			$featured_work = $pid;
-			break;
+			break; // stops foreach loop once we find the first featured client
 		}
 
 		// if no "work" posts have featured client checked, returns the most recent "work" post
@@ -33,10 +33,10 @@
 <?php // chooses the featured campaign
 	if( have_rows('campaign', $featured_work) ): while( have_rows('campaign', $featured_work) ): the_row();
 
-	if( get_sub_field( 'featured' ) ) {
+	if( get_sub_field( 'feature_home' ) ) {
 		$campaign_title = get_sub_field( 'campaign_title' );
 		$campaign_image = get_sub_field( 'campaign_image' );
-	}
+	} 
 ?>
 
 <?php

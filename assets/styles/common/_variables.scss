@@ -15,7 +15,8 @@ $S:     320px;
 $SM-SCREEN:   400px;
 $MS:    414px;   
 $M:     768px;
-$L:     992px;     
+$L:     992px;
+$LL:   1200px;    
 $XL:   1537px; 
 
 //skar colors
@@ -44,6 +45,9 @@ $admin-header-height-M: 112px;
   }
   @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; } 
+  }
+  @else if $canvas == LL {
+   @media only screen and (min-width: $LL) { @content; } 
   }
   @else if $canvas == XL {
    @media only screen and (min-width: $XL) { @content; } 

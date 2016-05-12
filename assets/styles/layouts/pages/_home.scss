@@ -360,13 +360,13 @@ body.home {
   		position: relative;
   		height: 100%;
 
-  		.section-3-top, .section-3-bottom {
+  		.skar-content, .section-3-bottom {
     		position: relative;
     		float: left;
     		width: 100%;
   		}
 
-  		.section-3-top {
+  		/*.skar-content {
     		height: 100%;
     		background: #fff;
 
@@ -569,7 +569,7 @@ body.home {
         			div:nth-of-type(3) {}
       			}
     		}
-  		}
+  		}*/
 
   		.section-3-bottom {
 		    background: $skar-green;
