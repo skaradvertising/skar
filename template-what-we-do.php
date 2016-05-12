@@ -39,75 +39,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="row row-eq-height work-container">
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-one">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<p>Nebraska Lottery</p>
-							<p>It All Starts</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-three-sm">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<p>Orville Redenbacher's</p>
-							<p>Lenticular Display</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-two">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<p>Nebraska Lottery</p>
-							<p>Benificiary</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-three-lg">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<p class="work-title">Orville Redenbacher's</p>
-							<p class="work-title">Lenticular Display</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-four">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<p>Werner</p>
-							<p>Altitude Campaign</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-five">
-				<div class="inner-content">
-					<div class="content-container">
-						<a href="#">
-							<!--<p>Centris Federal Credit Union</p>-->
-							<p><?php get_template_part('templates/work', 'featured-on-pages'); ?></p>
-							<p>Website</p>
-						</a>
-					</div>
-					<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
-				</div>
-			</div>
-		</div>
+		<?php get_template_part('templates/work', 'featured-on-pages'); ?>
+		
 	</section>
 
 	<section class="container-fluid what-we-do-section three">
