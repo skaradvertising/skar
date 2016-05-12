@@ -87,6 +87,10 @@ body.page-template-template-what-we-do {
 					margin-bottom: 2em;
 					height: 340px;
 
+					@include MQ(L) {
+						margin-top: 100px;
+					} 
+
 					@media only screen and (min-width: 1425px) {
 						height: 200px;
 					}

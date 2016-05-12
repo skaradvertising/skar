@@ -21,6 +21,7 @@
 				</div>
 			</div>
 		</div>
+		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 
 	<section class="container-fluid what-we-do-section two">
@@ -40,7 +41,6 @@
 			</div>
 		</div>
 		<?php get_template_part('templates/work', 'featured-on-pages'); ?>
-		
 	</section>
 
 	<section class="container-fluid what-we-do-section three">

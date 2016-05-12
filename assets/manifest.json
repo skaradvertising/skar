@@ -32,6 +32,11 @@
         "scripts/home_scripts.js"
       ]
     },
+    "what_we_do_scripts.js": {
+      "files": [
+        "scripts/what_we_do_scripts.js"
+      ]
+    },
     "scrollsnap.js": {
       "files": [
         "scripts/scrollsnap.js"

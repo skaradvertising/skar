@@ -115,3 +115,10 @@ function load_home_js () {
   }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_home_js', 100);
+
+function load_what_we_do_js() {
+  if(  is_page_template('template-what-we-do.php') ) {
+    wp_enqueue_script('what_we_do_scripts', Assets\asset_path('scripts/what_we_do_scripts.js'), ['jquery'], null, true);
+  }
+}
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_what_we_do_js', 100);

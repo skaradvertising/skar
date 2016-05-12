@@ -42,3 +42,33 @@
 		}
 	}
 }
+
+.return-to-top {
+    position: fixed;
+    right: 50px;
+    bottom: 36px;
+    z-index: 999;
+
+    #alt-arrow {
+    	height: 50px;
+      	width: auto;
+      	@include transform(rotate(180deg));
+      	
+      	.cls-1 {
+        	fill: #593170;
+      	}
+    }
+}
+
+body.page-template-template-what-we-do {
+
+	.return-to-top {
+
+		#alt-arrow {
+
+			.cls-1 {
+				fill: $skar-green;
+			}
+		}
+	}
+}
