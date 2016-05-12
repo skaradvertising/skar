@@ -79,68 +79,68 @@
 	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-one" style="background: url('<?php echo $one[2]; ?>') center no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $one[0] ); ?>">
 					<p><?php echo get_the_title( $one[0] ); ?></p>
 					<p><?php echo $one[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $one[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 
 	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-three-sm" style="background: url('<?php echo $three[2]; ?>') 25% no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $three[0] ); ?>">
 					<p><?php echo get_the_title( $three[0] ); ?></p>
 					<p><?php echo $three[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $three[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-two" style="background: url('<?php echo $two[2]; ?>') center no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $two[0] ); ?>">
 					<p><?php echo get_the_title( $two[0] ); ?></p>
 					<p><?php echo $two[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $two[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-three-lg" style="background: url('<?php echo $three[2]; ?>') 25% no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $three[0] ); ?>">
 					<p><?php echo get_the_title( $three[0] ); ?></p>
 					<p><?php echo $three[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $three[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-four" style="background: url('<?php echo $four[2]; ?>') center no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $four[0] ); ?>">
 					<p><?php echo get_the_title( $four[0] ); ?></p>
 					<p><?php echo $four[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $four[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 work-five" style="background: url('<?php echo $five[2]; ?>') center no-repeat; background-size: cover;">
 		<div class="inner-content">
 			<div class="content-container">
-				<a href="#">
+				<a href="<?php echo get_the_permalink( $five[0] ); ?>">
 					<p><?php echo get_the_title( $five[0] ); ?></p>
 					<p><?php echo $five[1]; ?></p>
 				</a>
 			</div>
-			<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			<span><a href="<?php echo get_the_permalink( $five[0] ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>
 	</div>
 
