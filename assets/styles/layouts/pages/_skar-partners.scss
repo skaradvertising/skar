@@ -1,0 +1,49 @@
+.partners-container {
+    background: $skar-green;
+    position: relative;
+    width: 100%;
+
+    .partners-wrapper {
+        padding: 100px 0;
+        max-width: 745px;
+
+        .partners-label {
+            position: relative;
+            display: block;
+
+            span {
+                display: block;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                opacity: 0.3;
+
+                @include MQ(M) {
+                    font-size: 18px;
+                }    
+            }
+        }
+
+        .partners-content {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row; /* works with row or column */
+            flex-direction: row;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .partner {
+                margin: 20px;
+                float: left;
+                display: block;
+                position: relative;
+            }
+        }
+    }
+}

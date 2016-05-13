@@ -5,9 +5,23 @@ jQuery(document).ready(function($){
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
-	// click animation for green arrow button
+	// click animation for green arrow button that turn into x's on click
 	$('.arrow-icon').click(function(){
 		$(this).toggleClass('is-clicked');
+	});
+
+// scroll to top arrow controller
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > $(window).height()) {
+			$('.return-to-top').fadeIn();
+		} else {
+			$('.return-to-top').fadeOut();
+		}
+	});
+
+	$('.return-to-top').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
 	});
 
 	// Function for adjusting font size in fixed height sections with no overflow-y scrolling
@@ -19,5 +33,6 @@ jQuery(document).ready(function($){
 		}
 	}
 
+	//adjustHeights('.skar-content .recent-article .inner-content div:nth-of-type(1) .inner-content-title a')
 	//adjustHeights('body.page-template-template-what-we-do .what-we-do-container .what-we-do-section.two .work-container .work-three-lg .inner-content .content-container p:nth-of-type(1)');
 });

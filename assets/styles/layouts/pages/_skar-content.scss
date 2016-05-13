@@ -141,10 +141,18 @@
 
       					p {
         					color: #593171;
-        					font-size: 45px;
+        					font-size: 36px;
 
         					&::first-line {
           						color: #58595b;
+        					}
+
+        					@media only screen and (min-width: 350px) {
+        						font-size: 41px;
+        					}
+
+        					@media only screen and (min-width: 375px) {
+        						font-size: 45px;
         					}
       					}
     				}

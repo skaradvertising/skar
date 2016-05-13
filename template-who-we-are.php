@@ -28,12 +28,12 @@
 	</section>
 
 	<section class="container-fluid who-we-are-section two">
-		<?php get_template_part( 'templates/skar', 'content' ); ?>
-		<?php get_template_part( 'templates/people', 'slider' ); ?>
+		<div class="row"><?php get_template_part( 'templates/skar', 'content' ); ?></div>
+		<div class="row"><?php get_template_part( 'templates/people', 'slider' ); ?></div>
 	</section>
 
 	<section class="container-fluid who-we-are-section three">
-		
+		<div class="row"><?php get_template_part( 'templates/skar', 'partners' ); ?></div>
 	</section>
 
 </div>

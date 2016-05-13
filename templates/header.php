@@ -1,11 +1,13 @@
 <header class="banner">
     <div class="header-content">
-        <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part( 'templates/svgs/skar', 'logo' ); ?></a>
-        <div class="nav-trigger-container">
-            <span class="email-text">Sign up for email alerts</span><span class="menu-text">Menu</span>
-            <a class="nav-primary-trigger" href="#0">
-                <span class="menu-icon"></span>
-            </a> <!-- primary-nav-trigger -->
+        <div class="row">
+            <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part( 'templates/svgs/skar', 'logo' ); ?></a>
+            <div class="nav-trigger-container">
+                <span class="email-text">Sign up for email alerts</span><span class="menu-text">Menu</span>
+                <a class="nav-primary-trigger" href="#0">
+                    <span class="menu-icon"></span>
+                </a> <!-- primary-nav-trigger -->
+            </div>
         </div>
     </div>
     <nav id="skar-nav" class="nav-overlay">

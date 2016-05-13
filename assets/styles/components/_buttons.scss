@@ -60,7 +60,8 @@
     }
 }
 
-body.page-template-template-what-we-do {
+body.page-template-template-what-we-do,
+body.page-template-template-who-we-are {
 
 	.return-to-top {
 
@@ -70,5 +71,31 @@ body.page-template-template-what-we-do {
 				fill: $skar-green;
 			}
 		}
+	}
+}
+
+.people-slider-arrows {
+	position: absolute;
+	top: 50%;
+	@include transform(translateY(-50%));
+	width: 13px;
+	height: 24px;
+	background: url('/wp-content/uploads/2016/05/people-slider-arrow.png');
+	background-size: cover;
+	z-index: 1;
+	cursor: pointer;
+
+	&.right {
+		right: 20px;
+		@include transform(rotate(180deg));
+	}
+
+	&:nth-of-type(1) {
+		left: 5px;
+	}
+
+	@include MQ(M) {
+		width: 19px;
+		height: 36px;
 	}
 }
