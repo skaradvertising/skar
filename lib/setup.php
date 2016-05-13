@@ -90,6 +90,7 @@ function display_sidebar() {
     is_singular( 'post' ),
     is_page_template('template-what-we-do.php'),
     is_page_template('template-who-we-are.php'),
+    is_singular( 'industries' ),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

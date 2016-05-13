@@ -29,7 +29,6 @@ jQuery(document).ready(function($){
 	  prevArrow: '<span class="people-slider-arrows left” aria-hidden="true"></span>',
 	  nextArrow: '<span class="people-slider-arrows right" aria-hidden="true"></span>',
 
-
 	  // the magic
 	  responsive: [{
 
@@ -74,7 +73,7 @@ jQuery(document).ready(function($){
 
 	    }]
 	});
-	
+
 // auto scroll snapping function controller
 	if($(window).width() > 992) {
 		$(".who-we-are-container").sectionsnap({

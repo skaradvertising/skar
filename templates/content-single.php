@@ -1,6 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php if( is_singular( 'post' ) ) : ?>
 <?php get_template_part( 'templates/single', 'blog-post' ); ?>
+<?php elseif( is_singular( 'industries' ) ) : ?>
+<?php get_template_part( 'templates/single', 'industry-post' ); ?>
 <?php else : ?>
   <article <?php post_class(); ?>>
     <header>
