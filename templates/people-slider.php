@@ -22,9 +22,9 @@
 
 		<div class="person-container">
 		<?php 
-			$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); //get each person image (set as featured image)
+			$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); //get each person' portrait (set as featured image)
 			if( get_field( 'signature' ) ) {
-				$signature = get_field( 'signature' );
+				$signature = get_field( 'signature' ); // set the signature
 			}
 		?>
 			<img class="portrait" src="<?php echo $src[0]; ?>">

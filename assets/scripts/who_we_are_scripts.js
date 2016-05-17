@@ -1,5 +1,8 @@
 jQuery(document).ready(function($){
 
+	var scene = document.getElementById('shifty');
+	var parallax = new Parallax(scene);
+
 	// On swipe event
 	$('.people-slider').on('swipe', function(event, slick, direction){
 	  console.log(direction);
@@ -85,6 +88,7 @@ jQuery(document).ready(function($){
 	}
 
 	$(window).resize(function(){
+		location.reload();
 		if($(window).width() > 992) {
 			$(".who-we-are-container").sectionsnap({
 				delay : 100,

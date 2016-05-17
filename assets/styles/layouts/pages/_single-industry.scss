@@ -1,9 +1,27 @@
 .single-industry-container {
+	padding: 0;
 
-	section {
-		
-		h1 {
-			font-family: 'Formata-Regular';
+	.single-industry-section {
+
+		&.one {
+
+			.row {
+
+				ul#scene {
+					list-style-type: none;
+					padding: 0;
+					margin-bottom: 0;
+
+					li.layer {
+						margin-left: -21px;
+						
+						img {
+							width: calc(100vw + 21px);
+							height: auto;
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -3,6 +3,8 @@
 <?php get_template_part( 'templates/single', 'blog-post' ); ?>
 <?php elseif( is_singular( 'industries' ) ) : ?>
 <?php get_template_part( 'templates/single', 'industry-post' ); ?>
+<?php elseif( is_singular( 'campaigns' ) ) : ?>
+<?php get_template_part( 'templates/single', 'campaigns-post' ); ?>
 <?php else : ?>
   <article <?php post_class(); ?>>
     <header>

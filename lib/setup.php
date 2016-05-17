@@ -91,6 +91,7 @@ function display_sidebar() {
     is_page_template('template-what-we-do.php'),
     is_page_template('template-who-we-are.php'),
     is_singular( 'industries' ),
+    is_singular( 'campaigns' ),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -111,23 +112,32 @@ function assets() {
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
 // Loads the js specific to the home page
-function load_home_js () {
-  if(  is_front_page() ) {
-    wp_enqueue_script('home_scripts', Assets\asset_path('scripts/home_scripts.js'), ['jquery'], null, true);
+if ( ! is_admin() ) {
+  function load_home_js () {
+    if(  is_front_page() ) {
+      wp_enqueue_script('home_scripts', Assets\asset_path('scripts/home_scripts.js'), ['jquery'], null, true);
+    }
   }
-}
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_home_js', 100);
+  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_home_js', 100);
 
-function load_what_we_do_js() {
-  if(  is_page_template('template-what-we-do.php') ) {
-    wp_enqueue_script('what_we_do_scripts', Assets\asset_path('scripts/what_we_do_scripts.js'), ['jquery'], null, true);
+  function load_what_we_do_js() {
+    if(  is_page_template('template-what-we-do.php') ) {
+      wp_enqueue_script('what_we_do_scripts', Assets\asset_path('scripts/what_we_do_scripts.js'), ['jquery'], null, true);
+    }
   }
-}
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_what_we_do_js', 100);
+  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_what_we_do_js', 100);
 
-function load_who_we_are_js() {
-  if(  is_page_template('template-who-we-are.php') ) {
-    wp_enqueue_script('who_we_are_scripts', Assets\asset_path('scripts/who_we_are_scripts.js'), ['jquery'], null, true);
+  function load_who_we_are_js() {
+    if(  is_page_template('template-who-we-are.php') ) {
+      wp_enqueue_script('who_we_are_scripts', Assets\asset_path('scripts/who_we_are_scripts.js'), ['jquery'], null, true);
+    }
   }
+  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_who_we_are_js', 100);
+
+  function load_industry_js() {
+    if(  is_singular( 'industries' ) ) {
+      wp_enqueue_script('industries_scripts', Assets\asset_path('scripts/industries-scripts.js'), ['jquery'], null, true);
+    }
+  }
+  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_industry_js', 100);
 }
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_who_we_are_js', 100);

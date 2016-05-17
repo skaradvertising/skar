@@ -27,6 +27,11 @@
         "scripts/skar-scripts.js"
       ]
     },
+    "industries-scripts.js": {
+      "files": [
+        "scripts/industries-scripts.js"
+      ]
+    },
     "home_scripts.js": {
       "files": [
         "scripts/home_scripts.js"

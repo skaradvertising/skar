@@ -1,53 +1,41 @@
 <?php
 	$args = array(
-		'post_type' => 'work',
+		'post_type' => 'campaigns',
 		'posts_per_page' => -1,
 		'order' => 'ASC'
 	);
 
 	$query = new WP_Query( $args );
-	$work_array = array();
+	$campaign_array = array();
 	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
 
-	// all "Work" post ids
-	$work_array[] = $post->ID;
+	// all "campaign" post ids
+	$campaign_array[] = $post->ID;
 
 	endwhile; wp_reset_postdata(); endif;
 
-	// find the first "work" post that is a featured client. There is only supposed to be one featured post
-	foreach ($work_array as $pid) {
-		if( get_field( 'featured_client', $pid ) ) {
+	// find the first "campaign" post that is a featured campaign. There is only supposed to be one featured post, but if there's more, it picks the most recent
+	foreach ($campaign_array as $pid) {
+		if( get_field( 'featured_home', $pid ) ) {
 			$featured_work = $pid;
 			break; // stops foreach loop once we find the first featured client
 		}
 
-		// if no "work" posts have featured client checked, returns the most recent "work" post
+		// if no "campaign" posts have featured client checked, returns the most recent "campaign" post
 		if( !$featured_work ) {
-			$featured_work = $work_array[0];
+			$featured_work = $campaign_array[0];
 		}
 	}
 ?>
 
-<?php $campaign = get_field( 'campaign', $featured_work ); ?>
-
-<?php // chooses the featured campaign
-	if( have_rows('campaign', $featured_work) ): while( have_rows('campaign', $featured_work) ): the_row();
-
-	if( get_sub_field( 'feature_home' ) ) {
-		$campaign_title = get_sub_field( 'campaign_title' );
-		$campaign_image = get_sub_field( 'campaign_image' );
-	} 
-?>
-
 <?php
-	if( $campaign_image ) {
-		$img_src = $campaign_image['url'];
+	if( get_field( 'campaign_image', $featured_work ) ) {
+		$img = get_field( 'campaign_image', $featured_work );
+		$img_src = $img['url'];
 	} else {
 		$img_src = wp_get_attachment_image_src( get_post_thumbnail_id( $featured_work ), 'full' )[0];
 	}
 ?>
-
-<?php endwhile; endif; ?>
 
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 featured-work" style="background: url('<?php echo $img_src; ?>') no-repeat; background-position: center; background-size: cover;">
 	<div class="inner-content">
@@ -55,8 +43,7 @@
 			<p>featured work</p>
 			<div class="inner-content-title">
 				<p>
-					<span><a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php echo get_the_title( $featured_work ); ?></a></span><br>
-					<span><a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php echo $campaign_title; ?></a></span>
+					<a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php echo get_field( 'campaign_title', $featured_work ); ?></a>
 				</p>
 			</div>
 		</div>

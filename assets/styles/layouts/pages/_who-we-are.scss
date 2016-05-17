@@ -20,7 +20,30 @@ body.page-template-template-who-we-are {
 					height: 100vh;
 				}
 
-				.row {
+				.shifty-images {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+
+					ul {
+						padding: 0;
+						list-style-type: none;
+						margin-left: -10px;
+						width: calc(100vw + 10px);
+
+						li {
+							
+							img {
+								height: 100vh;
+								width: auto;
+							}
+						}
+					}
+				}
+
+				.row-eq-height {
 					margin-top: 10em;
 
 					.section-one-content {
@@ -36,25 +59,33 @@ body.page-template-template-who-we-are {
 							.tag-content {
 								position: relative;
 
-								p {
+								ul {
 									font-size: 36px;
 									font-weight: 700;
 									line-height: 1;
 									margin: 0;
 									background: linear-gradient(rgba(255,255,255, 0), rgba(255,255,255, 0)), rgba(255,255,255,0);
 									padding: 10px;
+									list-style-type: none;
 
-									span:nth-of-type(1) {
-										color: $skar-gray;
-										
-									}
+									li {
+										display: inline;
 
-									span:nth-of-type(2) {
-										color: #593171;
+										&:nth-of-type(1) {
+											color: $skar-gray;
+										}
+
+										&:nth-of-type(2) {
+											color: #593171;
+										}
 									}
 
 									@include MQ(L) {
 										background: linear-gradient(rgba(255,255,255, 0.40), rgba(255,255,255, 0.40)), rgba(255,255,255,0.40);
+										
+										li {
+											display: block;
+										}
 									}
 
 									@include MQ(LL) {

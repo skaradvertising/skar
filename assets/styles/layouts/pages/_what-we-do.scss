@@ -168,11 +168,11 @@ body.page-template-template-what-we-do {
 									font-weight: 700;
 									line-height: 1;
 
-									&:nth-of-type(1) {
+									span:nth-of-type(1) {
 										color: #fff;
 									}
 
-									&:nth-of-type(2) {
+									span:nth-of-type(2) {
 										color: $skar-green;
 									}
 
@@ -190,7 +190,7 @@ body.page-template-template-what-we-do {
 								}
 							}
 
-							span {
+							 .campaign-link {
 								position: absolute;
 								bottom: 4em;
 								left: 0;
