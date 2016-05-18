@@ -43,7 +43,11 @@
 			<p>featured work</p>
 			<div class="inner-content-title">
 				<p>
-					<a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php echo get_field( 'campaign_title', $featured_work ); ?></a>
+					<a href="<?php echo get_the_permalink( $featured_work ); ?>">
+						<span><?php echo get_field( 'campaign_title', $featured_work ); ?></span>
+						<span><?php echo get_the_title( get_field('client_name') ); ?></span>
+						
+						</a>
 				</p>
 			</div>
 		</div>

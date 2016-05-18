@@ -3,8 +3,9 @@
 	    <div class="row">
 	    <?php the_field( 'campaign_title' ); ?>
 	    <?php the_title(); ?>
+	    <?php echo $post->post_name; ?>
 
-	    	<?php the_content(); ?>
+	    	<?php //the_content(); ?>
 		</div>
     </section>
 </div>
