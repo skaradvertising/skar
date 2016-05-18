@@ -13,7 +13,7 @@ function setup() {
   add_theme_support('soil-clean-up');
   add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
+  //add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
   // Make theme available for translation
@@ -92,6 +92,8 @@ function display_sidebar() {
     is_page_template('template-who-we-are.php'),
     is_singular( 'industries' ),
     is_singular( 'campaigns' ),
+    is_page_template('template-get-in-touch.php'),
+    is_page_template('template-careers.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -111,8 +113,8 @@ function assets() {
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
-// Loads the js specific to the home page
 if ( ! is_admin() ) {
+// Loads the js specific to the home page
   function load_home_js () {
     if(  is_front_page() ) {
       wp_enqueue_script('home_scripts', Assets\asset_path('scripts/home_scripts.js'), ['jquery'], null, true);
@@ -140,4 +142,11 @@ if ( ! is_admin() ) {
     }
   }
   add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\load_industry_js', 100);
+
+  /*if( is_page( 12022 ) ) {
+    function reload_jquery() {
+      wp_enqueue_script( 'jquery' );
+    }
+    add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\reload_jquery' );
+  }*/
 }

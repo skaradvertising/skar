@@ -1,0 +1,23 @@
+.careers-container {
+	margin-top: $header-height-S;
+
+	@include MQ(M) {
+		margin-top: $header-height-M;
+	}
+
+	.careers-section {
+
+		.careers-content-wrapper {
+
+			.careers-label {
+				font-size: 45px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			.careers-content {
+
+			}
+		}
+	}
+}
