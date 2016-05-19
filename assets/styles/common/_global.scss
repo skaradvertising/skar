@@ -21,7 +21,7 @@ body {
 		color: $skar-gray;
 		text-decoration: none;
 	
-		&:hover {
+		&:hover, &:focus, &:active, &:visited {
 			color: $skar-purple;
 			text-decoration: none;
 		}

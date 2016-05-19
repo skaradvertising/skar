@@ -1,5 +1,6 @@
 .careers-container {
 	margin-top: $header-height-S;
+	min-height: calc(100vh - 280px);
 
 	@include MQ(M) {
 		margin-top: $header-height-M;
@@ -10,13 +11,125 @@
 		.careers-content-wrapper {
 
 			.careers-label {
-				font-size: 45px;
-				font-weight: 700;
-				text-transform: uppercase;
+				h3 {
+					font-size: 45px;
+					font-weight: 700;
+					text-transform: uppercase;
+					float: left;
+					margin-top: 0; 
+					color: #6d6e71;
+
+					@include MQ(L) {
+						float: right;
+					}
+				}
 			}
 
 			.careers-content {
 
+				p {
+					font-size: 20px;
+					font-weight: 300;
+					line-height: 1.2;
+					color: #6d6e71;
+
+					@include MQ(M) {
+						font-size: 24px;
+					}
+				}
+			}
+
+			.careers-contact {
+				margin-top: 3em;
+
+				.skar-map {
+					padding: 15px;
+					border: 1px solid #b1b1b2;
+
+					&:after, &:before {
+						content:""; 
+						background: #fff; 
+						position: absolute;  
+						left: 0; 
+						right: 0;
+						height: 4px; 
+						width: 30%;
+						margin: 0 auto;
+					}
+					
+					&:before {
+						top: -2px;
+					}
+
+					&:after {
+						bottom: -2px;
+					}
+
+					#wpgmza_map {
+						opacity: 0.6;
+					}
+				}
+
+				.address, .social {
+					margin-top: 3em;
+					margin-bottom: 2em;
+					padding-left: 0;
+
+					@media only screen and (max-width: 355px) {
+						width: 100%;
+						text-align: center;
+					}
+				}
+
+				.address {
+
+					p {
+						margin: 0;
+						line-height: 1.2;
+						font-size: 14px;
+						color: #6d6e71;
+
+						@include MQ(M) {
+							font-size: 18px;
+						}
+					}
+				}
+
+				.social {
+
+					ul {
+						list-style-type: none;
+						padding: 0;
+						float: right;
+
+						@media only screen and (max-width: 355px) {
+							float: none;
+						}
+
+						li {
+							display: inline-block;
+							margin-right: 1em;
+
+							@include MQ(M) {
+								margin-right: 2em;
+							}
+
+							img {
+								height: 35px;
+								width: auto;
+								display: block;
+
+								@include MQ(L) {
+									height: 50px;
+								}
+							}
+
+							&:last-of-type {
+								margin-right: 0;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -2,5 +2,95 @@
 
 	.career-single-post{
 		
+		.career-title {
+			margin: 2em 0;
+			
+			div {
+				float: left;
+
+				&.list-img {
+					margin-right: 1em;
+
+					img {
+						width: 50px;
+						height: auto;
+
+						@include MQ(M) {
+							width: 100%;
+						}
+					}
+				}
+
+				&.list-title {
+					display: block;
+
+					h4 {
+						@include transform(translateY(0));
+
+						@include MQ(M) {
+							@include transform(translateY(100%));
+						}
+
+						a {
+							font-size: 24px;
+							font-weight: 300;
+							color: $skar-black;
+						}
+					}
+				}
+			}
+		}
+
+		.job-content {
+			margin: 2em 0 4em;
+
+			.job-description {
+
+			}
+
+			.job-details-label {
+
+			}
+
+			.job-details {
+
+				ul {
+					font-size: 14px;
+					font-weight: 300;
+					margin: 0.5em 0 1.5em;
+
+					@include MQ(M) {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.job-form {
+				margin: 3em 0;
+
+				h4 {
+					font-size: 20px;
+					font-weight: 300;
+
+					@include MQ(M) {
+						font-size: 24px;
+					}
+				}
+
+				p {
+					margin: 1em 0;
+				}
+			}
+
+			.additional-info {
+				font-size: 20px; 
+				font-weight: 300;
+				color: #6d6e71;
+
+				@include MQ(M) {
+					font-size: 24px;
+				}
+			}
+		}
 	}
 }
