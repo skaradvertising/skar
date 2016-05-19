@@ -1,6 +1,13 @@
 <?php
+	
+	if( is_page( 'Careers' ) ) {
+		$post_type = 'skar-careers';
+	} elseif( is_page( 'Internships' ) ) {
+		$post_type = 'skar-internships';
+	}
+
 	$args = array(
-		'post_type' => 'skar-careers',
+		'post_type' => $post_type,
 		'posts_per_page' => -1,
 		'order' => 'ASC'
 	);
@@ -13,7 +20,7 @@
 <?php while( $query->have_posts() ) : $query->the_post(); ?>
 	<div class="career-single-post">
 		<div class="row career-title">
-		<?php if(get_field('icon_image')) : $src = get_field('icon_image')[0]; else : $src = '/wp-content/uploads/2016/05/green-square.jpg'; endif; ?>
+		<?php if(get_field('icon_image')) : $src = get_field('icon_image')['url']; else : $src = '/wp-content/uploads/2016/05/green-square.jpg'; endif; ?>
 			<div class="list-img">
 				<img class="img-responsive" src="<?php echo $src; ?>" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $post->ID; ?>" aria-expanded="true" aria-controls="collapse<?php echo $post->ID; ?>">
 			</div>

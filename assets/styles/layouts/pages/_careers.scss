@@ -7,8 +7,25 @@
 	}
 
 	.careers-section {
+		margin-top: 3em;
 
-		.careers-content-wrapper {
+		.left-side {
+			margin-bottom: 3em;
+
+			@media only screen and (max-width: 499px) {
+
+				div {
+					width: 100%;
+
+					&.careers-label {
+						
+						h3 {
+							float: none;
+							text-align: center;
+						}
+					}
+				}
+			}
 
 			.careers-label {
 				h3 {
@@ -18,12 +35,28 @@
 					float: left;
 					margin-top: 0; 
 					color: #6d6e71;
+					z-index: 1;
 
-					@include MQ(L) {
+					@include MQ(M) {
 						float: right;
 					}
 				}
 			}
+
+			.left-image {
+				margin-top: 0;
+
+				@include MQ(M) {
+					margin-top: 3em;
+				}
+
+				.cls-1,.cls-2 ,.cls-3, .cls-4 {
+					fill: $skar-purple;
+				}
+			}
+		}
+
+		.careers-content-wrapper {
 
 			.careers-content {
 
@@ -32,6 +65,7 @@
 					font-weight: 300;
 					line-height: 1.2;
 					color: #6d6e71;
+					margin-bottom: 1em;
 
 					@include MQ(M) {
 						font-size: 24px;
@@ -129,6 +163,22 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+body.internships {
+	.careers-container .careers-section .left-side div {
+		@media only screen and (max-width: 680px) {
+			width: 100%;
+
+			&.careers-label {
+						
+				h3 {
+					float: none;
+					text-align: center;
 				}
 			}
 		}
