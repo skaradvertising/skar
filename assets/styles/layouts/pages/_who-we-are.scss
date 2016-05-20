@@ -38,6 +38,11 @@ body.page-template-template-who-we-are {
 							img {
 								height: 100vh;
 								width: auto;
+								//min-width: 100%;
+
+								&#bg-full {
+									min-width: 100%;
+								}
 							}
 						}
 					}

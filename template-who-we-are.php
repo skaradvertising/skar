@@ -19,7 +19,7 @@
 
 			<?php if( get_sub_field( 'bg' ) ) : $img = get_sub_field( 'bg' )['url']; ?>
 
-				<li class="layer" data-depth="<?php echo $data_depth; ?>"><img src="<?php echo $img; ?>"></li>
+				<li class="layer" data-depth="<?php echo $data_depth; ?>"><img id="<?php echo get_sub_field( 'bg' )['title']; ?>" src="<?php echo $img; ?>"></li>
 
 			<?php endif; ?>
 

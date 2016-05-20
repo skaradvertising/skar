@@ -2,6 +2,7 @@
 	padding: 0;
 
 	.single-industry-section {
+		position: relative;
 
 		&.one {
 
@@ -22,6 +23,52 @@
 					}
 				}
 			}
+
+			.section-one-content-container {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
+				.section-one-content-wrapper {
+
+					.industry-title {
+
+						h1 {
+							color: #a7a9ac;
+							text-transform: uppercase;
+							font-size: 45px;
+							font-weight: 700;
+							margin-top: 0;
+							float: none;
+							text-align: center;
+
+							@include MQ(M) {
+								float: right;
+							}
+						}
+					}
+
+					.industry-content {
+
+						p {
+							color: #fff;
+							font-size: 14px;
+							font-weight: 200;
+							line-height: 1.2;
+							margin-bottom: 1.5em;
+
+							@include MQ(M) {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.two {
+
+			
 		}
 	}
 }

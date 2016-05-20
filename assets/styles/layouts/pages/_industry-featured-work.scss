@@ -1,0 +1,84 @@
+.industry-featured-work-container {
+	padding: 0;
+
+	.work-wrapper {
+		height: 660px;
+
+		&.work-one {
+
+			.work-one-content {
+				margin: 4.5em 0 0 4em;
+
+				h1 {
+					margin: 0;
+				
+					a {
+						color: #fff;
+						font-size: 45px;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+
+		&.work-two {
+			background-color: $skar-green;
+
+			.img-container {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+
+				img {
+					position: absolute;
+					bottom: 0;
+				}
+
+				@media only screen and (min-width:610px) and (max-width: 991px) {
+					height: 66.667%;
+					width: 66.667%;
+					margin: 0 auto;
+					top: 33.333%;
+				}
+			}
+
+			.work-two-content {
+				padding: 2.5em;
+
+				h1 {
+					margin: 0;
+					line-height: 1;
+
+					a {
+						font-weight: 700;
+						font-size: 45px;
+						color: $skar-purple;
+					}
+
+					&:first-of-type {
+						
+						a {
+							color: $skar-gray;
+						}
+					}
+				}
+			}
+		}
+
+		&.work-three {
+			
+		}
+
+		&.work-four {
+			background: #bcbec0;
+		}
+
+		&.work-five {
+			
+		}
+	}
+}

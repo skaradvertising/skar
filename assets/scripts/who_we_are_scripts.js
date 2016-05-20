@@ -77,7 +77,6 @@ jQuery(document).ready(function($){
 	    }]
 	});
 
-	var window_size = $(window).width();
 // auto scroll snapping function controller
 	if($(window).width() > 992) {
 		$(".who-we-are-container").sectionsnap({
@@ -89,7 +88,8 @@ jQuery(document).ready(function($){
 	}
 
 	$(window).resize(function(){
-		if($(window).width() > 992 || $(window).width() > window_size) {
+		$(".who-we-are-container").unbind();
+		if($(window).width() > 992) {
 			$(".who-we-are-container").sectionsnap({
 				delay : 100,
 				selector : '.who-we-are-section',
@@ -99,7 +99,6 @@ jQuery(document).ready(function($){
 		} else {
 			location.reload();
 		}
-		window_size = $(window).width();
 	});
 
 });
