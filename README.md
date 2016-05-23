@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [SKAR.com](http://skar.com)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
@@ -136,3 +137,7 @@ Keep track of development and community news.
 * Follow [@rootswp on Twitter](https://twitter.com/rootswp)
 * Read and subscribe to the [Roots Blog](https://roots.io/blog/)
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+=======
+# skar-wordpress
+SKAR WordPress theme
+>>>>>>> 92e27c6d78c0329e34a051df07a7465784ae703b

@@ -35,7 +35,11 @@
 }
 
 #pxd-arrow {
-    width: 50px;
+    width: 35px;
+
+    @include MQ(LL) {
+        width: 50px;
+    }
 
     .cls-1 {
         @include transform(translate(0px, 0px));

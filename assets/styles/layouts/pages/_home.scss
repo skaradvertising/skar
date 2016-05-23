@@ -51,10 +51,10 @@ body.home {
 		height: 100%;
 		width: 100%;
 
-		@media only screen and (min-width: 992px) {
+		/*@media only screen and (min-width: 992px) {
 			width: 100vw;
 			height: 100vh;
-		}
+		}*/
 	}
 
 	.intro {
@@ -250,9 +250,13 @@ body.home {
   		position: relative;
   		margin: 0;
   		@include animation-name(reveal-down);
-  		font-size: 28px;
+  		font-size: 22px;
   		font-family: 'gotham', Arial, Helvetica, sans-serif;
   		font-weight: 300;
+
+  		@include MQ(LL) {
+  			font-size: 28px;
+  		}
 	}
 
 	.mask.intro-content span::after,
@@ -289,7 +293,7 @@ body.home {
 			        	padding: 15px 15px 0 0;
 			      	}
 
-			      	@include MQ(L) {
+			      	@include MQ(LL) {
 			        	padding-top: 75px;
 			      	}
 			    }
@@ -358,220 +362,14 @@ body.home {
     		width: 100%;
   		}
 
-  		/*.skar-content {
-    		height: 100%;
-    		background: #fff;
-
-    		@include MQ(L) {
-     			height: 60vh;
-    		}
-
-    		.case-history, .recent-article, .featured-work {
-      			padding: 0;
-      			height: 100%;
-
-      			.inner-content {
-			        position: relative;
-			        margin: 15px auto;
-			        padding: 0 15px;
-			        max-width: 430px;
-			        height: 480px;
-			        max-height: 100%;
-
-        			@include MQ(L) {
-          				margin: 0 auto;
-          				@include vertical-align();
-        			}
-
-        			div:nth-of-type(1) {
-
-          				p {
-				            font-family: 'gotham', Helvetica, sans-serif;
-				            line-height: 1;
-          				}
-
-          				p:nth-of-type(1) {
-            				font-size: 18px;
-            				text-transform: uppercase;
-            				font-weight: 700;
-          				}
-
-          				.inner-content-title {
-            				height: 150px;
-
-            				p {
-              					font-size: 49px;
-              					font-weight: 700;
-              					text-transform: none;
-            				}
-          				}
-        			}
-
-        			div:nth-of-type(2) {
-          				p {
-            				font-family: 'gotham', Helvetica, sans-serif;
-				            line-height: 1.2;
-				            font-size: 14px;
-				            font-weight: 300;
-				            color: #414042;
-          				}
-
-          				@include MQ(L) {
-            				margin-top: 40px;
-            				font-size: 17px;
-          				}
-        			}
-
-        			div:nth-of-type(3) {
-          				position: absolute;
-          				bottom: 0;
-          				left: 0;
-          				right: 0;
-          				text-align: center;
-
-          				span {
-
-            				#alt-arrow {
-              					@include transform(rotate(270deg));
-              					width: 50px;
-            				}
-          				}
-        			}
-      			}
-    		}
-
-    		.case-history {
-      			background: #e6e7e8;
-
-      			.inner-content {
-
-        			div:nth-of-type(1) {
-          
-          				p:nth-of-type(1) {
-            				color: #d1d3d4;
-          				}
-
-	          			.inner-content-title {
-
-	            			p {
-
-	              				span:nth-of-type(1) {
-	                				color: #58595b;
-	              				}
-
-	              				span:nth-of-type(2) {
-	                				color: $skar-green;
-	              				}
-	            			}
-	          			}
-        			}
-
-        			div:nth-of-type(2) {}
-
-        			div:nth-of-type(3) {
-
-          				span {
-
-            				#alt-arrow {
-            					width: 50px;
-
-              					.cls-1 {
-                					fill: $skar-green;
-              					}
-            				}
-          				}
-        			}
-      			}
-    		}
-
-    		.recent-article {
-      			background: #a7a9ac;
-
-      			.inner-content {
-
-        			div:nth-of-type(1) {
-          
-          				p:nth-of-type(1) {
-            				color: #939598;
-          				}
-
-          				.inner-content-title {
-
-            				a {
-
-              					p {
-                					color: #593171;
-                					font-size: 45px;
-
-                					&::first-line {
-                  						color: #58595b;
-                					}
-              					}
-            				}
-          				}
-        			}
-        
-        			div:nth-of-type(3) {
-
-          				span {
-
-            				#alt-arrow {
-
-              					.cls-1 {
-                					fill: #593170;
-              					}
-            				}
-          				}
-        			}
-      			}
-    		}
-
-    		.featured-work {
-      			background-size: cover;
-
-      			.inner-content {
-        
-        			div:nth-of-type(1) {
-
-          				p:nth-of-type(1) {
-            				color: #58595b;
-          				}
-
-          				.inner-content-title {
-
-            				p {
-              
-              					span:nth-of-type(1) {
-                
-                					a {
-                						color: #fff;
-                					}
-              					}
-
-              					span:nth-of-type(2) {
-                
-                					a {
-                						color: $skar-green;
-                					}
-              					}
-            				}
-          				}
-        			}
-        			
-        			div:nth-of-type(3) {}
-      			}
-    		}
-  		}*/
-
   		.section-3-bottom {
 		    background: $skar-green;
 		    height: 480px;
 
-		    @include MQ(L) {
+		   /* @include MQ(LL) {
 		      	height: 40vh;
-		    }
-   
-    
+		    }*/
+
     		.container {
       			position: absolute;
       			left: 0;

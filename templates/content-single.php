@@ -5,6 +5,8 @@
 <?php get_template_part( 'templates/single', 'industry-post' ); ?>
 <?php elseif( is_singular( 'campaigns' ) ) : ?>
 <?php get_template_part( 'templates/single', 'campaigns-post' ); ?>
+<?php elseif( is_singular( 'work' ) ) : ?>
+<?php get_template_part( 'templates/single', 'work-post' ); ?>
 <?php else : ?>
   <article <?php post_class(); ?>>
     <header>

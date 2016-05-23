@@ -81,7 +81,7 @@ jQuery(document).ready(function($){
 	if($(window).width() > 992) {
 		$(".who-we-are-container").sectionsnap({
 			delay : 100,
-			selector : '.who-we-are-section',
+			selector : '.auto-scroll',
 			reference : 0.9, 
 			animationTime : 600,
 		});
@@ -92,7 +92,7 @@ jQuery(document).ready(function($){
 		if($(window).width() > 992) {
 			$(".who-we-are-container").sectionsnap({
 				delay : 100,
-				selector : '.who-we-are-section',
+				selector : '.auto-scroll',
 				reference : 0.9, 
 				animationTime : 600,
 			});

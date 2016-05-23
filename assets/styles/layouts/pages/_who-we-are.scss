@@ -51,7 +51,18 @@ body.page-template-template-who-we-are {
 				.row-eq-height {
 					margin-top: 10em;
 
+					.empty-section {
+
+						@media only screen and (min-width: 992px) and (max-width: 1285px) {
+							width: 33.33333%
+						}
+					}
+
 					.section-one-content {
+
+						@media only screen and (min-width: 992px) and (max-width: 1285px) {
+							width: 66.6666667%
+						}
 
 						.tag-line {
 							max-width: 100%;

@@ -75,6 +75,75 @@
 
 		&.work-four {
 			background: #bcbec0;
+
+			.work-four-wrapper {
+				padding: 1em;
+
+				@include MQ(M) {
+					padding: 2em;
+				}
+
+				@include MQ(LL) {
+					padding: 3em;
+				}
+
+				h1 {
+					margin: 0;
+					line-height: 1;
+					
+					a {
+						font-size: 36px;
+						font-weight: 700;
+						color: $skar-purple;
+						line-height: 1;
+					}
+
+					&:first-of-type {
+						a {
+							color: $skar-gray;
+						}
+					}
+
+					@include MQ(M) {
+						font-size: 40px;
+					}
+
+					@include MQ(LL) {
+						font-size: 45px;
+					}
+				}
+
+				.blog-post-excerpt {
+					margin-top: 2em;
+					padding: 0;
+
+					p {
+						font-size: 14px;
+						font-weight: 300;
+						line-height: 1.2;
+						color: $skar-gray;
+					}
+
+					@include MQ(M) {
+						margin-top: 1em;
+
+						p {
+							font-size: 16px;
+						}
+					}
+
+					@include MQ(LL) {
+
+						p {
+							font-size: 18px;
+						}
+					}
+
+					@include MQ(L) {
+						margin-top: 3em;
+					}
+				}
+			}
 		}
 
 		&.work-five {

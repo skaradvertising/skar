@@ -18,8 +18,8 @@
 
 		<?php endif; ?>
 		</div>
-		<div class="section-one-content-container">
-			<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12"></div>
+		<div class="section-one-content-container row-eq-height">
+			<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 empty-section"></div>
 			<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 section-one-content-wrapper">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 industry-title">
 					<?php the_title( '<h1>', '</h1>' ); ?>

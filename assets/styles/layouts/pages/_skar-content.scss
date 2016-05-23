@@ -2,26 +2,30 @@
 	height: 100%;
 	background: #fff;
 
-	@include MQ(L) {
+	/*@include MQ(LL) {
 			height: 60vh;
-	}
+	}*/
 
 	.case-history, .recent-article, .featured-work {
 		padding: 0;
 		height: 100%;
+    min-height: 480px;
 
 		.inner-content {
 	        position: relative;
 	        margin: 15px auto;
-	        padding: 0 15px;
+	        padding: 15px;
 	        max-width: 430px;
 	        height: 480px;
 	        max-height: 100%;
 
-			@include MQ(L) {
+         /* @include MQ(L) {
+            @include vertical-align();
+          }*/
+
+		/*	@include MQ(LL) {
   				margin: 0 auto;
-  				@include vertical-align();
-			}
+			}*/
 
 			div:nth-of-type(1) {
 
@@ -37,12 +41,16 @@
   				}
 
   				.inner-content-title {
-    				height: 150px;
+    				//height: 150px;
 
     				p {
-      					font-size: 49px;
+      					font-size: 40px;
       					font-weight: 700;
       					text-transform: none;
+
+                @include MQ(LL) {
+                  font-size: 49px;
+                }
     				}
   				}
 			}
@@ -56,7 +64,7 @@
 		            color: #414042;
   				}
 
-  				@include MQ(L) {
+  				@include MQ(LL) {
     				margin-top: 40px;
     				font-size: 17px;
   				}
@@ -147,12 +155,9 @@
           						color: #58595b;
         					}
 
-        					@media only screen and (min-width: 350px) {
-        						font-size: 41px;
-        					}
 
         					@media only screen and (min-width: 375px) {
-        						font-size: 45px;
+        						font-size: 40px;
         					}
       					}
     				}

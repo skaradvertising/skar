@@ -72,3 +72,51 @@
 		}
 	}
 }
+
+body.nonprofit, body.retail {
+
+	.single-industry-container .single-industry-section.one .section-one-content-container {
+		top: 2em;
+
+		.empty-section {
+			display: none;
+		}
+
+		.section-one-content-wrapper {
+
+			.industry-title {
+				width: 100%;
+
+				h1 {
+					color: $skar-gray;
+					float: none;
+				}
+			}
+
+			.industry-content {
+				width: 100%;
+
+				p {
+					//color: $skar-gray;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
+
+body.health-care {
+	.single-industry-container .single-industry-section.one .section-one-content-container {
+		top: 2em;
+
+		.section-one-content-wrapper  {
+
+			.industry-title {
+
+				h1 {
+					color: $skar-gray;
+				}
+			}
+		}
+	}
+}

@@ -54,13 +54,14 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-four-wrapper">
 				<h1><a href="<?php the_permalink(); ?>"><?php echo $category_name->name; ?></a></h1>
 				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-
-				<?php the_excerpt(); ?>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blog-post-excerpt">
+					<?php the_excerpt(); ?>
+				</div>
 			</div>
 
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: url('/wp-content/uploads/2016/05/featured-work-section-five.jpg') center no-repeat; background-size: cover;">
 		
 		</div>
 	</div>

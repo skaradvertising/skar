@@ -69,7 +69,7 @@
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 
-	<section class="home-section section three">
+	<section class="home-section three">
 		<?php get_template_part( 'templates/skar', 'content' ); ?>
 
 		<div class="section-3-bottom">
