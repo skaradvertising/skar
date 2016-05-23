@@ -1,1 +1,1 @@
-<h1>SINGLE WORK</h1>
+<h1><?php the_title(); ?></h1>
