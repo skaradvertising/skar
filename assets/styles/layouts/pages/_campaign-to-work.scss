@@ -1,0 +1,68 @@
+.work-posts-container, .single-campaign-container {
+	padding: 0;
+
+	.single-campaign-wrapper {
+		margin-bottom: 15em;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	
+		.campaign-label {
+
+			.campaign-title {
+				
+				h1 {
+					margin: 0;
+					font-weight: 700;
+					font-size: 40px;
+					color: #593171;
+					line-height: 1;
+					text-align: center;
+					text-transform: uppercase;
+
+					@include MQ(L) {
+						text-align: left;
+					}
+				}
+			}
+
+			.campaign-description {
+
+				p {
+					font-size: 14px;
+					font-weight: 200;
+					color: #414042;
+					line-height: 1.2;
+
+					@include MQ(M) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+
+		.campaign-row {
+
+			background-color: #fff;
+
+			&:nth-of-type(even) {
+				background-color: #f1f2f2;
+			}
+
+			.campaign-row-type {
+				margin-bottom: 3em;
+				
+				span {
+					background-color: #593171;
+					color: #fff;
+					font-size: 18px;
+					font-weight: 200;
+					padding: 10px 30px;
+					display: table;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

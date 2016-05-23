@@ -35,4 +35,8 @@ jQuery(document).ready(function($){
 
 	//adjustHeights('.skar-content .recent-article .inner-content div:nth-of-type(1) .inner-content-title a')
 	//adjustHeights('body.page-template-template-what-we-do .what-we-do-container .what-we-do-section.two .work-container .work-three-lg .inner-content .content-container p:nth-of-type(1)');
+
+	if ($('body').hasClass('frontend')) {
+		$(".campaign-row-content").fitVids();
+	}
 });

@@ -1,5 +1,20 @@
-<div class="container-fluid single-campaign-container">
-    <div id="post-<?php echo $post->ID; ?>" class="row single-campaign-wrapper">
+<?php
+// Find connected pages
+$connected = new WP_Query( array(
+  'connected_type' => 'work_to_campaign',
+  'connected_items' => get_queried_object(),
+  'nopaging' => true,
+) );
+
+// Display connected pages
+if ( $connected->have_posts() ) :
+?>
+<div class="container-fluid work-posts-container">
+<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+
+<?php if( get_field( 'include' ) ) : ?>
+
+	<div id="post-<?php echo $post->ID; ?>" class="row single-campaign-wrapper">
 		
 		<div class="container campaign-label">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 campaign-title">
@@ -19,4 +34,15 @@
 	<?php endwhile; endif; ?>
 		
 	</div>
+
+<?php endif; ?>
+
+<?php endwhile; ?>
 </div>
+
+<?php 
+// Prevent weirdness
+wp_reset_postdata();
+
+endif;
+?>
