@@ -1,9 +1,38 @@
 <div class="container-fluid industry-featured-work-container">
 	<div class="row">
-		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: url('/wp-content/uploads/2016/05/feattured-work.jpg') center no-repeat; background-size: cover;">
+
+	<?php
+		$current_page = $post->post_name;
+		$post_ids = array();
+		$args = array(
+			'post_type' => 'campaigns',
+			'posts_per_page' => -1,
+			'order' => 'DESC',
+		);
+		$query = new WP_Query( $args );
+		if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+			if( get_field('industry')[0]->post_name == $current_page ) {
+				$post_ids[] = $post->ID;
+				if( get_field( 'include_industry' ) ) {
+					$featured_work_id = $post->ID;
+				} else {
+					$featured_work_id = $post_ids[0];
+				}
+			}
+		endwhile;
+
+			$client_name = get_the_title(get_field( 'client_name', $featured_work_id )[0]);
+			$campaign_title = get_field( 'campaign_title', $featured_work_id );
+			$campaign_image = get_field( 'campaign_image', $featured_work_id )['url'];
+			$permalink = get_permalink( $featured_work_id );
+
+		wp_reset_postdata(); endif;
+ 	?>
+
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: url('<?php echo $campaign_image; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-one-content">
-				<h1><a href="#">Featured Work</a></h1>
-				<h1><a href="#">OPPD</a></h1>
+				<h1><a href="<?php echo $permalink; ?>">Featured Work</a></h1>
+				<h1><a href="<?php echo $permalink; ?>""><?php echo $client_name; ?></a></h1>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-two">

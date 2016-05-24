@@ -95,6 +95,7 @@ function display_sidebar() {
     is_singular( 'work' ),
     is_page_template('template-get-in-touch.php'),
     is_page_template('template-careers.php'),
+    is_tax( 'work-categories' ),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

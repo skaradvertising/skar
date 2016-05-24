@@ -83,6 +83,8 @@
 
 	&.menu-is-open {
 		position: fixed;
+		@include transform(translate3d(0,0,0));
+		top: 0;
 	}
 }
 

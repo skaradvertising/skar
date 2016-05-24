@@ -2,7 +2,6 @@
 	$args = array(
 		'post_type' => 'services',
 		'posts_per_page' => -1,
-		'order' => 'DESC'
 	);
 	
 	$query = new WP_Query( $args );
@@ -23,7 +22,14 @@
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 service-container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 service-square">
-					<img src="/wp-content/uploads/2016/05/green-square.jpg">
+				<?php 
+					if ( get_field( 'icon' ) ) {
+						$src = get_field( 'icon' )['url'];
+					} else {
+						$src = '/wp-content/uploads/2016/05/green-square.jpg';
+					}
+				?>
+					<img src="<?php echo $src; ?>">
 				</div>
 				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 service-content">
 					<p><?php the_title(); ?></p>

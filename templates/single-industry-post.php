@@ -25,12 +25,7 @@
 					<?php the_title( '<h1>', '</h1>' ); ?>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 industry-content">
-					<p>
-						Are you looking to maximize customer acquisition while minimizing attrition? Great. Because that's one of the many things we help our financial clients do, along with implementing new ways to help increase deposits and drive cross-selling of products.
-					</p>
-					<p>
-						Interested in learning more? Then it's time to get in touch.
-					</p>
+					<?php the_content(); ?>
 				</div>
 			</div>
 		</div>

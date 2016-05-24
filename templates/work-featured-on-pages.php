@@ -6,7 +6,7 @@
 		'order' => 'ASC',
 		'tax_query' => array(
 			array(
-				'taxonomy' => 'work',
+				'taxonomy' => 'work-categories',
 				'field' => 'slug',
 				'terms' => 'featured'
 			),

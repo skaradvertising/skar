@@ -83,23 +83,141 @@ body.nonprofit, body.retail {
 		}
 
 		.section-one-content-wrapper {
+			width: 100%;
+		}
+	}
+}
 
-			.industry-title {
-				width: 100%;
+body.regional-brands {
+
+	.single-industry-container .single-industry-section.one .section-one-content-container {
+		top: 2em;
+		
+		.empty-section {
+			display: none;
+		}
+
+		.section-one-content-wrapper {
+			
+			float: right;
+			width: 100%;
+
+			@include MQ(M) {
+				width: 75%;
+			}
+
+			@include MQ(LL) {
+				width: 60%;
+			}
+
+			.industry-title { 
 
 				h1 {
-					color: $skar-gray;
-					float: none;
+					text-align: left;
+					color: #593171;
+					float: right;
+
+					&::first-line {
+						color: #58595b;
+					}
+					
 				}
 			}
 
 			.industry-content {
-				width: 100%;
+				max-width: 800px;
 
 				p {
-					//color: $skar-gray;
+					color: #58595b;
 					font-weight: 300;
 				}
+			}
+		}
+	}
+
+}
+
+body.nonprofit {
+	.single-industry-container .single-industry-section.one .section-one-content-container .section-one-content-wrapper {
+		.industry-title {
+			width: 100%;
+
+			@include MQ(MS) {
+				width: 40%
+			}
+
+			@include MQ(M) {
+				width: 25%;
+			}
+
+			h1 {
+				text-align: left;
+				color: #593171;
+				float: none;
+
+				&::first-line {
+					color: #58595b;
+				}
+				
+			}
+		}
+
+		.industry-content {
+			width: 100%;
+			max-width: 800px;
+
+			@include MQ(MS) {
+				width: 50%
+			}
+
+			@include MQ(M) {
+				width: 65%;
+			}
+
+			p {
+				color: #58595b;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+body.retail { 
+	.single-industry-container .single-industry-section.one .section-one-content-container .section-one-content-wrapper {
+
+		.industry-title {
+			width: 100%;
+
+			@include MQ(MS) {
+				width: 40%
+			}
+
+			@include MQ(M) {
+				width: 25%;
+			}
+
+			h1 {
+				text-align: left;
+				color: #593171;
+				float: right;
+			}
+		}
+
+		.industry-content {
+			width: 100%;
+			max-width: 800px;
+
+			@include MQ(MS) {
+				width: 50%
+			}
+
+			@include MQ(M) {
+				width: 65%;
+			}
+
+			p {
+				color: #58595b;
+				font-weight: 300;
 			}
 		}
 	}
@@ -114,7 +232,12 @@ body.health-care {
 			.industry-title {
 
 				h1 {
-					color: $skar-gray;
+					text-align: left;
+					color: #593171;
+
+					&::first-line {
+						color: #58595b;
+					}
 				}
 			}
 		}
