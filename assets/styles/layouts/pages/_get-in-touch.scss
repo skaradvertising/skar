@@ -50,6 +50,11 @@
 			}
 
 			.in-touch-content {
+				padding: 0 15px 0 0;
+
+				@include MQ(M) {
+					padding: 0 45px 0 0;
+				}
 
 				.tag-line {
 					font-size: 20px;
@@ -70,7 +75,21 @@
 					margin-bottom: 45px;
 
 					@include MQ(M) {
-						font-size: 18px;
+						font-size: 16px;
+					}
+				}
+
+				.skar-contact-form {
+					padding: 0;
+
+					p {
+
+						span {
+
+							input, textarea {
+								width: 100%;
+							}
+						}
 					}
 				}
 

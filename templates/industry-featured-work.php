@@ -95,3 +95,7 @@
 		</div>
 	</div>
 </div>
+<div class="row more-posts">
+	<p><a href="<?php echo '/category/' . $category_name->slug; ?>">More <?php echo $category_name->name; ?> Insights</a></p>
+
+</div>

@@ -66,7 +66,6 @@ body.page-template-template-who-we-are {
 
 						.tag-line {
 							max-width: 100%;
-							//mix-blend-mode: color-burn;
 
 							@include MQ(L) {
 								max-width: 400px;
@@ -130,15 +129,14 @@ body.page-template-template-who-we-are {
 								
 
 								p {
-									font-size: 18px;
-									font-family: 'Gotham Book', 'gotham', 'Helvetica', sans-serif;
-									font-weight: normal;
+									font-size: 14px;
+									font-weight: 300;
 									line-height: 1.2;
 									margin-bottom: 1em;
 									padding: 10px;
 
 									@include MQ(M) {
-										font-size: 18px;
+										font-size: 16px;
 									}
 								}
 
@@ -169,18 +167,34 @@ body.page-template-template-who-we-are {
 								}
 
 								@include MQ(M) {
-									font-size: 18px;
+									font-size: 16px;
 								}
 							}
 
 							@include MQ(L) {
 								margin-top: 0;
+								padding-right: 45px;
 							}
 
 							@include MQ(LL) {
 								background: none;
 							}
 						}
+					}
+				}
+
+				.scroll-down-container {
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 50px;
+					width: 50px;
+					margin: 0 auto;
+
+					.scroll-down {
+						position: relative;
+						display: inline-block;
+						margin: 0 auto;
 					}
 				}
 			}

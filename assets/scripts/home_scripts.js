@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 // auto scroll snapping function controller
-	if($(window).width() > 992) {
+	/*if($(window).width() > 992) {
 		$(".scrolling-home-container").sectionsnap({
 			delay : 100,
 			selector : '.section',
@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 				animationTime : 600,
 			});
 		}
-	});
+	});*/
 
 	
 // scroll down click controller

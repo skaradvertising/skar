@@ -1,0 +1,71 @@
+.single-people-page-container {
+
+	section {
+		max-width: 100%;
+	}
+
+	.person-section-one {
+
+
+	}
+
+	.person-section-two {
+
+		.person-article-container {
+			margin: 3em 0;
+			border-bottom: 1px solid #e6e7e8;
+
+			.person-article-title {
+				h1{
+					float: none;
+					text-align: center;
+
+					a {
+						font-size: 36px;
+						font-weight: 700;
+						color: #58595b;
+					}
+				
+					@include MQ(M) {
+						float: left;
+						text-align: left;
+
+						a {
+							font-size: 45px;
+						}
+					}
+				}
+			}
+
+			.person-article-content {
+
+				p {
+					font-size: 14px;
+					font-weight: 300;
+
+					@include MQ(M) {
+						font-size: 16px;
+					}
+				}
+			}
+
+			&:first-of-type {
+				display: none;
+			}
+
+			&:first-of-type, &:last-of-type {
+				border-bottom: none;
+			}
+		}
+
+		.navigation {
+
+			p {
+				text-align: center;
+				font-size: 28px;
+				font-weight: 200;
+				color: $skar-black;
+			}
+		}
+	}
+}

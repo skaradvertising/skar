@@ -15,7 +15,7 @@
 <div class="people-container">
 	<div class="people-slider-label">
 		<span>our people</span>
-		<span>Sign up for email alerts</span>
+		<span role="button" class="email-text" data-toggle="modal" data-target="#email-alerts">Sign up for email alerts</span>
 	</div>
 	<div class="people-slider">
 	<?php while( $query->have_posts() ) : $query->the_post(); ?>
@@ -28,7 +28,7 @@
 			}
 		?>
 			<img class="portrait" src="<?php echo $src[0]; ?>">
-			<img class="signature" src="<?php echo $signature['url']; ?>">
+			<a href="<?php the_permalink(); ?>"><img class="signature" src="<?php echo $signature['url']; ?>"></a>
 		</div>
 
 	<?php endwhile; ?>

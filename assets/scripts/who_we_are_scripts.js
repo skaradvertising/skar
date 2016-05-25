@@ -78,7 +78,7 @@ jQuery(document).ready(function($){
 	});
 
 // auto scroll snapping function controller
-	if($(window).width() > 992) {
+	/*if($(window).width() > 992) {
 		$(".who-we-are-container").sectionsnap({
 			delay : 100,
 			selector : '.auto-scroll',
@@ -99,6 +99,12 @@ jQuery(document).ready(function($){
 		} else {
 			location.reload();
 		}
+	});*/
+
+	// scroll down arrow click controller
+	$('.scroll-down').click(function(){
+		$('html, body').animate({scrollTop : $('.two').offset().top}, 800);
+		return false;
 	});
 
 });

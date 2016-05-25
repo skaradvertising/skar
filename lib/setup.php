@@ -93,6 +93,7 @@ function display_sidebar() {
     is_singular( 'industries' ),
     is_singular( 'campaigns' ),
     is_singular( 'work' ),
+    is_singular( 'people' ),
     is_page_template('template-get-in-touch.php'),
     is_page_template('template-careers.php'),
     is_tax( 'work-categories' ),

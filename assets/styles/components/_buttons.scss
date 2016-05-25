@@ -61,8 +61,7 @@
     }
 }
 
-body.page-template-template-what-we-do,
-body.page-template-template-who-we-are {
+body.page-template-template-what-we-do {
 
 	.return-to-top {
 
@@ -70,6 +69,19 @@ body.page-template-template-who-we-are {
 
 			.cls-1 {
 				fill: $skar-green;
+			}
+		}
+	}
+}
+
+body.page-template-template-who-we-are {
+
+	.return-to-top {
+
+		#alt-arrow {
+
+			.cls-1 {
+				fill: #593171;
 			}
 		}
 	}

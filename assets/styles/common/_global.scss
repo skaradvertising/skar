@@ -44,4 +44,8 @@ body {
 			}
 		}
 	}
+
+	.modal.in .modal-dialog {
+		@include transform(translateY(50%));
+	}
 }

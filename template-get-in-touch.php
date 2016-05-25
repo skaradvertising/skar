@@ -18,6 +18,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 in-touch-content">
 				<div class="tag-line"><?php the_field( 'tag_line' ); ?></div>
 				<div class="main-content-area"><?php the_field( 'main_content' ); ?></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skar-contact-form"><?php the_field( 'contact_form' ); ?></div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 skar-map"><?php the_field( 'map' ); ?></div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 address"><?php the_field( 'address' ); ?></div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social">

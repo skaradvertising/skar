@@ -43,6 +43,19 @@
                 float: left;
                 display: block;
                 position: relative;
+
+                img {
+                    width: 170px;
+                    height: auto;
+                }
+
+                a {
+
+                    img {
+                        width: 170px;
+                        height: auto;
+                    }
+                }
             }
         }
     }

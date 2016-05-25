@@ -57,18 +57,30 @@
 		}
 
 		.careers-content-wrapper {
+			padding: 0 15px;
 
+			@include MQ(M) {
+				padding: 0 60px 0 15px;
+			}
+ 
 			.careers-content {
 
 				p {
-					font-size: 20px;
+					font-size: 14px;
 					font-weight: 300;
 					line-height: 1.2;
 					color: #6d6e71;
 					margin-bottom: 1em;
 
 					@include MQ(M) {
-						font-size: 24px;
+						font-size: 16px;
+					}
+
+					&.not-hiring {
+						font-weight: 500;
+						line-height: 1.2;
+						color: $skar-black;
+						margin-bottom: 1em;
 					}
 				}
 			}

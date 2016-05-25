@@ -301,6 +301,7 @@ body.home {
 			    .headline-content {
 
 			      	p {
+			      		float: none;
 			        	font-size: 45px;
 				        font-weight: 700;
 				        color: #58595b;
@@ -318,7 +319,7 @@ body.home {
 		          		}
 
 			        	@include MQ(M) {
-			          		font-size: 3.75vw;
+			        		float: right;
 			          		margin: 0;
 			          		text-align: left;
 			          		display: block;
@@ -329,11 +330,16 @@ body.home {
 			    .main-page-content {
 
 			      	p {
-				        font-size: 17px;
+				        font-size: 14px;
 				        font-weight: 300;
 				        color: #58595b;
 				        background: #fff;
-				        padding: 10px;
+				        padding: 10px 20px 10px 10px;
+
+				        @include MQ(MS) {
+				        	font-size: 16px;
+				        	 padding: 10px 30px 10px 10px;
+				        }
 			      	}	
 			    	
 			    	.paper-airplane {

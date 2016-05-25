@@ -16,9 +16,19 @@ body.page-template-template-what-we-do {
 
 			&.one {
 				height: 100vh;
-				background-size: cover;
+				overflow: hidden;
+				
+				.image-layers {
+					position: absolute;
+					top: 0;
+					left: 0;
 
-				.row {
+					ul {
+						padding: 0;
+					}
+				}
+
+				.row-eq-height {
 					margin-top: 10em;
 
 					.section-1-div-1, .section-1-div-2 {
@@ -32,20 +42,20 @@ body.page-template-template-what-we-do {
 					}
 
 					.section-1-div-1 {
-						 background: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255, 0.15)), rgba(255,255,255,0.15);
+						 //background: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255, 0.15)), rgba(255,255,255,0.15);
 
 						p {
 							font-size: 30px;
 							font-weight: 500;
 							text-transform: uppercase;
-							line-height: 1.2;
+							line-height: 1;
 
 							@include MQ(L) {
-								font-size: 3vmin;
+								//font-size: 3vmin;
 							}
 
 							&:nth-of-type(1) {
-								color: #231f20;
+								color: #fff;
 							}
 
 							&:nth-of-type(2) {
@@ -74,8 +84,23 @@ body.page-template-template-what-we-do {
 							padding: 0 1em;
 
 							@include MQ(L) {
-								font-size: 18px;
+								font-size: 16px;
 							}
+						}
+					}
+
+					.scroll-down-container {
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 50px;
+						width: 50px;
+						margin: 0 auto;
+
+						.scroll-down {
+							position: relative;
+							display: inline-block;
+							margin: 0 auto;
 						}
 					}
 				}

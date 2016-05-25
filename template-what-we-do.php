@@ -4,10 +4,23 @@
  */
 ?>
 <div class="what-we-do-container">
-	<?php // featured image as background
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-	?>
-	<section class="container-fluid what-we-do-section one" style="background: url('<?php echo $src[0]; ?>') no-repeat center; background-size: cover;">
+	<section class="container-fluid what-we-do-section one">
+	<?php if( have_rows( 'background' ) ) : $data_depth = 0; ?>
+		<div class="row image-layers">
+	        <ul id="scene">
+
+	        <?php while( have_rows( 'background' ) ) : the_row(); ?>
+
+	        	<?php if( get_sub_field( 'layer' ) ) : $img = get_sub_field( 'layer' )['url']; ?>
+
+	        		<li class="layer" data-depth="<?php echo $data_depth; ?>"><img src="<?php echo $img; ?>"></li>
+
+				<?php endif; ?>
+			<?php $data_depth += 0.03; endwhile; ?>
+
+			</ul>
+		</div>
+	<?php endif; ?>
 		<div class="row row-eq-height">
 			<div class="col-lg-6 col-md-6"></div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -20,6 +33,9 @@
 					<p>We're experts in the health care, financial and retail industries while also working with dozens of other regional and nonprofit brands.</p>
 				</div>
 			</div>
+			<p class="scroll-down-container">
+				<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
+			</p>
 		</div>
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>

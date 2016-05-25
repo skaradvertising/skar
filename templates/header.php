@@ -3,7 +3,7 @@
         <div class="row">
             <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part( 'templates/svgs/skar', 'logo' ); ?></a>
             <div class="nav-trigger-container">
-                <span class="email-text">Sign up for email alerts</span><span class="menu-text">Menu</span>
+                <span role="button" class="email-text" data-toggle="modal" data-target="#email-alerts">Sign up for email alerts</span><span class="menu-text">Menu</span>
                 <a class="nav-primary-trigger" href="#0">
                     <span class="menu-icon"></span>
                 </a> <!-- primary-nav-trigger -->

@@ -45,6 +45,9 @@
 				</div>
 			</div>
 		</div>
+		<p class="scroll-down-container">
+			<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
+		</p>
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 

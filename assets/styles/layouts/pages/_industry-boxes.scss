@@ -81,10 +81,18 @@
               @media screen and (min-width:885px) {
                 @include transform(translateY(0));
               }
+
+              a {
+
+                img {
+                  max-width: 92px;
+                }
+              }
             }
 
         		.text-content {
           		padding: 0 0 0 8px;
+              width: 100%;
 
           		p {
             			position: relative;

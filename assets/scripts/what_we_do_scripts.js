@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 // auto scroll snapping function controller
-	if($(window).width() > 992) {
+	/*if($(window).width() > 992) {
 		$(".what-we-do-container").sectionsnap({
 			delay : 100,
 			selector : '.what-we-do-section',
@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
 				animationTime : 600,
 			});
 		}
-	});
+	});*/
 
 	
 // scroll down arrow click controller
@@ -28,5 +28,8 @@ jQuery(document).ready(function($){
 		$('html, body').animate({scrollTop : $('.two').offset().top}, 800);
 		return false;
 	});
+
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
 
 });
