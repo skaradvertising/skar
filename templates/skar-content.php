@@ -4,31 +4,37 @@
 		<?php
 			$case_args = array(
 				'post_type' => 'case-studies',
-				'posts_per_page' => 1,
+				'posts_per_page' => -1,
 				'order' => 'DESC'
 			);
 			$case_query = new WP_Query( $case_args );
 			if( $case_query->have_posts() ) : while( $case_query->have_posts() ) : $case_query->the_post();
+			if( 'featured' ) :
+				$client_name = get_field( 'client_name' );
+				$case_title = get_field( 'case_title' );
+				$excerpt = get_field( 'excerpt' );
+				$permalink = get_the_permalink();
+				endif;
+				endwhile; wp_reset_postdata(); endif;
 		?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p>case history</p>
 				<div  class="inner-content-title">
 				
 					<p>
-						<span><?php the_field( 'client_name' ); ?></span>
-						<span><?php the_field( 'case_title' ); ?>:</span>
+						<span><a href="<?php echo $permalink; ?>"><?php echo $client_name; ?></a></span>
+						<span><a href="<?php echo $permalink; ?>"><?php echo $case_title; ?>:</a></span>
 					</p>
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p>
-					<?php the_excerpt(); ?>
+					<?php echo $excerpt; ?>
 				</p>
 			</div>
 			<div>
-				<span><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+				<span><a href="<?php echo $permalink; ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 			</div>
-			<?php endwhile; endif; ?>
 		</div>
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 recent-article">

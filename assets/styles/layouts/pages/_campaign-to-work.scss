@@ -47,6 +47,11 @@
 		}
 
 		.campaign-row {
+			margin-bottom: 2em;
+
+			&:last-of-type {
+				margin-bottom: 5em;
+			}
 
 			background-color: #fff;
 
@@ -55,7 +60,7 @@
 			}*/
 
 			.campaign-row-type {
-				margin-bottom: 3em;
+				margin-bottom: 1em;
 				
 				span {
 					background-color: #593171;

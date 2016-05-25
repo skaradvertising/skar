@@ -104,11 +104,15 @@
         			p {
 
           				span:nth-of-type(1) {
-            				color: #58595b;
+                    a {
+                      color: #58595b;
+                    }
           				}
 
           				span:nth-of-type(2) {
-            				color: $skar-green;
+                    a {
+                      color: $skar-green;
+                    }
           				}
         			}
       			}

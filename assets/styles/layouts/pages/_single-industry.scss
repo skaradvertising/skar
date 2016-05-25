@@ -9,6 +9,7 @@
 			.row {
 
 				ul#scene {
+					overflow: hidden;
 					list-style-type: none;
 					padding: 0;
 					margin-bottom: 0;
@@ -49,6 +50,11 @@
 					}
 
 					.industry-content {
+						padding-right: 15px;
+
+						@include MQ(M) {
+							padding-right: 45px;
+						}
 
 						p {
 							color: #fff;
@@ -224,6 +230,16 @@ body.retail {
 }
 
 body.health-care {
+
+	.single-industry-container .single-industry-section.one .row ul#scene li.layer:last-of-type {
+		margin-top: -8px;
+
+		img {
+			width: calc(100vw + 50px);
+			height: auto;
+		}
+	}
+
 	.single-industry-container .single-industry-section.one .section-one-content-container {
 		top: 2em;
 

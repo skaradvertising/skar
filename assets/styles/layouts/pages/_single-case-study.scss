@@ -1,0 +1,123 @@
+.single-case-history-container {
+
+	.section-one {
+		margin-top: 3em;
+		margin-bottom: 5em;
+
+	}
+
+	.section-two {
+
+
+		.case-history-title-side {
+
+			h1, h2, h3 {
+				margin: 0;
+				float: none;
+				text-align: center;
+
+				@include MQ(M) {
+					float: left;
+					text-align: left;
+				}
+			}
+
+			h2 {
+				font-weight: 700;
+				font-size: 50px;
+				color: #58595b;
+
+				@include MQ(M) {
+					font-size: 65px;
+				}
+
+			}
+
+			h1 {
+				font-weight: 700;
+				font-size: 50px;
+				color: #593171;
+
+				@include MQ(M) {
+					font-size: 65px;
+				}
+			}
+
+			h3 {
+				font-size: 36px;
+				font-weight: 700;
+				color: #58595b;
+
+				@include MQ(M) {
+					font-size: 42px;
+				}
+			}
+		}
+
+		.case-history-content-side {
+
+			.challenge, .solution, .result {
+
+				h4 {
+					font-weight: 700;
+					font-size: 20px;
+					color: #414042;
+
+					@include MQ(M) {
+						font-size: 24px;
+					}
+				}
+
+				p {
+					font-size: 14px;
+					font-weight: 300;
+					color: #414042;
+
+					@include MQ(M) {
+						font-size: 16px; 
+					}
+				}
+			}
+
+			.result {
+				margin-bottom: 5em;
+			}
+
+			border-bottom: 1px solid #939598;
+		}
+	}
+
+	.social {
+		margin: 1em;
+		float: right;
+		margin-right: 15px;
+
+		@include MQ(M) {
+			margin: 2em 60px 2em 0;
+		}
+
+		p {
+			font-size: 18px;
+			font-weight: 300;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				margin: 0 10px;
+
+				img {
+					height: 30px;
+					width: auto;
+
+					@media only screen and (min-width: 488px) {
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+}

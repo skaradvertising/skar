@@ -9,6 +9,8 @@
 <?php get_template_part( 'templates/single', 'work-post' ); ?>
 <?php elseif( is_singular( 'people' ) ) : ?>
 <?php get_template_part( 'templates/single', 'people-post' ); ?>
+<?php elseif( is_singular( 'case-studies' ) ) : ?>
+<?php get_template_part( 'templates/single', 'case-history' ); ?>
 <?php else : ?>
   <article <?php post_class(); ?>>
     <header>

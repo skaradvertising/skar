@@ -84,9 +84,11 @@ body.single {
 
 			.post-social {
 				margin: 1em;
+				float: right;
+				margin-right: 15px;
 
 				@include MQ(M) {
-					margin: 2em 0;
+					margin: 2em 60px 2em 0;
 				}
 
 				p {
