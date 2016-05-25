@@ -50,7 +50,7 @@
 	<section class="home-section section two">
 		<div class="row row-eq-height">
 			<div class="col-lg-5 col-md-4 col-sm-3 section-2-div-1">
-				<img src="/wp-content/uploads/2016/05/hand.png">
+				<!--<img src="/wp-content/uploads/2016/05/hand.png">-->
 			</div>
 			<div class="col-lg-7 col-md-8 col-sm-9 col-xs-12 section-2-div-2">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 headline-content">
@@ -58,7 +58,7 @@
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 main-page-content">
 					<?php the_field( 'main_page_content' ); ?>
-					<div class="paper-airplane row">
+					<div role="button" data-toggle="modal" data-target="#email-alerts" class="paper-airplane row">
 						<img class="img-responsive" src="/wp-content/uploads/2016/05/paper-airplane.png">
 					</div>
 				</div>
@@ -84,7 +84,9 @@
 
 			$work_query = new WP_Query( $work_args );
 			$work_array = array();
-			if( $work_query->have_posts() ) : while( $work_query->have_posts() ) : $work_query->the_post(); ?>
+			if( $work_query->have_posts() ) : while( $work_query->have_posts() ) : $work_query->the_post(); 
+			
+			?>
 				<?php
 
 					if( get_field( 'home_logo' ) ) {

@@ -319,9 +319,8 @@ body.home {
 		          		}
 
 			        	@include MQ(M) {
-			        		float: right;
 			          		margin: 0;
-			          		text-align: left;
+			          		text-align: right;
 			          		display: block;
 			        	}
 			      	}
