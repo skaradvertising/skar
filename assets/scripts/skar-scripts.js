@@ -39,4 +39,10 @@ jQuery(document).ready(function($){
 	if ($('body').hasClass('frontend')) {
 		$(".campaign-row-content").fitVids();
 	}
+
+	// scroll down arrow click controller
+	$('.scroll-down').click(function(){
+		$('html, body').animate({scrollTop : $('.two').offset().top}, 800);
+		return false;
+	});
 });

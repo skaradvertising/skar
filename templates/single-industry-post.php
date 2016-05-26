@@ -17,6 +17,9 @@
 			</ul>
 
 		<?php endif; ?>
+			<p class="scroll-down-container">
+				<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
+			</p>
 		</div>
 		<div class="section-one-content-container row-eq-height">
 			<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 empty-section"></div>

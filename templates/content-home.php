@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<?php get_template_part( 'templates/industries', 'boxes' ); ?>
+		<?php get_template_part( 'templates/industry', 'boxes-2' ); ?>
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 
@@ -74,35 +74,36 @@
 
 		<div class="section-3-bottom">
 			<div class="container">
-				<div class="row">
+				<div class="row row-eq-height">
 				<?php 
-				$work_args = array(
-				'post_type' => 'work',
-				'posts_per_page' => -1,
-				'orderby' => 'menu_order'
-			);
+					$work_args = array(
+					'post_type' => 'work',
+					'posts_per_page' => -1,
+					'orderby' => 'menu_order'
+				);
 
-			$work_query = new WP_Query( $work_args );
-			$work_array = array();
-			if( $work_query->have_posts() ) : while( $work_query->have_posts() ) : $work_query->the_post(); 
-			
-			?>
-				<?php
+					$work_query = new WP_Query( $work_args );
+					$work_array = array();
+					p2p_type( 'work_to_campaign' )->each_connected( $work_query, array(), 'campaigns' ); 
+					if( $work_query->have_posts() ) : while( $work_query->have_posts() ) : $work_query->the_post(); 
 
-					if( get_field( 'home_logo' ) ) {
-						$image = get_field( 'home_logo' );
-					} else {
-						$image = get_field( 'logo' );
-					}
+						if( get_field( 'home_logo' ) ) {
+							$image = get_field( 'home_logo' );
+						} else {
+							$image = get_field( 'logo' );
+						}
 
-					if( !empty($image) ) :
+						if( !empty($image) ) :
 				?>
 					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 logo-img-container">
-					
+					<?php if( $post->campaigns ) : ?>
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" /></a>
+					<?php else : ?>
+						<img title="<?php the_title(); ?>" class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" />
+					<?php endif; ?>
 					</div>
 				<?php endif; ?>
-				<?php endwhile; wp_reset_postdata(); endif; ?>
+			<?php endwhile; wp_reset_postdata(); endif; ?>
 				</div>
 			</div>
 		</div>

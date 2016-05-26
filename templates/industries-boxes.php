@@ -23,7 +23,7 @@
                     if( !empty($image) ): 
                 ?>
 
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+                    <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
 
                 <?php endif; ?>
                 </div>

@@ -42,12 +42,10 @@
 
 	<section class="container-fluid what-we-do-section two">
 		<div class="row two-top">
-			<?php get_template_part( 'templates/industries', 'boxes' ); ?>
+			<?php get_template_part( 'templates/industry', 'boxes-2' ); ?>
 			<div class="row work-label-container">
-				<div class="col-lg-4 co-md-4 col-sm-4 col-xs-4">
-					<span>OUR WORK</span>	
-				</div>
-				<div class="col-lg-8 co-md-8 col-sm-8 col-xs-8">
+				<div class="col-lg-12 co-md-12 col-sm-12 col-xs-12">
+					<span>OUR WORK</span>
 					<?php
 		                if (has_nav_menu('work_navigation')) :
 		                    wp_nav_menu(['theme_location' => 'work_navigation', 'menu_class' => 'work_nav', 'after' => '<span> | </span>']);

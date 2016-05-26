@@ -3,8 +3,14 @@
 
 	.single-industry-section {
 		position: relative;
+		height: 100%;
 
 		&.one {
+
+			/*@include MQ(L) {
+				height: 100vh;
+				overflow: hidden;
+			}*/
 
 			.row {
 
@@ -20,15 +26,45 @@
 						img {
 							width: calc(100vw + 21px);
 							height: auto;
+
+							/*@include MQ(L) {
+								height: 100vh;
+								width: auto;
+							}*/
 						}
+					}
+				}
+
+				.scroll-down-container {
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 8%;
+					width: 50px;
+					margin: 0 auto;
+					display: none;
+
+					.scroll-down {
+						position: relative;
+						display: inline-block;
+						margin: 0 auto;
+						z-index: 1;
+					}
+
+					@include MQ(L) {
+						display: block;
 					}
 				}
 			}
 
 			.section-one-content-container {
-				position: absolute;
+				position: relative;
 				left: 0;
 				bottom: 0;
+
+				@include MQ(L) {
+					position: absolute;
+				}
 
 				.section-one-content-wrapper {
 
@@ -57,14 +93,18 @@
 						}
 
 						p {
-							color: #fff;
+							color: #a7a9ac;
 							font-size: 14px;
 							font-weight: 200;
 							line-height: 1.2;
 							margin-bottom: 1.5em;
 
 							@include MQ(M) {
-								font-size: 18px;
+								font-size: 16px;
+							}
+
+							@include MQ(L) {
+								color: #fff;
 							}
 						}
 					}
@@ -75,6 +115,56 @@
 		&.two {
 
 			
+		}
+	}
+}
+
+body.finance {
+
+	.single-industry-container .single-industry-section.one .row ul#scene {
+		margin-top: -4.3%;
+	}
+	
+	.single-industry-container .single-industry-section.one .section-one-content-container {
+		
+		@media only screen and (max-width: 991px) {
+			top: 2em;
+		}
+
+		.empty-section {
+			display: none;
+
+			@include MQ(L) {
+				display: block;
+			}
+		}
+
+		.section-one-content-wrapper {
+			width: 100%;
+		
+			@include MQ(L) {
+				width: 50%;
+			}
+
+			.industry-title, .industry-content {
+
+				@media only screen and (max-width: 767px) {
+					width: 100%;
+				}
+			}
+
+			.industry-title {
+
+				h1 {
+					@media only screen and (max-width: 767px) {
+						text-align: center;
+					}
+
+					@media only screen and (min-width: 992px) and (max-width: 1500px) {
+						background: rgba(255, 255, 255, 0.15);
+					}
+ 				}
+			}
 		}
 	}
 }
@@ -119,9 +209,14 @@ body.regional-brands {
 			.industry-title { 
 
 				h1 {
-					text-align: left;
+					text-align: center;
 					color: #593171;
-					float: right;
+					float: none;
+
+					@include MQ(M) {
+						text-align: left;
+						float: right;
+					}
 
 					&::first-line {
 						color: #58595b;
@@ -148,18 +243,18 @@ body.nonprofit {
 		.industry-title {
 			width: 100%;
 
-			@include MQ(MS) {
-				width: 40%
-			}
-
 			@include MQ(M) {
 				width: 25%;
 			}
 
 			h1 {
-				text-align: left;
+				text-align: center;
 				color: #593171;
 				float: none;
+
+				@include MQ(M) {
+					text-align: left;
+				}
 
 				&::first-line {
 					color: #58595b;
@@ -172,10 +267,6 @@ body.nonprofit {
 			width: 100%;
 			max-width: 800px;
 
-			@include MQ(MS) {
-				width: 50%
-			}
-
 			@include MQ(M) {
 				width: 65%;
 			}
@@ -183,6 +274,11 @@ body.nonprofit {
 			p {
 				color: #58595b;
 				font-weight: 300;
+
+				@media only screen and (min-width: 992px) and (max-width: 1595px) {
+					background: rgba(29, 19, 21, 0.25);
+					color: #fff;
+				}
 			}
 		}
 	}
@@ -194,18 +290,19 @@ body.retail {
 		.industry-title {
 			width: 100%;
 
-			@include MQ(MS) {
-				width: 40%
-			}
-
 			@include MQ(M) {
 				width: 25%;
 			}
 
 			h1 {
-				text-align: left;
+				text-align: center;
 				color: #593171;
-				float: right;
+				float: none;
+
+				@include MQ(M) {
+					text-align: left;
+					font: right;
+				}
 			}
 		}
 
@@ -213,12 +310,13 @@ body.retail {
 			width: 100%;
 			max-width: 800px;
 
-			@include MQ(MS) {
-				width: 50%
-			}
 
 			@include MQ(M) {
 				width: 65%;
+
+				h1 {
+					text-align: right;
+				}
 			}
 
 			p {
@@ -237,23 +335,82 @@ body.health-care {
 		img {
 			width: calc(100vw + 50px);
 			height: auto;
+
+			/*@include MQ(L) {
+				height: calc(100vh + 50px;);
+				width: auto;
+			}*/
 		}
 	}
 
 	.single-industry-container .single-industry-section.one .section-one-content-container {
 		top: 2em;
 
+		.empty-section {
+			width: 0;
+
+			@include MQ(M) {
+				width: 25%;
+			}
+
+			@include MQ(L) {
+				width: 40%;
+			}
+		}
+
 		.section-one-content-wrapper  {
 
+			@include MQ(M) {
+				width: 75%;
+			}
+
+			@include MQ(L) {
+				width: 60%;
+			}
+
 			.industry-title {
+				width: 100%;
+
+				@include MQ(M) {
+					width: 33.333%;
+				}
+
+				@include MQ(L) {
+					width: 25%;
+				}
 
 				h1 {
-					text-align: left;
+					text-align: center;
 					color: #593171;
+					background: none;
+
+					@include MQ(M) {
+						text-align: left;
+					}
+
+					@media only screen and (min-width: 992px) and (max-width: 1450px) {
+						background: rgba(255, 255, 255, .6);
+					}
 
 					&::first-line {
 						color: #58595b;
 					}
+				}
+			}
+
+			.industry-content {
+				width: 100%;
+
+				@include MQ(M) {
+					width: 66.667%;
+				}
+
+				@include MQ(L) {
+					width: 75%;
+				}
+
+				@media only screen and (min-width: 992px) and (max-width: 1275px) {
+					background: rgba(29, 19, 21, 0.4);
 				}
 			}
 		}

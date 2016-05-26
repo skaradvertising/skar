@@ -50,8 +50,15 @@
 					margin-top: 3em;
 				}
 
-				.cls-1,.cls-2 ,.cls-3, .cls-4 {
-					fill: $skar-purple;
+				#big-skar {
+					max-width: 75%;
+					margin: 0 auto;
+					position: relative;
+					display: block;
+					
+					.cls-1,.cls-2 ,.cls-3, .cls-4 {
+						fill: $skar-purple;
+					}
 				}
 			}
 		}

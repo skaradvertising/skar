@@ -36,13 +36,49 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-two">
+
+		<?php 
+			if( is_single( 11687 ) ) {
+				$case_term = 'finance';
+			} elseif( is_single( 11693 ) ) {
+				$case_term = 'nonprofit';
+			} elseif( is_single( 11691 ) ) {
+				$case_term = 'regional-brands';
+			} elseif( is_single( 11689 ) ) {
+				$case_term = 'retail';
+			} elseif( is_single( 11683 ) ) {
+				$case_term = 'health-care';
+			}
+			$case_args = array(
+				'post_type' => 'case-studies',
+				'posts_per_page' => -1,
+				'order' => 'DESC',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'case-study-categories',
+						'field' => 'slug',
+						'terms' => $case_term,
+					),
+				),
+			);
+			$case_query = new WP_Query( $case_args );
+			
+			if( $case_query->have_posts() ) : while( $case_query->have_posts() ) : $case_query->the_post();
+		
+			if( get_field( 'feature_industry' ) ) :
+				$work_img = get_field( 'work_image' )['url'];
+				
+			
+		?>
+		
 			<div class="img-container">
-				<img class="img-responsive" src="/wp-content/uploads/2016/05/oppd-case-study.png">
+				<img class="img-responsive" src="<?php echo $work_img; ?>">
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-two-content">
-				<h1><a href="#">Case History</a></h1>
-				<h1><a href="#">OPPD Energy-Saving Tree Program</a></h1>
+				<h1><a href="<?php the_permalink(); ?>">Case History</a></h1>
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>
+		<?php endif; endwhile; wp_reset_postdata(); endif; ?>
 		</div>
 	</div>
 	<div class="row">

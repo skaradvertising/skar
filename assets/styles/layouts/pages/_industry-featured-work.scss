@@ -170,3 +170,16 @@
 		}
 	}
 }
+
+body.nonprofit, body.health-care, body.retail {
+
+	.industry-featured-work-container .work-wrapper.work-two {
+		background: #ffd24f;
+	}
+}
+
+body.finance {
+	.industry-featured-work-container .work-wrapper.work-two {
+		background: #fff;
+	}
+}
