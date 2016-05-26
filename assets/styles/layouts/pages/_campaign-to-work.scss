@@ -2,10 +2,10 @@
 	margin-top: 8em;
 
 	.single-campaign-wrapper {
-		margin-bottom: 15em;
+		margin-bottom: 5em;
 
 		&:last-of-type {
-			margin-bottom: 0;
+			margin-bottom: 5em;
 		}
 	
 		.campaign-label {
@@ -40,7 +40,7 @@
 					line-height: 1.2;
 
 					@include MQ(M) {
-						font-size: 18px;
+						font-size: 16px;
 					}
 				}
 			}
@@ -49,15 +49,27 @@
 		.campaign-row {
 			margin-bottom: 2em;
 
-			&:last-of-type {
-				margin-bottom: 5em;
-			}
-
 			background-color: #fff;
 
 			/*&:nth-of-type(odd) {
 				background-color: #f1f2f2;
 			}*/
+
+			.campaign-piece-content {
+				max-width: 600px;
+				float: none;
+				margin: 1.5em auto;
+				p {
+					font-size: 14px;
+					font-weight: 200;
+					color: #414042;
+					line-height: 1.2;
+
+					@include MQ(M) {
+						font-size: 16px;
+					}
+				}
+			}
 
 			.campaign-row-type {
 				margin-bottom: 1em;

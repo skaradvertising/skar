@@ -27,8 +27,13 @@ if ( $connected->have_posts() ) :
 	<?php if ( have_rows( 'main_content' ) ) : while( have_rows( 'main_content' ) ) : the_row(); ?>
 		<div class="row campaign-row">
 			<div class="container">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-type"><span><?php the_sub_field( 'type' ); ?></span></div>
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-content"><?php the_sub_field( 'content' ); ?></div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-type"><span><?php the_sub_field( 'type' ); ?></span></div>
+				<?php if( get_sub_field( 'campaign_piece_description' ) ) : ?>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-piece-content"><?php the_sub_field( 'campaign_piece_description' ); ?></div>
+				<?php endif; ?>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-content"><?php the_sub_field( 'content' ); ?></div>
+				</div>
 			</div>
 		</div>
 	<?php endwhile; endif; ?>
