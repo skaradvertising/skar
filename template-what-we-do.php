@@ -19,6 +19,9 @@
 			<?php $data_depth += 0.03; endwhile; ?>
 
 			</ul>
+			<p class="scroll-down-container">
+				<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
+			</p>
 		</div>
 	<?php endif; ?>
 		<div class="row row-eq-height">
@@ -33,9 +36,6 @@
 					<p>We're experts in the health care, financial and retail industries while also working with dozens of other regional and nonprofit brands.</p>
 				</div>
 			</div>
-			<p class="scroll-down-container">
-				<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
-			</p>
 		</div>
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>

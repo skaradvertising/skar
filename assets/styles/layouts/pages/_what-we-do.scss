@@ -19,7 +19,9 @@ body.page-template-template-what-we-do {
 				overflow: hidden;
 
 				@include MQ(L) {
-					height: 100vh;
+					height: 100%;
+					min-height: 600px;
+
 				}
 				
 				.image-layers {
@@ -27,16 +29,13 @@ body.page-template-template-what-we-do {
 					top: 0;
 					left: 0;
 
-					@include MQ(L) {
-						position: absolute;
-					}
-
 					ul {
 						padding: 0;
 
 						li {
 
 							img {
+								width: calc(100% + 200px);
 
 								@media only screen and (max-width: 991px) {
 									width: 100%;
@@ -45,13 +44,35 @@ body.page-template-template-what-we-do {
 							}
 						}
 					}
+
+					.scroll-down-container {
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 50px;
+						width: 50px;
+						margin: 0 auto;
+						display: none;
+
+						.scroll-down {
+							position: relative;
+							display: inline-block;
+							margin: 0 auto;
+						}
+
+						@include MQ(L) {
+							display: block;
+						}
+					}
 				}
 
 				.row-eq-height {
 					margin-top: 2em;
 
 					@include MQ(L) {
-						margin-top: 10em;
+						position: absolute;
+						top: 10em;
+						left: 0;
 					}
 
 					.section-1-div-1, .section-1-div-2 {
@@ -123,41 +144,12 @@ body.page-template-template-what-we-do {
 							}
 						}
 					}
-
-					.scroll-down-container {
-						position: absolute;
-						left: 0;
-						right: 0;
-						bottom: 50px;
-						width: 50px;
-						margin: 0 auto;
-						display: none;
-
-						.scroll-down {
-							position: relative;
-							display: inline-block;
-							margin: 0 auto;
-						}
-
-						@include MQ(L) {
-							display: block;
-						}
-					}
 				}
 			}
 
 			&.two {
 
 				.two-top {
-					margin-bottom: 2em;
-
-					@include MQ(L) {
-						margin-top: 100px;
-					} 
-
-					@media only screen and (min-width: 1425px) {
-						height: 200px;
-					}
 
 					.work-label-container {
 

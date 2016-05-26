@@ -50,7 +50,7 @@
 	<section class="home-section section two">
 		<div class="row row-eq-height">
 			<div class="col-lg-5 col-md-4 col-sm-3 section-2-div-1">
-				<!--<img src="/wp-content/uploads/2016/05/hand.png">-->
+				<img src="/wp-content/uploads/2016/05/instagram_phone_placeholder.jpg">
 			</div>
 			<div class="col-lg-7 col-md-8 col-sm-9 col-xs-12 section-2-div-2">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 headline-content">

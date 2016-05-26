@@ -7,7 +7,11 @@
 		&.work-one {
 
 			.work-one-content {
-				margin: 4.5em 0 0 4em;
+				margin: 4.5em 0 0 0;
+
+				@include MQ(M) {
+					margin: 4.5em 0 0 4em;
+				}
 
 				h1 {
 					margin: 0;
@@ -38,6 +42,7 @@
 				img {
 					position: absolute;
 					bottom: 0;
+					width: 100%;
 				}
 
 				@media only screen and (min-width:610px) and (max-width: 991px) {
