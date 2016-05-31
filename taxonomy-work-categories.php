@@ -16,7 +16,8 @@
 		<section id="post-<?php echo $post->ID; ?>" class="row single-campaign-wrapper">
 			<div class="container campaign-label">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 campaign-title">
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h1 class="client-name"><a href="<?php the_permalink(); ?>"><?php echo get_the_title( get_field( 'client_name' )[0] ); ?></h1>
+					<h1 class="campaign-title"><a href="<?php the_permalink(); ?>"><?php the_field( 'campaign_title' ); ?></h1>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 campaign-description">
 				<?php if( get_sub_field( 'campaign_piece_description' ) ) : ?>

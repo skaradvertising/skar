@@ -6,7 +6,10 @@
 
 	.person-section-one {
 
-
+		.signature {
+			max-height: 500px;
+			margin: 0 auto;
+		}
 	}
 
 	.person-section-two {
@@ -49,9 +52,9 @@
 				}
 			}
 
-			&:first-of-type {
+			/*&:first-of-type {
 				display: none;
-			}
+			}*/
 
 			&:first-of-type, &:last-of-type {
 				border-bottom: none;

@@ -4,13 +4,13 @@
 		'post_type' => 'campaigns',
 		'posts_per_page' => -1,
 		'order' => 'ASC',
-		'tax_query' => array(
+		/*'tax_query' => array(
 			array(
 				'taxonomy' => 'work-categories',
 				'field' => 'slug',
 				'terms' => 'featured'
 			),
-		),
+		),*/
 	);
 
 	$query = new WP_Query( $args );
@@ -30,8 +30,9 @@
 
 // put each returned campaign post (id) into an array to be used below to fetch the right post order on the What We Do page
 	foreach ($work_array as $id) {
-		if ( get_field( 'order', $id ) ) { // if the post has an order, extract the fields, put in an array to be used to display on the page
-			$value = get_field('order', $id);
+		if( have_rows('include_on_what_we_do_page', $id) ) : while ( have_rows('include_on_what_we_do_page', $id) ) : the_row();
+		 // if the post has an order, extract the fields, put in an array to be used to display on the page
+			$value = get_sub_field('order');
 			$client = get_the_title(get_field('client_name', $id)[0]);
 			$title = get_field( 'campaign_title', $id );
 			if( get_field('campaign_image', $id) ) {
@@ -39,7 +40,7 @@
 			} else {
 				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' )[0];
 			}
-			$text_color = get_field('label_color', $id);
+			$text_color = get_sub_field('label_color');
 			
 			switch ($value) {
 				case 1:
@@ -79,7 +80,7 @@
 					break;
 			}
 
-		}
+		endwhile; endif;
 
 	}
 ?>

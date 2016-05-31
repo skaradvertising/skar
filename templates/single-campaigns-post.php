@@ -3,7 +3,8 @@
 		
 		<div class="container campaign-label">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 campaign-title">
-				<h1><?php the_title(); ?></h1>
+				<h1 class="client-name"><?php echo get_the_title( get_field( 'client_name' )[0] ); ?></h1>
+				<h1 class="campaign-title"><?php the_field( 'campaign_title' ); ?></h1> 
 			</div>
 			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 campaign-description">
 				<?php the_field( 'campaign_description' ); ?>
