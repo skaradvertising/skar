@@ -34,7 +34,7 @@
 					<ul>
 						<?php while( have_rows( 'social' ) ) : the_row(); ?>
 							<?php if( get_sub_field( 'icon' ) ) : ?>
-								<li><a href="<?php the_sub_field( 'url' ); ?>" data-toggle="tooltip" data-placement="top" title="<?php the_sub_field( 'social_network' ); ?>" target="_blank"><img src="<?php echo get_sub_field( 'icon' )['url']; ?>"></a></li>
+								<li><a href="<?php the_sub_field( 'url' ); ?>" data-toggle="tooltip" data-placement="top" title="<?php the_sub_field( 'social_network' ); ?>" target="_blank"><img class="img-responsive" src="<?php echo get_sub_field( 'icon' )['url']; ?>"></a></li>
 							<?php endif; ?>
 						<?php endwhile; ?>
 					</ul>

@@ -45,13 +45,12 @@
 				<p>
 					<a href="<?php echo get_the_permalink( $featured_work ); ?>">
 						<span><?php echo get_field( 'campaign_title', $featured_work ); ?></span>
-						<span><?php echo get_the_title( get_field('client_name') ); ?></span>
-						
-						</a>
+						<span><?php echo get_the_title( get_field( 'client_name', $featured_work )[0]); ?></span>
+					</a>
 				</p>
 			</div>
 		</div>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><</div>
 		<div>
 			<span><a href="<?php echo get_the_permalink( $featured_work ); ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 		</div>

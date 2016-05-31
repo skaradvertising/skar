@@ -345,6 +345,11 @@ body.home {
 				    	width: 125px;
 				    	height: 125px;
 				    	background: #ffd24f;
+				    	margin: 0 auto;
+
+				    	@include MQ(M) {
+				    		margin: 0;
+				    	}
 
 				    	img {
 				    		margin: 0 auto;

@@ -97,9 +97,9 @@
 				?>
 					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 logo-img-container">
 					<?php if( $post->campaigns ) : ?>
-						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" /></a>
+						<a data-toggle="tooltip" data-placement="top" title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" /></a>
 					<?php else : ?>
-						<img title="<?php the_title(); ?>" class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" />
+						<img data-toggle="tooltip" data-placement="top" title="<?php the_title(); ?>"  class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" />
 					<?php endif; ?>
 					</div>
 				<?php endif; ?>

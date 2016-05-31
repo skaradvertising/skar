@@ -22,6 +22,10 @@
 			transition: transform 0.3s;
 		}
 
+		&.is-visible-after-click {
+			top:0;
+		}
+
 		&.is-visible {
 			/* if the user changes the scrolling direction, we show the header */
 			@include transform(translate3d(0,100%,0));
@@ -206,7 +210,8 @@
 
 	.nav-overlay-content {
 		position: relative;
-		top: 25%;
+		top: 50%;
+		@include transform(translateY(-50%));
 		width: 100%;
 		text-align: center;
 
