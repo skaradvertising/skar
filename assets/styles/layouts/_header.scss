@@ -8,11 +8,7 @@
 	@include font-smoothing;
 	@include background(radial-gradient(rgba(87, 51, 111, 1) 0%, rgba(52, 19, 69, 1) 100%));
 
-	@include MQ(M) {
-		height: $header-height-M;
-		box-shadow: none;
-
-		&.is-fixed {
+	&.is-fixed {
 			/* when the user scrolls down, we hide the header right above the viewport */
 			position: fixed;
 			top: -$header-height-M;
@@ -28,18 +24,24 @@
 
 		&.is-visible {
 			/* if the user changes the scrolling direction, we show the header */
+			@include transform(translate3d(0,$header-height-M,0));
+		}
+
+	@include MQ(M) {
+		height: $header-height-M;
+		box-shadow: none;
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
 			@include transform(translate3d(0,100%,0));
 		}
 	}
 
-	@include MQ(L) {
-		@include transition(background-color .3s);
-		@include transform(translate3d(0,0,0));
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-
-		
-	}
+	
+	@include transition(background-color .3s);
+	@include transform(translate3d(0,0,0));
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 
 	.row {
 		margin-left: 5px;

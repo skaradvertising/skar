@@ -1,10 +1,5 @@
 jQuery(document).ready(function($){
 	
-	//init bootstrap tooltip
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
-
 	// click animation for green arrow button that turn into x's on click
 	$('.arrow-icon').click(function(){
 		$(this).toggleClass('is-clicked');
@@ -47,4 +42,20 @@ jQuery(document).ready(function($){
 		$('html, body').animate({scrollTop : $('.two').offset().top}, 800);
 		return false;
 	});
+
+	function is_touch_device() {
+    	try {  
+        	document.createEvent("TouchEvent");  
+        	return true;  
+      	} catch (e) {  
+        	return false;  
+      	}  
+    }
+
+    if(!is_touch_device()) {
+    	//init bootstrap tooltip
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+    }
 });
