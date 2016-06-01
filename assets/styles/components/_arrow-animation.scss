@@ -37,6 +37,10 @@
 #pxd-arrow-home {
     width: 35px;
 
+    @media (max-width: 800px) and (orientation: landscape) {
+        width: 25px;
+    }
+
     @include MQ(LL) {
         width: 50px;
     }

@@ -207,6 +207,10 @@ body.home {
 					overflow: hidden;
 					margin: 0 auto;
 
+					@media (max-width: 800px) and (orientation: landscape) {
+						height: 12vh;
+					}
+
 					@include MQ(M) {
 						width: 100%;
 						height: auto;
@@ -229,8 +233,13 @@ body.home {
 	}
 
 	.big-skar-container {
-		margin: 0 auto;
+		margin: 10% auto 0;
 		float: none;
+
+		@media (max-width: 800px) and (orientation: landscape) {
+			width: 40%;
+			margin-top: 5%;
+		}
 	}
 
 	.mask.intro-content .big-skar {
@@ -240,11 +249,11 @@ body.home {
 	}
 
 	.action-container {
-  		/*position: absolute;
-  		left: 0;
-  		right: 0;
-  		bottom: 50px;*/
   		margin-top: 5%;
+
+  		@media (max-width: 800px) and (orientation: landscape) {
+  			margin-top: 0;
+  		}
 	}
 
 	.action-wrapper p {
@@ -254,6 +263,10 @@ body.home {
   		font-size: 22px;
   		font-family: 'gotham', Arial, Helvetica, sans-serif;
   		font-weight: 300;
+
+  		@media (max-width: 800px) and (orientation: landscape) {
+  			font-size: 14px;
+  		}
 
   		@include MQ(LL) {
   			font-size: 28px;

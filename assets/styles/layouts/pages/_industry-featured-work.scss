@@ -77,27 +77,25 @@
 		}
 
 		&.work-three {
-			
-		}
-
-		&.work-four {
 			background: #bcbec0;
+
+			@media only screen and (max-width: 991px) {
+				height: 100%;
+			}
 
 			.work-four-wrapper {
 				display: table;
-				padding: 1em;
+				padding: 3em 1em;
 				max-width: 440px;
 				float: none;
 				margin: 0 auto;
-				top: 50%;
-				@include transform(translateY(-50%));
 
-				@include MQ(M) {
-					padding: 2em;
+				@include MQ(L) {
+					padding: 2em 1em;
 				}
 
 				@include MQ(LL) {
-					padding: 3em;
+					padding: 4em 3em;
 				}
 
 				h1 {
@@ -157,10 +155,33 @@
 					}
 				}
 			}
+
+			&:first-of-type {
+				background:rgba(188, 190, 192, 0.6)
+			}
 		}
 
 		&.work-five {
-			
+
+			.work-five-content {
+				padding: 2em;
+
+				@include MQ(M) {
+					padding: 3em;
+				}
+
+				h1 {
+					margin: 0;
+				
+					a {
+						color: #fff;
+						font-size: 45px;
+						font-weight: 700;
+						background: rgba(88, 89, 91, 0.4);
+						padding: 4px;
+					}
+				}
+			}
 		}
 	}
 }

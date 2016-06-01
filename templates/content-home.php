@@ -29,7 +29,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 big-skar-container animated zoomInRight">
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-7 big-skar-container animated zoomInRight">
 					<span class="big-skar"><?php get_template_part( 'templates/svgs/big', 'skar' ); ?></span>
 				</div>
 				<div class="row action-container">
