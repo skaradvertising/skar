@@ -84,7 +84,13 @@
 			background: #bcbec0;
 
 			.work-four-wrapper {
+				display: table;
 				padding: 1em;
+				max-width: 440px;
+				float: none;
+				margin: 0 auto;
+				top: 50%;
+				@include transform(translateY(-50%));
 
 				@include MQ(M) {
 					padding: 2em;
@@ -160,17 +166,30 @@
 }
 
 .more-posts {
-	margin: 4em 0;
+	margin: 3em 0;
 
-	p {
+	div {
 		text-align: center;
 
 		a {
-			font-size: 36px;
+			font-size: 28px;
 			font-weight: 700;
+			color: #5c006e;
+		}
 
-			@include MQ(MS) {
-				font-size: 45px;
+		@include MQ(M) {
+
+			&:first-of-type {
+				border-right: 3px solid #5c006e;
+				text-align: right;
+
+				a {
+					float: right;
+				}
+			}
+
+			&:last-of-type {
+				text-align: left;
 			}
 		}
 	}

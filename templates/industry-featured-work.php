@@ -132,6 +132,11 @@
 	</div>
 </div>
 <div class="row more-posts">
-	<p><a href="<?php echo '/category/' . $category_name->slug; ?>">More <?php echo $category_name->name; ?> Insights</a></p>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<a href="<?php the_field( 'more_work' ); ?>">More <?php echo $category_name->name; ?> Work</a>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<a href="<?php echo '/category/' . $category_name->slug; ?>">More <?php echo $category_name->name; ?> Insights</a>
+	</div>
 
 </div>

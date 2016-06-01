@@ -126,6 +126,8 @@ body.finance {
 	}
 	
 	.single-industry-container .single-industry-section.one .section-one-content-container {
+
+		bottom: 10%;
 		
 		@media only screen and (max-width: 991px) {
 			top: 2em;
@@ -159,11 +161,18 @@ body.finance {
 					@media only screen and (max-width: 767px) {
 						text-align: center;
 					}
-
-					@media only screen and (min-width: 992px) and (max-width: 1500px) {
-						background: rgba(255, 255, 255, 0.15);
-					}
  				}
+			}
+
+			.industry-content {
+
+				p {
+
+					@media only screen and (min-width: 992px) and (max-width: 1920px) {
+						background: rgba(29, 19, 21, 0.25);
+						padding: 10px;
+					}
+				}
 			}
 		}
 	}
@@ -188,22 +197,14 @@ body.regional-brands {
 
 	.single-industry-container .single-industry-section.one .section-one-content-container {
 		top: 2em;
-		
-		.empty-section {
-			display: none;
-		}
+		width: 100%;
 
 		.section-one-content-wrapper {
 			
-			float: right;
 			width: 100%;
 
-			@include MQ(M) {
-				width: 75%;
-			}
-
-			@include MQ(LL) {
-				width: 60%;
+			@include MQ(L) {
+				width: 50%;
 			}
 
 			.industry-title { 
@@ -228,9 +229,19 @@ body.regional-brands {
 			.industry-content {
 				max-width: 800px;
 
+				@include MQ(L) {
+					padding-right: 58px;
+				}
+
 				p {
 					color: #58595b;
 					font-weight: 300;
+
+					@media only screen and (min-width: 992px) and (max-width: 1265px) {
+						background: rgba(29, 19, 21, 0.15);
+						color: #fff;
+						padding: 10px;
+					}
 				}
 			}
 		}
@@ -239,6 +250,12 @@ body.regional-brands {
 }
 
 body.nonprofit {
+
+	.single-industry-container .single-industry-section.one .row ul#scene li.layer {
+		margin-left: -14px;
+	}
+
+
 	.single-industry-container .single-industry-section.one .section-one-content-container .section-one-content-wrapper {
 		.industry-title {
 			width: 100%;
@@ -254,6 +271,10 @@ body.nonprofit {
 
 				@include MQ(M) {
 					text-align: left;
+				}
+
+				@include MQ(L) {
+					text-align: right;
 				}
 
 				&::first-line {
@@ -285,6 +306,11 @@ body.nonprofit {
 }
 
 body.retail { 
+
+	.single-industry-container .single-industry-section.one .row ul#scene li.layer {
+		margin-left: -14px;
+	}
+
 	.single-industry-container .single-industry-section.one .section-one-content-container .section-one-content-wrapper {
 
 		.industry-title {
@@ -300,8 +326,7 @@ body.retail {
 				float: none;
 
 				@include MQ(M) {
-					text-align: left;
-					font: right;
+					text-align: right;
 				}
 			}
 		}
@@ -354,7 +379,7 @@ body.health-care {
 			}
 
 			@include MQ(L) {
-				width: 40%;
+				width: 45%;
 			}
 		}
 
@@ -365,7 +390,7 @@ body.health-care {
 			}
 
 			@include MQ(L) {
-				width: 60%;
+				width: 50%;
 			}
 
 			.industry-title {
@@ -403,6 +428,7 @@ body.health-care {
 
 				@include MQ(M) {
 					width: 66.667%;
+					padding-right: 15px;
 				}
 
 				@include MQ(L) {
@@ -411,6 +437,11 @@ body.health-care {
 
 				@media only screen and (min-width: 992px) and (max-width: 1275px) {
 					background: rgba(29, 19, 21, 0.4);
+					
+					p {
+						margin: 0;
+						padding: 10px 0;
+					}
 				}
 			}
 		}

@@ -38,7 +38,7 @@
 				<div class="action-wrapper">
 					<?php the_field( 'home_tag_line' ); ?>
 					<p>
-						<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow' ); ?></a>
+						<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow-home' ); ?></a>
 					</p>
 				</div>
 			</div>

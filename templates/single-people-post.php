@@ -19,7 +19,7 @@
 	<?php while( $query->have_posts() ) : $query->the_post(); ?>
 		<div class="row person-article-container">
 			<div id="title-<?php echo $post->ID; ?>" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 person-article-title">
-				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h1><?php the_title(); ?></h1>
 			</div>
 			<div id="content-<?php echo $post->ID; ?>" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 person-article-content">
 				<p><?php the_date(); ?></p>
