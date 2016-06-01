@@ -34,8 +34,17 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-
-
+function instagram_sidebar() {
+  register_sidebar(
+    array(
+      'id' => 'instagram-sidebar',
+      'name' => __( 'Instagram' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+    )
+  );
+}
+add_action( 'widgets_init', __NAMESPACE__ . '\\instagram_sidebar' );
 
 
 

@@ -240,10 +240,11 @@ body.home {
 	}
 
 	.action-container {
-  		position: absolute;
+  		/*position: absolute;
   		left: 0;
   		right: 0;
-  		bottom: 20px;
+  		bottom: 50px;*/
+  		margin-top: 5%;
 	}
 
 	.action-wrapper p {
@@ -276,11 +277,93 @@ body.home {
   			.section-2-div-1 {
    	 			position: relative;
     			height: 100%;
-    			padding-left: 0;
-    			display: none;
+    			padding: 0;
+    			
 
-    			@include MQ(M) {
-      				display: block;
+    			.instagram-container {
+    				padding: 0;
+    				width: 100%;
+
+    				.hand-img {
+    					display: none;
+
+    					@include MQ(MS) {
+    						display: block;
+    					}
+    				}
+
+    				.instagram-feed {
+    					position: relative;
+
+    					#sidebar {
+    						width: 100%;
+
+    						.jr-insta-datacontainer {
+    							width: 100%;
+    							padding: 0 15px;
+    						}
+    					}
+    				}
+
+    				@include MQ(MS) {
+    					width: 400px;
+
+    					.instagram-feed {
+	    					position: absolute;
+	    					top: 83px;
+    						left: 149px;
+    						overflow: hidden; 
+
+    						#sidebar {
+    							width: 113px;
+    							height: 200px;
+
+    							.jr-insta-datacontainer {
+    								padding: 0 5px;
+
+    								span {
+    									font-size: 66.6667%;
+    								}
+    							}
+    						}
+	    				}
+    				}
+
+    				@include MQ(M) {
+    					width: 700px;
+
+    					.instagram-feed {
+    						top: 145px;
+    						left: 260px;
+
+    						#sidebar {
+    							width: 199px;
+    							height: 352px;
+
+    							.jr-insta-datacontainer {
+    								padding: 0 15px;
+
+    								span {
+    									font-size: 100%;
+    								}
+    							}
+    						}
+    					}
+    				}
+
+    				@include MQ(LL) {
+    					width: 800px;
+
+    					.instagram-feed {
+    						top: 165px;
+    						left: 297px;
+
+    						#sidebar {
+    							width: 228px;
+    							height: 403px;
+    						}
+    					}
+    				}
     			}
   			}
 
@@ -290,11 +373,7 @@ body.home {
 			      	padding: 0;
 
 			      	@include MQ(M) {
-			        	padding: 15px 15px 0 0;
-			      	}
-
-			      	@include MQ(LL) {
-			        	padding-top: 75px;
+			        	padding: 45px 15px 0 0;
 			      	}
 			    }
 
@@ -309,7 +388,6 @@ body.home {
 				        text-align: center;
 				        padding: 10px;
 				        line-height: 1;
-				        background: #fff;
 				        padding: 5px;
 				        display: inline-block;
 				          	
@@ -318,7 +396,7 @@ body.home {
 		            		text-transform: uppercase;
 		          		}
 
-			        	@include MQ(M) {
+			        	@include MQ(L) {
 			          		margin: 0;
 			          		text-align: right;
 			          		display: block;
@@ -332,7 +410,6 @@ body.home {
 				        font-size: 14px;
 				        font-weight: 300;
 				        color: #58595b;
-				        background: #fff;
 				        padding: 10px 20px 10px 10px;
 
 				        @include MQ(MS) {

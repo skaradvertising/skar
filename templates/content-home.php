@@ -32,27 +32,30 @@
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 big-skar-container animated zoomInRight">
 					<span class="big-skar"><?php get_template_part( 'templates/svgs/big', 'skar' ); ?></span>
 				</div>
-			</div>
-
-			<div class="row action-container">
-				<div class="action-wrapper">
-					<?php the_field( 'home_tag_line' ); ?>
-					<p>
-						<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow-home' ); ?></a>
-					</p>
+				<div class="row action-container">
+					<div class="action-wrapper">
+						<?php the_field( 'home_tag_line' ); ?>
+						<p>
+							<a class="scroll-down" href="#0"><?php get_template_part( 'templates/svgs/pxd', 'arrow-home' ); ?></a>
+						</p>
+					</div>
 				</div>
 			</div>
-
 		</div>
 
 	</section>
 
 	<section class="home-section section two">
 		<div class="row row-eq-height">
-			<div class="col-lg-5 col-md-4 col-sm-3 section-2-div-1">
-				<img src="/wp-content/uploads/2016/05/instagram_phone_placeholder.jpg">
+			<div class="col-lg-5 col-md-4 col-sm-12 col-xs-12 section-2-div-1">
+				<div class="instagram-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<img class="img-responsive hand-img" src="/wp-content/uploads/2016/06/instagram_phone_placeholder.png">
+					<div class="instagram-feed">
+						<?php get_template_part( 'templates/content', 'instagram-sidebar' ); ?>
+					</div>
+				</div>
 			</div>
-			<div class="col-lg-7 col-md-8 col-sm-9 col-xs-12 section-2-div-2">
+			<div class="col-lg-7 col-md-8 col-sm-12 col-xs-12 section-2-div-2">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 headline-content">
 					<?php the_field( 'home_headline' ); ?>
 				</div>
