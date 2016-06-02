@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 
 	// On edge hit
 	$('.people-slider').on('edge', function(event, slick, direction){
-	  console.log('edge was hit')
+	  console.log('edge was hit');
 	});
 
 	// On before slide change
