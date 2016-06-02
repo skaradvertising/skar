@@ -28,7 +28,7 @@
 				<div class="row bg-row-15"><img class="animated slideInRight" src="/wp-content/uploads/2016/05/15.png"></div>
 			</div>
 
-			<div class="row">
+			<div class="row top-content">
 				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-7 big-skar-container animated zoomInRight">
 					<span class="big-skar"><?php get_template_part( 'templates/svgs/big', 'skar' ); ?></span>
 				</div>

@@ -74,6 +74,13 @@ body.home {
 		@include font-smoothing;
 		@include background(radial-gradient(#56336f 40%, #2f0e3f 80%));
 
+		.top-content {
+
+			@media (max-width: 800px) and (orientation: landscape) {
+				margin-top: 10%;
+			}
+		}
+
 		.action-wrapper {
 		    @include clearfix;
 		    display: inline-block;
