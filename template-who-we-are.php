@@ -30,9 +30,9 @@
 
 		<div class="row row-eq-height">
 
-			<div class="col-lg-6 col-md-4 empty-section"></div>
-			<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 section-one-content">
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 tag-line">
+			<div class="col-lg-5 col-md-5 empty-section"></div>
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 section-one-content">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tag-line">
 					<div class="tag-content">
 						<?php the_field( 'tag_line' ); ?>
 					</div>
@@ -40,7 +40,7 @@
 						<?php the_field( 'short_description' ); ?>
 					</div>
 				</div>
-				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 skar-description">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 skar-description">
 					<?php the_field( 'full_description' ); ?>
 				</div>
 			</div>

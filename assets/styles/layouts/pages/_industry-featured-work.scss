@@ -2,9 +2,14 @@
 	padding: 0;
 
 	.work-wrapper {
-		height: 660px;
+		height: 100%;
+
+		@include MQ(L) {
+			height: 550px;
+		}
 
 		&.work-one {
+			height: 550px;
 
 			.work-one-content {
 				margin: 4.5em 0 0 0;
@@ -29,9 +34,10 @@
 
 		&.work-two {
 			background-color: $skar-green;
+			padding: 0;
 
 			.img-container {
-				position: absolute;
+				position: relative;
 				top: 0;
 				right: 0;
 				bottom: 0;
@@ -40,21 +46,31 @@
 				width: 100%;
 
 				img {
-					position: absolute;
+					position: relative;
 					bottom: 0;
 					width: 100%;
+
+					@include MQ(L) {
+						position: absolute;
+					}
 				}
 
-				@media only screen and (min-width:610px) and (max-width: 991px) {
-					height: 66.667%;
-					width: 66.667%;
-					margin: 0 auto;
-					top: 33.333%;
+				@include MQ(L) {
+					position: absolute;
 				}
 			}
 
 			.work-two-content {
 				padding: 2.5em;
+				z-index: 1;
+
+				@include MQ(L) {
+					padding: 1.5em;
+				}
+
+				@include MQ(LL) {
+					padding: 2.5em;
+				}
 
 				h1 {
 					margin: 0;
@@ -85,18 +101,10 @@
 
 			.work-four-wrapper {
 				display: table;
-				padding: 3em 1em;
+				padding: 2em 1em;
 				max-width: 440px;
 				float: none;
 				margin: 0 auto;
-
-				@include MQ(L) {
-					padding: 2em 1em;
-				}
-
-				@include MQ(LL) {
-					padding: 4em 3em;
-				}
 
 				h1 {
 					margin: 0;
@@ -162,6 +170,7 @@
 		}
 
 		&.work-five {
+			height: 550px;
 
 			.work-five-content {
 				padding: 2em;

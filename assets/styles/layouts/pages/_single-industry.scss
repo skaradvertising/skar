@@ -95,7 +95,7 @@
 						p {
 							color: #a7a9ac;
 							font-size: 14px;
-							font-weight: 200;
+							font-weight: 300;
 							line-height: 1.2;
 							margin-bottom: 1.5em;
 
@@ -237,10 +237,14 @@ body.regional-brands {
 					color: #58595b;
 					font-weight: 300;
 
-					@media only screen and (min-width: 992px) and (max-width: 1265px) {
+					@media only screen and (min-width: 992px) and (max-width: 1440px) {
 						background: rgba(29, 19, 21, 0.15);
 						color: #fff;
 						padding: 10px;
+					}
+
+					&:last-of-type {
+						max-width: 480px;
 					}
 				}
 			}
@@ -296,9 +300,14 @@ body.nonprofit {
 				color: #58595b;
 				font-weight: 300;
 
-				@media only screen and (min-width: 992px) and (max-width: 1595px) {
+				@media only screen and (min-width: 992px) and (max-width: 1485px) {
 					background: rgba(29, 19, 21, 0.25);
 					color: #fff;
+					padding: 10px;
+				}
+
+				&:last-of-type {
+					max-width: 480px;
 				}
 			}
 		}
@@ -435,7 +444,7 @@ body.health-care {
 					width: 75%;
 				}
 
-				@media only screen and (min-width: 992px) and (max-width: 1275px) {
+				@media only screen and (min-width: 992px) and (max-width: 1460px) {
 					background: rgba(29, 19, 21, 0.4);
 					
 					p {

@@ -3,7 +3,7 @@
 
 	<?php
 		$current_page = $post->post_name;
-		$post_ids = array();
+		$post_ids = array( 'featured1' => '1', 'featured2' => '2' );
 		$args = array(
 			'post_type' => 'campaigns',
 			'posts_per_page' => -1,
@@ -12,18 +12,18 @@
 		$query = new WP_Query( $args );
 		if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
 			if( get_field('industry')[0]->post_name == $current_page ) {
-				$post_ids[] = $post->ID;
-				if( get_field( 'include_industry' ) ) {
-					$featured_work_id = $post_ids[0];
-					$featured_work2 = $post_ids[1];
+				if( get_field( 'include_industry' ) == 1 ) {
+					$post_ids['featured1'] = $post->ID;
+				} elseif( get_field( 'include_industry' ) == 2 ) {
+					$post_ids[ 'featured2' ] = $post->ID;
 				}
 			}
 		endwhile; wp_reset_postdata(); endif;
 
-			$client_name = get_the_title(get_field( 'client_name', $featured_work_id )[0]);
-			$campaign_title = get_field( 'campaign_title', $featured_work_id );
-			$campaign_image = get_field( 'campaign_image', $featured_work_id )['url'];
-			$permalink = get_permalink( $featured_work_id );
+			$client_name = get_the_title(get_field( 'client_name', $post_ids['featured1'] )[0]);
+			$campaign_title = get_field( 'campaign_title', $post_ids['featured1'] );
+			$campaign_image = get_field( 'campaign_image', $post_ids['featured1'] )['url'];
+			$permalink = get_permalink( $post_ids['featured1'] );
  	?>
 
 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: url('<?php echo $campaign_image; ?>') center no-repeat; background-size: cover;">
@@ -67,14 +67,14 @@
 				
 			
 		?>
-		
-			<div class="img-container">
-				<img class="img-responsive" src="<?php echo $work_img; ?>">
-			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-two-content">
 				<h1><a href="<?php the_permalink(); ?>">Case History</a></h1>
 				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>
+			<div class="img-container">
+				<img class="img-responsive" src="<?php echo $work_img; ?>">
+			</div>
+			
 		<?php endif; endwhile; wp_reset_postdata(); endif; ?>
 		</div>
 	</div>
@@ -122,10 +122,10 @@
 		</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 		<?php
-			$client2 = get_the_title(get_field( 'client_name', $featured_work2 )[0]);
-			$campaign_title2 = get_field( 'campaign_title', $featured_work2 );
-			$campaign_image2 = get_field( 'campaign_image', $featured_work2 )['url'];
-			$permalink2 = get_permalink( $featured_work2 );
+			$client2 = get_the_title(get_field( 'client_name', $post_ids[ 'featured2' ] )[0]);
+			$campaign_title2 = get_field( 'campaign_title', $post_ids[ 'featured2' ] );
+			$campaign_image2 = get_field( 'campaign_image', $post_ids[ 'featured2' ] )['url'];
+			$permalink2 = get_permalink( $post_ids[ 'featured2' ] );
 		?>
 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: url('<?php echo $campaign_image2; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-five-content">
