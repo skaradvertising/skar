@@ -16,7 +16,11 @@ body.single {
 		padding: 0;
 
 		.blog-head {
-			padding: 0 15px;
+			padding: 0;
+
+			@include MQ(M) {
+				padding: 0 15px;
+			}
 
 			img {
 				max-height: 500px;

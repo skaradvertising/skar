@@ -13,3 +13,16 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.wpcf7 {
+
+	form {
+
+		span {
+
+			input {
+				max-width: 100%;
+			}
+		}
+	}
+}
