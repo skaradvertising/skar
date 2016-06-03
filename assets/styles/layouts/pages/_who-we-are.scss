@@ -175,6 +175,10 @@ body.page-template-template-who-we-are {
 								@include MQ(M) {
 									font-size: 16px;
 								}
+
+								span {
+									font-weight: normal;
+								}
 							}
 
 							@include MQ(L) {
