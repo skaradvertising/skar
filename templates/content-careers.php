@@ -21,10 +21,10 @@
 	<div class="career-single-post">
 		<div class="row career-title">
 		<?php if(get_field('icon_image')) : $src = get_field('icon_image')['url']; else : $src = '/wp-content/uploads/2016/05/green-square.jpg'; endif; ?>
-			<div class="list-img">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 list-img">
 				<img class="img-responsive" src="<?php echo $src; ?>" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $post->ID; ?>" aria-expanded="true" aria-controls="collapse<?php echo $post->ID; ?>">
 			</div>
-			<div class="list-title">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 list-title">
 				<h4>
 					 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $post->ID; ?>" aria-expanded="true" aria-controls="collapse<?php echo $post->ID; ?>">
 						<?php the_title(); ?>

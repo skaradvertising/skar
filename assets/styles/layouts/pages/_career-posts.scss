@@ -9,7 +9,6 @@
 				float: left;
 
 				&.list-img {
-					margin-right: 1em;
 
 					img {
 						width: 50px;
@@ -26,11 +25,6 @@
 					display: block;
 
 					h4 {
-						@include transform(translateY(0));
-
-						@include MQ(M) {
-							@include transform(translateY(100%));
-						}
 
 						a {
 							font-size: 24px;
