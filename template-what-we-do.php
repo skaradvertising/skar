@@ -29,11 +29,10 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-1-div-1">
 					<div class="section-1-div-1-overlay"></div>
-					<p>More than 300 years of combined experience –</p>
-					<p>all under one roof.</p>
+					<?php the_field( 'page_tagline' ); ?>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-1-div-2">
-					<p>We're experts in the health care, financial and retail industries while also working with dozens of other regional and nonprofit brands.</p>
+					<?php the_field( 'page_description' ); ?>
 				</div>
 			</div>
 		</div>

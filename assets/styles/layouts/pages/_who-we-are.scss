@@ -211,6 +211,10 @@ body.page-template-template-who-we-are {
 						display: block;
 					}
 
+					@media only screen and (min-width: 992px) and (max-width: 1063px) {
+						bottom: 10px;
+					}
+
 					.scroll-down {
 						position: relative;
 						display: inline-block;
