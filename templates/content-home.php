@@ -68,7 +68,7 @@
 			</div>
 		</div>
 
-		<?php get_template_part( 'templates/industry', 'boxes-2' ); ?>
+		<div class="row"><?php get_template_part( 'templates/industry', 'boxes-2' ); ?></div>
 		<span class="return-to-top"><a href="#"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 	</section>
 

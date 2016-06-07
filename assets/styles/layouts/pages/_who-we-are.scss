@@ -37,6 +37,10 @@ body.page-template-template-who-we-are {
 								/*&#bg-full {
 									width: 100%;
 								}*/
+
+								&:last-of-type {
+									margin-bottom: -10px;
+								}
 							}
 						}
 					}

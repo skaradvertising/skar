@@ -31,6 +31,7 @@ body.page-template-template-what-we-do {
 
 					ul {
 						padding: 0;
+						overflow: hidden;
 
 						li {
 
@@ -41,6 +42,10 @@ body.page-template-template-what-we-do {
 									width: 100%;
 									height: auto;
 								}
+							}
+
+							&:last-of-type {
+								margin-top: 10px;
 							}
 						}
 					}

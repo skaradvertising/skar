@@ -203,6 +203,21 @@ body.nonprofit, body.retail {
 
 body.regional-brands {
 
+	.single-industry-container .single-industry-section.one .row ul#scene li.layer {
+
+		&:nth-of-type(2) {
+			margin-top: 5px;
+
+			img {
+				width: calc(100vw + 30px);
+			}
+		}
+
+		&:last-of-type {
+			margin-top: 10px;
+		}
+	}
+
 	.single-industry-container .single-industry-section.one .section-one-content-container {
 		top: 2em;
 		width: 100%;
@@ -371,17 +386,24 @@ body.retail {
 
 body.health-care {
 
-	.single-industry-container .single-industry-section.one .row ul#scene li.layer:last-of-type {
-		margin-top: -8px;
+	.single-industry-container .single-industry-section.one .row ul#scene li.layer {
 
-		img {
-			width: calc(100vw + 50px);
-			height: auto;
+		&:nth-of-type(3) {
+			margin-top: 10px;
+		}
+		
+		&:last-of-type {
+			margin-top: -8px;
 
-			/*@include MQ(L) {
-				height: calc(100vh + 50px;);
-				width: auto;
-			}*/
+			img {
+				width: calc(100vw + 50px);
+				height: auto;
+
+				/*@include MQ(L) {
+					height: calc(100vh + 50px;);
+					width: auto;
+				}*/
+			}
 		}
 	}
 

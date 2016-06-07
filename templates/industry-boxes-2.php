@@ -8,7 +8,7 @@
     $query = new WP_Query( $args );
     if( $query->have_posts() ) :
 ?>
-<div class="container-fluid industry-boxes-2-container row-eq-height">
+<div class="container-fluid industry-boxes-2-container">
 <?php while( $query->have_posts() ) : $query->the_post(); ?>
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 industry-box">
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img-wrapper">
