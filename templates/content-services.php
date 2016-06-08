@@ -12,12 +12,8 @@
 	<div class="services-label">
 		<span>OUR SERVICES</span>
 	</div>
-
-<?php while( $query->have_posts() ) : $query->the_post(); ?>
-
-<?php if( $count % 3 == 0 ) : ?>
 	<div class="row row-eq-height">
-<?php endif; ?>
+<?php while( $query->have_posts() ) : $query->the_post(); ?>
 
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 service-container">
@@ -37,11 +33,10 @@
 					<p id="post-<?php echo $post->ID; ?>" class="collapse"><?php echo $post->post_content; ?></p>
 				</div>
 			</div>
-			<span role="button" data-toggle="collapse" data-parent="#accordion" href="#post-<?php echo $post->ID; ?>" class="arrow-icon"></span>
+			<span class="arrow-icon"></span>
+			<span role="button" data-toggle="collapse" data-parent="#accordion" href="#post-<?php echo $post->ID; ?>" class="arrow-icon-selector"></span>
 		</div>
-<?php if( $count == 2 || $count == 5 || $count == 8 || $count == 11 ) : ?>
+	<?php endwhile; wp_reset_postdata(); ?>
 	</div>
-<?php endif; ?>
-<?php $count ++; endwhile; ?>
 </div>
 <?php endif; ?>

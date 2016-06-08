@@ -1,8 +1,8 @@
 jQuery(document).ready(function($){
 	
 	// click animation for green arrow button that turn into x's on click
-	$('.arrow-icon').click(function(){
-		$(this).toggleClass('is-clicked');
+	$('.arrow-icon-selector').click(function(){
+		$(this).closest('.service').find('.arrow-icon').toggleClass('is-clicked');
 	});
 
 // scroll to top arrow controller
