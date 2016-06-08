@@ -6,7 +6,7 @@
 			height: 60vh;
 	}*/
 
-	.case-history, .recent-article, .featured-work {
+	.case-history, .recent-article, .featured-work, .recent-posts {
 		padding: 0;
 		height: 100%;
 
@@ -42,13 +42,9 @@
     				//height: 150px;
 
     				p {
-      					font-size: 40px;
+      					font-size: 38px;
       					font-weight: 700;
       					text-transform: none;
-
-                @include MQ(LL) {
-                  font-size: 49px;
-                }
     				}
   				}
 			}
@@ -112,6 +108,7 @@
           				}
 
           				span:nth-of-type(2) {
+                    display: block;
                     a {
                       color: $skar-green;
                     }
@@ -155,15 +152,10 @@
 
       					p {
         					color: #593171;
-        					font-size: 36px;
+        					//font-size: 36px;
 
         					&::first-line {
           						color: #58595b;
-        					}
-
-
-        					@media only screen and (min-width: 375px) {
-        						font-size: 40px;
         					}
       					}
     				}
@@ -217,5 +209,59 @@
 			div:nth-of-type(3) {}
 		}
 	}
+
+  .recent-posts {
+
+    .inner-content {
+      max-width: 425px;
+
+      div:nth-of-type(1) {
+  
+          p:nth-of-type(1) {
+            color: #939598;
+          }
+
+          .inner-content-title {
+
+            a {
+
+                p {
+                  color: #593171;
+                  //font-size: 36px;
+
+                  &::first-line {
+                      color: #58595b;
+                  }
+                }
+            }
+          }
+      }
+
+      div:nth-of-type(3) {
+
+          span {
+
+            #alt-arrow {
+
+                .cls-1 {
+                  fill: #593170;
+                }
+            }
+          }
+      }
+    }
+
+    &:nth-of-type(1) {
+      background: #a7a9ac;
+    }
+
+    &:nth-of-type(2) {
+      background: #e6e7e8;
+    }
+
+    &:nth-of-type(3) {
+      background: #fff;
+    }
+  }
 }
 

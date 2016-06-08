@@ -42,6 +42,9 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 skar-description">
 					<?php the_field( 'full_description' ); ?>
+					<div role="button" data-toggle="modal" data-target="#new-business" class="airplane">
+						<img class="img-responsive" src="/wp-content/uploads/2016/05/paper-airplane.png">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,7 +55,7 @@
 	</section>
 
 	<section class="container-fluid who-we-are-section two auto-scroll">
-		<div class="row"><?php get_template_part( 'templates/skar', 'content' ); ?></div>
+		<div class="row"><?php get_template_part( 'templates/content', 'recent-posts' ); ?></div>
 		<div class="row"><?php get_template_part( 'templates/people', 'slider' ); ?></div>
 	</section>
 

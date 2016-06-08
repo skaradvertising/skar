@@ -28,15 +28,14 @@
         }
 
         .partners-content {
-            display: -webkit-flex;
             display: flex;
-            -webkit-flex-direction: row; /* works with row or column */
-            flex-direction: row;
-            -webkit-align-items: center;
-            align-items: center;
-            -webkit-justify-content: center;
-            justify-content: center;
             flex-wrap: wrap;
+            display: -webkit-flex;
+            -webkit-flex-wrap: wrap;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
 
             .partner {
                 margin: 20px;

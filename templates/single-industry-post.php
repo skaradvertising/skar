@@ -29,6 +29,9 @@
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 industry-content">
 					<?php the_content(); ?>
+					<div role="button" data-toggle="modal" data-target="#new-business" class="airplane">
+						<img class="img-responsive" src="/wp-content/uploads/2016/05/paper-airplane.png">
+					</div>
 				</div>
 			</div>
 		</div>

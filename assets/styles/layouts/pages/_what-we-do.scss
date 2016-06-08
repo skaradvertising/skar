@@ -209,10 +209,10 @@ body.page-template-template-what-we-do {
 
 				.work-container {
 					width: 100%;
-					height: calc(100% - 372px);
+					//height: calc(100% - 372px);
 
 					@media only screen and (min-width: 1425px) {
-						height: calc(100% - 232px;
+						//height: calc(100% - 232px;
 					}
 
 					.work-one, .work-two, .work-three-sm, .work-three-lg, .work-four, .work-five {
@@ -228,7 +228,7 @@ body.page-template-template-what-we-do {
 								max-width: 400px;
 
 								p {
-									font-size: 40px;
+									font-size: 38px;
 									font-weight: 700;
 									line-height: 1;
 
@@ -238,19 +238,12 @@ body.page-template-template-what-we-do {
 
 									span:nth-of-type(2) {
 										color: $skar-green;
-									}
-
-									@include MQ(M) {
-										//font-size: 49px;
+										display: block;
 									}
 								}
 
 								@include MQ(L) {
 									margin-top: 4em;
-
-									p {
-										font-size: 3.5vmin;
-									}
 								}
 							}
 

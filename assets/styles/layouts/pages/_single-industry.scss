@@ -93,6 +93,7 @@
 						}
 
 						p {
+							float: left;
 							color: #a7a9ac;
 							font-size: 14px;
 							font-weight: 300;
@@ -107,10 +108,30 @@
 								color: #fff;
 							}
 
-							span {
-								font-weight: normal;
+							&:last-of-type {
+								margin-right: 2em;		
 							}
 						}
+
+						.airplane {
+					    	width: 65px;
+					    	height: 65px;
+					    	background: #98c44e;
+					    	position: relative;
+					    	display: inline-block;
+					    	display: -webkit-inline-block;
+					    	margin-bottom: 1.5em;
+
+					    	img {
+					    		margin: 0 auto;
+					    		width: 80%;
+					    		left: 0;
+					    		right: 0;
+					    		top: 50%;
+					    		@include transform(translateY(-50%));
+					    		position: absolute;
+					    	}
+					    }
 					}
 				}
 			}
@@ -266,9 +287,9 @@ body.regional-brands {
 						padding: 10px;
 					}
 
-					&:last-of-type {
+					/*&:last-of-type {
 						max-width: 480px;
-					}
+					}*/
 				}
 			}
 		}
@@ -329,9 +350,9 @@ body.nonprofit {
 					padding: 10px;
 				}
 
-				&:last-of-type {
+				/*&:last-of-type {
 					max-width: 480px;
-				}
+				}*/
 			}
 		}
 	}
