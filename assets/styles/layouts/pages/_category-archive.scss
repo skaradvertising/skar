@@ -1,9 +1,10 @@
 .category-archive-container {
 	margin-top: 80px;
+	padding: 0;
 
 	h1.category-page-title {
 		text-align: center;
-		font-size: 49px;
+		font-size: 38px;
 		font-weight: 700;
 
 		span {
@@ -15,40 +16,81 @@
 		}
 	}
 
-	.category-post {
-		border-bottom: 1px solid #a7a9ac;
-		margin: 3em;
+	.other-categories {
 
-		&:last-of-type {
-			border-bottom: none;
-		}
+		ul {
 
-		.title-side {
-
-			h1 {
-				font-size: 36px;
-				font-weight: 700;
-
-				@include MQ(M) {
-					font-size: 45px;
-				}
+			li {
+				text-align: center;
 
 				a {
-					color: #58595b;
+					font-size: 24px;
+					font-weight: 300;
+
+					span {
+						color: #593171;
+
+						&:last-of-type {
+							color: #a7a9ac;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.category-posts-container {
+		display: flex;
+		flex-wrap: wrap;
+		display: -webkit-flex;
+		-webkit-flex-wrap: wrap;
+		padding: 0;
+
+		.category-post {
+			padding: 0;
+			margin-bottom: 20px;
+
+			@include MQ(M) {
+
+				&:nth-of-type(odd) {
+					padding-right: 10px;
+				}
+
+				&:nth-of-type(even) {
+					padding-left: 10px;
 				}
 			}
 
-		}
+			.post-img-container {
+				padding: 0;
 
-		.content-side {
+				img {
+					width: 100%;
+				}
+			}
+			
 
-			p {
-				font-size: 14px;
-				font-weight: 300;
-				color: #58595b;
+			.post-title {
+				position: absolute;
+				bottom: 0;
+				padding: 0;
+				height: 50%;
+				background: rgba(88, 89, 91, 0.9);
 
 				@include MQ(M) {
-					font-size: 16px;
+					width: calc(100% - 10px);
+				}
+
+				h1 {
+					font-size: 38px;
+					font-weight: 700;
+					text-align: center;
+					@include vertical-align();
+					margin: 0;
+
+					a {
+						color: #fff;
+					}
 				}
 			}
 		}

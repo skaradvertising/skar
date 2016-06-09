@@ -1,11 +1,4 @@
 .industry-boxes-2-container {
-	//display: -webkit-flex; /* Safari */
-	//-webkit-flex-wrap: wrap !important; /* Safari 6.1+ */
-    //display: flex;   
-    //flex-wrap: wrap;
-    //@include flex-direction(row);
-    //@include display(flex);
-	//@include flex-wrap(wrap);
 	display: flex;
 	flex-wrap: wrap;
 	display: -webkit-flex;
@@ -63,6 +56,18 @@
 					color: $skar-gray;
 					margin: 0;
 					text-align: center;
+				}
+			}
+		}
+
+		&:nth-of-type(4) {
+			.content-wrapper {
+				.this-industry-title {
+					a {
+						p {
+							font-size: 18px;
+						}
+					}
 				}
 			}
 		}

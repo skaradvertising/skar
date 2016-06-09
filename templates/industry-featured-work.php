@@ -24,9 +24,10 @@
 			$campaign_title = get_field( 'campaign_title', $post_ids['featured1'] );
 			$campaign_image = get_field( 'campaign_image', $post_ids['featured1'] )['url'];
 			$permalink = get_permalink( $post_ids['featured1'] );
+			$bg_color = get_field( 'campaign_bg_color', $post_ids[ 'featured1' ] );
  	?>
 
-		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: url('<?php echo $campaign_image; ?>') center no-repeat; background-size: cover;">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: <?php echo $bg_color; ?> url('<?php echo $campaign_image; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-one-content">
 				<h1><a href="<?php echo $permalink; ?>">Featured Work</a></h1>
 				<h1><a href="<?php echo $permalink; ?>""><?php echo $client_name; ?></a></h1>
@@ -126,8 +127,9 @@
 			$campaign_title2 = get_field( 'campaign_title', $post_ids[ 'featured2' ] );
 			$campaign_image2 = get_field( 'campaign_image', $post_ids[ 'featured2' ] )['url'];
 			$permalink2 = get_permalink( $post_ids[ 'featured2' ] );
+			$bg_color2 = get_field( 'campaign_bg_color', $post_ids[ 'featured2' ] );
 		?>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: url('<?php echo $campaign_image2; ?>') center no-repeat; background-size: cover;">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: <?php echo $bg_color2; ?> url('<?php echo $campaign_image2; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-five-content">
 				<h1><a href="<?php echo $permalink2; ?>">Featured Work</a></h1>
 				<h1><a href="<?php echo $permalink2; ?>""><?php echo $client2; ?></a></h1>

@@ -2,7 +2,8 @@
 	padding: 0;
 
 	.work-wrapper {
-		height: 100%;
+		overflow: hidden;
+		padding-bottom: 1em;
 
 		@include MQ(L) {
 			height: 550px;
@@ -101,7 +102,6 @@
 			}
 
 			.work-four-wrapper {
-				display: table;
 				padding: 4.5em 1em 4.5em;
 				max-width: 440px;
 				float: none;
@@ -161,6 +161,7 @@
 
 		&.work-five {
 			height: 550px;
+			background-color: #ffd24f;
 
 			.work-five-content {
 				padding: 2em;

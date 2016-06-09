@@ -46,6 +46,17 @@ function instagram_sidebar() {
 }
 add_action( 'widgets_init', __NAMESPACE__ . '\\instagram_sidebar' );
 
+function custom_per_page($query) {
+  if( is_category() ) {
+    if ($query->is_category()) {
+        $query->set('posts_per_page', 10);
+    }
+  }
+  return $query;
+}
+
+add_action('pre_get_posts',  __NAMESPACE__ . '\\custom_per_page');
+
 
 
 
