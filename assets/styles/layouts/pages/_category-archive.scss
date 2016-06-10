@@ -49,8 +49,10 @@
 		.category-post {
 			padding: 0;
 			margin-bottom: 20px;
+			width: 100%;
 
 			@include MQ(M) {
+				width: calc(50% - 1px);
 
 				&:nth-of-type(odd) {
 					padding-right: 10px;
