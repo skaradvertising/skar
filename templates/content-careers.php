@@ -55,7 +55,7 @@
 
 <div class="career-posts">
 	<div class="career-single-post">
-		<div class="row career-title"><p class="not-hiring">We are not hiring any posisitions right now. Keep an eye out. We may be hiring again soon.<p></div>	
+		<div class="row career-title"><?php the_field( 'default_job_copy' ); ?></div>	
 	</div>
 </div>
 
