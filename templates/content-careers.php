@@ -51,22 +51,12 @@
 	</div><hr>
 <?php endwhile; wp_reset_postdata(); ?>
 </div>
-<?php else : if( $post_type == 'skar-careers' ) : ?>
+<?php else : ?>
 
 <div class="career-posts">
 	<div class="career-single-post">
 		<div class="row career-title"><?php the_field( 'default_job_copy' ); ?></div>	
 	</div>
 </div>
-
-<?php elseif( $post_type == 'skar-internships' ) : ?>
-
-<div class="career-posts">
-	<div class="career-single-post">
-		<div class="row career-title"><p class="not-hiring">The application deadline has passed.</p></div>	
-	</div>
-</div>
-
-<?php endif; ?>
 
 <?php endif; ?>
