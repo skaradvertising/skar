@@ -2,7 +2,7 @@
 
     <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blog-head">
 	
-    <?php // featured image as background
+    <?php // featured image in blog head
 		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
 	?>
 		<img class="img-responsive" src="<?php echo $src[0]; ?>">

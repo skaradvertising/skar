@@ -21,7 +21,6 @@ body.page-template-template-what-we-do {
 				@include MQ(L) {
 					height: 100%;
 					min-height: 600px;
-
 				}
 				
 				.image-layers {
@@ -95,7 +94,6 @@ body.page-template-template-what-we-do {
 					}
 
 					.section-1-div-1 {
-						 //background: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255, 0.15)), rgba(255,255,255,0.15);
 
 						p {
 							font-size: 30px;
@@ -209,14 +207,8 @@ body.page-template-template-what-we-do {
 
 				.work-container {
 					width: 100%;
-					//height: calc(100% - 372px);
-
-					@media only screen and (min-width: 1425px) {
-						//height: calc(100% - 232px;
-					}
 
 					.work-one, .work-two, .work-three-sm, .work-three-lg, .work-four, .work-five {
-						//height: 50%;
 						height: 100%;
 
 						.inner-content {
@@ -259,25 +251,18 @@ body.page-template-template-what-we-do {
 	              					width: 50px;
 	            				}
 	          				}
-
-							/*@include MQ(L) {
-								height: 100%;
-							}*/
 						}
 					}
 
 					.work-one {
-						//background: url('/wp-content/uploads/2016/05/featured-img-paceholder-01.jpg') center no-repeat;
 						background-size: cover;
 					}
 
 					.work-two {
-						//background: url('/wp-content/uploads/2016/05/ne-lottery-benificiary.jpg') center no-repeat;
 						background-size: cover;
 					}
 
 					.work-three-sm {
-						//background: url('/wp-content/uploads/2016/05/orville.jpg') 25% no-repeat;
 						background-size: cover;
 
 						@include MQ(L) {
@@ -286,7 +271,6 @@ body.page-template-template-what-we-do {
 					}
 
 					.work-three-lg {
-						//background: url('/wp-content/uploads/2016/05/orville.jpg') 25% no-repeat;
 						background-size: cover;
 						display: none;
 
@@ -296,7 +280,6 @@ body.page-template-template-what-we-do {
 					}
 
 					.work-four {
-						//background: url('/wp-content/uploads/2016/05/WERNER-CONCEPT-3-1.jpg') center no-repeat;
 						background-size: cover;
 
 						.inner-content {
@@ -309,7 +292,6 @@ body.page-template-template-what-we-do {
 					}
 
 					.work-five {
-						//background: url('/wp-content/uploads/2016/05/centris-site.jpg') center no-repeat;
 						background-size: cover;
 					}
 				}
@@ -318,10 +300,6 @@ body.page-template-template-what-we-do {
 			&.three {
 				
 			}
-
-			/*@include MQ(L) {
-				height: 100vh;
-			}*/
 		}
 	}
 }

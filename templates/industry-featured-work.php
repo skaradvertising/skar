@@ -65,8 +65,6 @@
 		
 			if( get_field( 'feature_industry' ) ) :
 				$work_img = get_field( 'work_image' )['url'];
-				
-			
 		?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-two-content">
 				<h1><a href="<?php the_permalink(); ?>">Case History</a></h1>
@@ -118,8 +116,6 @@
 					<?php the_excerpt(); ?>
 				</div>
 			</div>
-
-		
 		</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 		<?php

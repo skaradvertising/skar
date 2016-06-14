@@ -256,40 +256,19 @@
 	}
 }
 
+.banner > .invisible-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9997;
+	display: none;
+	background: none;
 
-/*body.admin-bar {
-
-	&.home {
-
-		.banner > .header-content {
-			height: $admin-header-height-S;
-
-			@include MQ(M) {
-				height: $admin-header-height-M;
-
-				&.is-fixed {
-					top: -$admin-header-height-M;
-				}			
-			}
-
-			.brand {
-
-				#skar-logo {
-					margin-top: 62px;
-				}
-			}
-
-			.nav-trigger-container {
-				margin-top: 56px;
-
-				@media only screen and (min-width: 488px) {
-					margin-top: 62px;
-				}
-			}
-
-			&.menu-is-open {
-				position: fixed;
-			}
+	@include MQ(MS) {
+		&.invisible-overlay-on {
+			display: block;
 		}
 	}
-}*/
+}

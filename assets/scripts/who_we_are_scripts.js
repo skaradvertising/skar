@@ -1,25 +1,10 @@
 jQuery(document).ready(function($){
 
+// init parallax shifty images
 	var scene = document.getElementById('shifty');
 	var parallax = new Parallax(scene);
 
-	// On swipe event
-	$('.people-slider').on('swipe', function(event, slick, direction){
-	  console.log(direction);
-	  // left
-	});
-
-	// On edge hit
-	$('.people-slider').on('edge', function(event, slick, direction){
-	  console.log('edge was hit');
-	});
-
-	// On before slide change
-	$('.people-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	  console.log(nextSlide);
-	});
-
-// inits and controls the people slider
+// init and controls the people slider
 	$(".people-slider").slick({
 
 	  // normal options...
@@ -76,30 +61,6 @@ jQuery(document).ready(function($){
 
 	    }]
 	});
-
-// auto scroll snapping function controller
-	/*if($(window).width() > 992) {
-		$(".who-we-are-container").sectionsnap({
-			delay : 100,
-			selector : '.auto-scroll',
-			reference : 0.9, 
-			animationTime : 600,
-		});
-	}
-
-	$(window).resize(function(){
-		$(".who-we-are-container").unbind();
-		if($(window).width() > 992) {
-			$(".who-we-are-container").sectionsnap({
-				delay : 100,
-				selector : '.auto-scroll',
-				reference : 0.9, 
-				animationTime : 600,
-			});
-		} else {
-			location.reload();
-		}
-	});*/
 
 	// scroll down arrow click controller
 	$('.scroll-down').click(function(){

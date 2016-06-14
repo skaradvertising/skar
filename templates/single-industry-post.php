@@ -1,7 +1,7 @@
 <div class="container-fluid single-industry-container">
     <section class="single-industry-section one container-fluid">
 	    <div class="row">
-	    <?php if( have_rows( 'shifty' ) ) : $data_depth = 0; ?>
+	    <?php if( have_rows( 'shifty' ) ) : $data_depth = 0; //data_depth defines how much shifting each image has ?>
 
 	        <ul id="scene">
 

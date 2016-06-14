@@ -87,7 +87,7 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
-    is_singular( 'post' ),
+    is_singular(),
     is_page_template('template-what-we-do.php'),
     is_page_template('template-who-we-are.php'),
     is_singular( 'industries' ),

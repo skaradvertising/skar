@@ -30,9 +30,7 @@ jQuery(document).ready(function($){
 
 	adjustHeights('.single-campaign-container .single-campaign-wrapper .campaign-label .campaign-title h1 a');
 
-	//adjustHeights('.skar-content .recent-article .inner-content div:nth-of-type(1) .inner-content-title a')
-	//adjustHeights('body.page-template-template-what-we-do .what-we-do-container .what-we-do-section.two .work-container .work-three-lg .inner-content .content-container p:nth-of-type(1)');
-
+// fullscreen video player that scales height and width correctly at all screen widths
 	if ($('body').hasClass('frontend')) {
 		$(".campaign-row-content").fitVids();
 	}
@@ -43,6 +41,7 @@ jQuery(document).ready(function($){
 		return false;
 	});
 
+// detect if user screen is a touch device
 	function is_touch_device() {
     	try {  
         	document.createEvent("TouchEvent");  
@@ -52,6 +51,7 @@ jQuery(document).ready(function($){
       	}  
     }
 
+// no tooltips on touch devices b/c tooltips don't work right on touch device
     if(!is_touch_device()) {
     	//init bootstrap tooltip
 		$(function () {

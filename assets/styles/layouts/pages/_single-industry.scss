@@ -7,11 +7,6 @@
 
 		&.one {
 
-			/*@include MQ(L) {
-				height: 100vh;
-				overflow: hidden;
-			}*/
-
 			.row {
 
 				ul#scene {
@@ -26,11 +21,6 @@
 						img {
 							width: calc(100vw + 21px);
 							height: auto;
-
-							/*@include MQ(L) {
-								height: 100vh;
-								width: auto;
-							}*/
 						}
 					}
 				}
@@ -138,7 +128,6 @@
 		}
 
 		&.two {
-
 			
 		}
 	}
@@ -266,7 +255,6 @@ body.regional-brands {
 					&::first-line {
 						color: #58595b;
 					}
-					
 				}
 			}
 
@@ -286,15 +274,10 @@ body.regional-brands {
 						color: #fff;
 						padding: 10px;
 					}
-
-					/*&:last-of-type {
-						max-width: 480px;
-					}*/
 				}
 			}
 		}
 	}
-
 }
 
 body.nonprofit {
@@ -328,7 +311,6 @@ body.nonprofit {
 				&::first-line {
 					color: #58595b;
 				}
-				
 			}
 		}
 
@@ -349,10 +331,6 @@ body.nonprofit {
 					color: #fff;
 					padding: 10px;
 				}
-
-				/*&:last-of-type {
-					max-width: 480px;
-				}*/
 			}
 		}
 	}
@@ -388,7 +366,6 @@ body.retail {
 			width: 100%;
 			max-width: 800px;
 
-
 			@include MQ(M) {
 				width: 65%;
 
@@ -419,11 +396,6 @@ body.health-care {
 			img {
 				width: calc(100vw + 50px);
 				height: auto;
-
-				/*@include MQ(L) {
-					height: calc(100vh + 50px;);
-					width: auto;
-				}*/
 			}
 		}
 	}

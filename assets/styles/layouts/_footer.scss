@@ -5,7 +5,6 @@ footer.content-info {
 	.footer-content {
 		padding: 0;
 		height: 100%;
-		//@include background(radial-gradient(50% 139.81%, circle farthest-side, rgba(110, 78, 137, 1) 0%, rgba(52, 19, 69, 1) 100%));
 		@include background(radial-gradient(rgba(110, 78, 137, 1) 0%, rgba(52, 19, 69, 1) 100%));
 
 		.brand {

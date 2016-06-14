@@ -50,24 +50,17 @@ body.home {
 		float: left;
 		height: 100%;
 		width: 100%;
-
-		/*@media only screen and (min-width: 992px) {
-			width: 100vw;
-			height: 100vh;
-		}*/
 	}
 
 	.intro {
 		position: relative;
 		width: 100%;
-		/* vertically align its content */
 		display: table;
 		background: #56336f;
 		overflow: hidden;
 	}
 
 	.intro-content {
-		/* vertically align inside its parent */
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
@@ -92,7 +85,6 @@ body.home {
 		    width: 100%;
 		    top: 0;
 		    left: 0;
-		    //opacity: 0.4;
 		    mix-blend-mode: color-burn;
 
 		    .row {
@@ -439,8 +431,8 @@ body.home {
 			      	}	
 			    	
 			    	.paper-airplane {
-				    	width: 125px;
-				    	height: 125px;
+				    	width: 65px;
+				    	height: 65px;
 				    	background: #ffd24f;
 				    	margin: 0 auto;
 

@@ -28,7 +28,7 @@
 			</div>
 			<div class="row campaign-row">
 				<div class="container">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-type"><!--<span><?php the_sub_field( 'type' ); ?></span>--></div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-type"></div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 campaign-row-content"><?php the_sub_field( 'content' ); ?></div>
 				</div>
 			</div>

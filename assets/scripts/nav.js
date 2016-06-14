@@ -30,6 +30,7 @@ jQuery(document).ready(function($){
 		$('.menu-icon').toggleClass('is-clicked'); 
 		$('.banner > .header-content').toggleClass('menu-is-open');
 		$('.nav-overlay').toggleClass('menu-opened');
+		$('.invisible-overlay').toggleClass('invisible-overlay-on');
 
 		if( $('.banner > .header-content').hasClass('is-visible') ) {
 			$('.banner > .header-content').removeClass('is-visible');
@@ -42,6 +43,14 @@ jQuery(document).ready(function($){
 		} else {
 			$('.banner > .header-content').addClass('is-fixed');
 		}
-
 	});
+
+// close navigation when user clicks off navigation area
+	$('.invisible-overlay').on('click', function(){
+		$('.menu-icon').toggleClass('is-clicked'); 
+		$('.banner > .header-content').toggleClass('menu-is-open');
+		$('.nav-overlay').toggleClass('menu-opened');
+		$('.invisible-overlay').toggleClass('invisible-overlay-on');
+	});
+
 });

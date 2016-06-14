@@ -4,8 +4,6 @@
 	    global $wp_query;
 	    $term = $wp_query->get_queried_object();
 	    $title = $term->name;
-	    //query_posts( 'posts_per_page=10&cat=' . $term->term_id );
-	    //query_posts( 'posts_per_page=10');
 	}
 ?>
 	<h1 class="category-page-title"><span><?php echo $title; ?></span> <span>Insights</span></h1>

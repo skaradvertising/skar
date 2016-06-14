@@ -12,11 +12,12 @@
     </div>
     <nav id="skar-nav" class="nav-overlay">
         <div class="nav-overlay-content">
-            <?php
-                if (has_nav_menu('primary_navigation')) :
-                    wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-                endif;
-            ?>
+        <?php
+            if (has_nav_menu('primary_navigation')) :
+                wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+            endif;
+        ?>
         </div>
     </nav>
+    <div class="invisible-overlay"></div>
 </header>

@@ -2,10 +2,6 @@
 	height: 100%;
 	background: #fff;
 
-	/*@include MQ(LL) {
-			height: 60vh;
-	}*/
-
 	.case-history, .recent-article, .featured-work, .recent-posts {
 		padding: 0;
 		height: 100%;
@@ -21,25 +17,20 @@
             height: 480px;
           }
 
-		/*	@include MQ(LL) {
-  				margin: 0 auto;
-			}*/
-
 			div:nth-of-type(1) {
 
   				p {
-		            font-family: 'gotham', Helvetica, sans-serif;
-		            line-height: 1;
-  				}
-
-  				p:nth-of-type(1) {
-    				font-size: 18px;
-    				text-transform: uppercase;
-    				font-weight: 700;
-  				}
+	            font-family: 'gotham', Helvetica, sans-serif;
+	            line-height: 1;
+  				    
+              &:nth-of-type(1) {
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  font-weight: 700;
+              }
+          }
 
   				.inner-content-title {
-    				//height: 150px;
 
     				p {
       					font-size: 38px;
@@ -52,15 +43,18 @@
 			div:nth-of-type(2) {
   				p {
     				font-family: 'gotham', Helvetica, sans-serif;
-		            line-height: 1.2;
-		            font-size: 14px;
-		            font-weight: 300;
-		            color: #414042;
+            line-height: 1.2;
+            font-size: 14px;
+            font-weight: 300;
+            color: #58595b;
   				}
 
-  				@include MQ(LL) {
+  				@include MQ(L) {
     				margin-top: 40px;
-    				font-size: 17px;
+    				
+            p {
+              font-size: 16px;
+            }
   				}
 			}
 
@@ -152,7 +146,6 @@
 
       					p {
         					color: #593171;
-        					//font-size: 36px;
 
         					&::first-line {
           						color: #58595b;
@@ -227,7 +220,6 @@
 
                 p {
                   color: #593171;
-                  //font-size: 36px;
 
                   &::first-line {
                       color: #58595b;
