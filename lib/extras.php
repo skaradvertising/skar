@@ -54,7 +54,6 @@ function custom_per_page($query) {
   }
   return $query;
 }
-
 add_action('pre_get_posts',  __NAMESPACE__ . '\\custom_per_page');
 
 

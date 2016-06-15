@@ -2,41 +2,37 @@
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 case-history">
 		<div class="inner-content">
 		<?php
-			$case_args = array(
-				'post_type' => 'case-studies',
-				'posts_per_page' => -1,
-				'order' => 'DESC'
-			);
-			$case_query = new WP_Query( $case_args );
-			if( $case_query->have_posts() ) : while( $case_query->have_posts() ) : $case_query->the_post();
-			if( 'featured' ) :
-				$client_name = get_field( 'client_name' );
-				$case_title = get_field( 'case_title' );
-				$excerpt = get_field( 'excerpt' );
-				$permalink = get_the_permalink();
-				endif;
-				endwhile; wp_reset_postdata(); endif;
+			if( get_field( 'featured_case_study' ) ) :
+				$id = get_field( 'featured_case_study' )->ID;
+				$case_study = array(
+					'permalink' => get_the_permalink( $id ),
+					'client' => get_field('client_name', $id),
+					'title' => get_field( 'case_title', $id ),
+					'excerpt' => get_field( 'excerpt', $id ),
+				);
+			endif;
 		?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p>case history</p>
 				<div  class="inner-content-title">
 				
 					<p>
-						<span><a href="<?php echo $permalink; ?>"><?php echo $client_name; ?></a></span>
-						<span><a href="<?php echo $permalink; ?>"><?php echo $case_title; ?>:</a></span>
+						<span><a href="<?php echo $case_study['permalink']; ?>"><?php echo $case_study['client']; ?></a></span>
+						<span><a href="<?php echo $case_study['permalink']; ?>"><?php echo $case_study['title']; ?>:</a></span>
 					</p>
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p>
-					<?php echo $excerpt; ?>
+					<?php echo $case_study['excerpt']; ?>
 				</p>
 			</div>
 			<div>
-				<span><a href="<?php echo $permalink; ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+				<span><a href="<?php echo $case_study['permalink']; ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
 			</div>
 		</div>
 	</div>
+
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 recent-article">
 		<div class="inner-content">
 
@@ -74,5 +70,41 @@
 			</div>
 		</div>
 	</div>
-	<?php get_template_part( 'templates/content', 'featured-work' ); ?>
+
+	<?php
+
+		if( get_field( 'featured_work' ) ) :
+
+			$id = get_field( 'featured_work' )->ID;
+			$featured_work = array(
+				'permalink' => get_the_permalink( $id ),
+				'client' => get_the_title(get_field('client_name', $id)[0]),
+				'title' => get_field( 'campaign_title', $id ),
+				'excerpt' => get_the_excerpt( $id ),
+				'campaign-image' => get_field('campaign_image', $id)['url'],
+			);
+
+		endif;
+
+	?>
+	
+	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 featured-work" style="background: url('<?php echo $featured_work['campaign-image']; ?>') no-repeat; background-position: center; background-size: cover;">
+		<div class="inner-content">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>featured work</p>
+				<div class="inner-content-title">
+					<p>
+						<a href="<?php echo $featured_work['permalink']; ?>">
+							<span><?php echo $featured_work['client']; ?></span>
+							<span><?php echo $featured_work['title']; ?></span>
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+			<div>
+				<span><a href="<?php echo $featured_work['permalink']; ?>"><?php get_template_part( 'templates/svgs/alt', 'arrow' ); ?></a></span>
+			</div>
+		</div>
+	</div>
 </div>

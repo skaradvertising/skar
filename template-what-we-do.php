@@ -45,10 +45,10 @@
 			<div class="row work-label-container">
 				<div class="col-lg-12 co-md-12 col-sm-12 col-xs-12">
 					<span>OUR WORK</span>
-					<?php
-		                if (has_nav_menu('work_navigation')) :
+					<?php 
+						if( has_nav_menu( 'work_navigation' ) ) :
 		                    wp_nav_menu(['theme_location' => 'work_navigation', 'menu_class' => 'work_nav', 'after' => '<span> | </span>']);
-		                endif;
+		                endif;               
 		            ?>
 				</div>
 			</div>

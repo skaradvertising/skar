@@ -25,57 +25,67 @@
 			$campaign_image = get_field( 'campaign_image', $post_ids['featured1'] )['url'];
 			$permalink = get_permalink( $post_ids['featured1'] );
 			$bg_color = get_field( 'campaign_bg_color', $post_ids[ 'featured1' ] );
+
+		if( get_field( 'featured_work_1' ) ) :
+
+			$id = get_field( 'featured_work_1' )->ID;
+			$fw1 = array(
+				'permalink' => get_the_permalink( $id ),
+				'client' => get_the_title(get_field('client_name', $id)[0]),
+				'title' => get_field( 'campaign_title', $id ),
+				'excerpt' => get_the_excerpt( $id ),
+				'campaign-image' => get_field('campaign_image', $id)['url'],
+				'background' => get_field( 'campaign_bg_color', $id ),
+			);
+
+		endif;
+
+		if( get_field( 'featured_case_study' ) ) :
+
+			$id = get_field( 'featured_case_study' )->ID;
+			$case_study = array(
+				'permalink' => get_the_permalink( $id ),
+				'client' => get_field('client_name', $id),
+				'title' => get_the_title( $id ),
+				'excerpt' => get_field( 'excerpt', $id ),
+				'work-image' => get_field( 'work_image', $id )['url'],
+			);
+
+		endif;
+
+		if( get_field( 'featured_work_2' ) ) :
+
+			$id = get_field( 'featured_work_2' )->ID;
+			$fw2 = array(
+				'permalink' => get_the_permalink( $id ),
+				'client' => get_the_title(get_field('client_name', $id)[0]),
+				'title' => get_the_title( $id ),
+				'excerpt' => get_the_excerpt( $id ),
+				'campaign-image' => get_field('campaign_image', $id)['url'],
+				'background' => get_field( 'campaign_bg_color', $id ),
+			);
+
+		endif;
+
  	?>
 
-		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: <?php echo $bg_color; ?> url('<?php echo $campaign_image; ?>') center no-repeat; background-size: cover;">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 work-wrapper work-one" style="background: <?php echo $fw1['background']; ?> url('<?php echo $fw1['campaign-image']; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-one-content">
-				<h1><a href="<?php echo $permalink; ?>">Featured Work</a></h1>
-				<h1><a href="<?php echo $permalink; ?>""><?php echo $client_name; ?></a></h1>
+				<h1><a href="<?php echo $fw1['permalink']; ?>">Featured Work</a></h1>
+				<h1><a href="<?php echo $fw1['permalink']; ?>""><?php echo $fw1['client']; ?></a></h1>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-two">
 
-		<?php 
-			if( is_single( 11687 ) ) {
-				$case_term = 'finance';
-			} elseif( is_single( 11693 ) ) {
-				$case_term = 'nonprofit';
-			} elseif( is_single( 11691 ) ) {
-				$case_term = 'regional-brands';
-			} elseif( is_single( 11689 ) ) {
-				$case_term = 'retail';
-			} elseif( is_single( 11683 ) ) {
-				$case_term = 'health-care';
-			}
-			$case_args = array(
-				'post_type' => 'case-studies',
-				'posts_per_page' => -1,
-				'order' => 'DESC',
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'case-study-categories',
-						'field' => 'slug',
-						'terms' => $case_term,
-					),
-				),
-			);
-			$case_query = new WP_Query( $case_args );
-			
-			if( $case_query->have_posts() ) : while( $case_query->have_posts() ) : $case_query->the_post();
-		
-			if( get_field( 'feature_industry' ) ) :
-				$work_img = get_field( 'work_image' )['url'];
-		?>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-two">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-two-content">
-				<h1><a href="<?php the_permalink(); ?>">Case History</a></h1>
-				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php echo $case_study['permalink']; ?>">Case History</a></h1>
+				<h1><a href="<?php echo $case_study['permalink']; ?>"><?php echo $case_study['title']; ?></a></h1>
 			</div>
 			<div class="img-container">
-				<img class="img-responsive" src="<?php echo $work_img; ?>">
+				<img class="img-responsive" src="<?php echo $case_study['work-image']; ?>">
 			</div>
-			
-		<?php endif; endwhile; wp_reset_postdata(); endif; ?>
 		</div>
+
 	</div>
 	<div class="row">
 	<?php
@@ -118,17 +128,11 @@
 			</div>
 		</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
-		<?php
-			$client2 = get_the_title(get_field( 'client_name', $post_ids[ 'featured2' ] )[0]);
-			$campaign_title2 = get_field( 'campaign_title', $post_ids[ 'featured2' ] );
-			$campaign_image2 = get_field( 'campaign_image', $post_ids[ 'featured2' ] )['url'];
-			$permalink2 = get_permalink( $post_ids[ 'featured2' ] );
-			$bg_color2 = get_field( 'campaign_bg_color', $post_ids[ 'featured2' ] );
-		?>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: <?php echo $bg_color2; ?> url('<?php echo $campaign_image2; ?>') center no-repeat; background-size: cover;">
+		
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 work-wrapper work-five" style="background: <?php echo $fw2['background']; ?> url('<?php echo $fw2['campaign-image']; ?>') center no-repeat; background-size: cover;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-five-content">
-				<h1><a href="<?php echo $permalink2; ?>">Featured Work</a></h1>
-				<h1><a href="<?php echo $permalink2; ?>""><?php echo $client2; ?></a></h1>
+				<h1><a href="<?php echo $fw2['permalink']; ?>">Featured Work</a></h1>
+				<h1><a href="<?php echo $fw2['permalink']; ?>""><?php echo $fw2['client']; ?></a></h1>
 			</div>
 		</div>
 	</div>
