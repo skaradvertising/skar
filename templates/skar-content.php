@@ -61,7 +61,6 @@
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p>
-					<span>Latest Blog Post | <?php echo $title; ?>.</span>
 					<?php echo $excerpt; ?>
 				</p>
 			</div>

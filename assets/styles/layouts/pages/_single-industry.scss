@@ -292,7 +292,7 @@ body.nonprofit {
 			width: 100%;
 
 			@include MQ(M) {
-				width: 25%;
+				width: 30%;
 			}
 
 			h1 {
@@ -326,7 +326,7 @@ body.nonprofit {
 				color: #58595b;
 				font-weight: 300;
 
-				@media only screen and (min-width: 992px) and (max-width: 1485px) {
+				@media only screen and (min-width: 992px) and (max-width: 1560px) {
 					background: rgba(29, 19, 21, 0.25);
 					color: #fff;
 					padding: 10px;

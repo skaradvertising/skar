@@ -27,8 +27,8 @@
 				$signature = get_field( 'signature' ); // set the signature
 			}
 		?>
-			<img class="portrait" src="<?php echo $src[0]; ?>">
-			<a href="<?php the_permalink(); ?>"><img class="signature" src="<?php echo $signature['url']; ?>"></a>
+			<a href="<?php the_permalink(); ?>"><img class="portrait" src="<?php echo $src[0]; ?>">
+			<img class="signature" src="<?php echo $signature['url']; ?>"></a>
 		</div>
 
 	<?php endwhile; ?>

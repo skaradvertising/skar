@@ -17,7 +17,7 @@
 
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 service-container">
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 service-square">
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-3 service-square">
 				<?php 
 					if ( get_field( 'icon' ) ) {
 						$src = get_field( 'icon' )['url'];
@@ -27,14 +27,11 @@
 				?>
 					<img src="<?php echo $src; ?>">
 				</div>
-				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 service-content">
+				<div class="col-lg-9 col-md-9 col-sm-8 col-xs-9 service-content">
 					<p><?php the_title(); ?></p>
-					<p><?php echo $post->post_excerpt; ?></p>
-					<p id="post-<?php echo $post->ID; ?>" class="collapse"><?php echo $post->post_content; ?></p>
+					<?php the_content(); ?>
 				</div>
 			</div>
-			<span class="arrow-icon"></span>
-			<span role="button" data-toggle="collapse" data-parent="#accordion" href="#post-<?php echo $post->ID; ?>" class="arrow-icon-selector"></span>
 		</div>
 	<?php endwhile; wp_reset_postdata(); ?>
 	</div>

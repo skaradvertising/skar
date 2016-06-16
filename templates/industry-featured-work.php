@@ -2,30 +2,7 @@
 	<div class="row">
 
 	<?php
-		$current_page = $post->post_name;
-		$post_ids = array( 'featured1' => '1', 'featured2' => '2' );
-		$args = array(
-			'post_type' => 'campaigns',
-			'posts_per_page' => -1,
-			'order' => 'DESC',
-		);
-		$query = new WP_Query( $args );
-		if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
-			if( get_field('industry')[0]->post_name == $current_page ) {
-				if( get_field( 'include_industry' ) == 1 ) {
-					$post_ids['featured1'] = $post->ID;
-				} elseif( get_field( 'include_industry' ) == 2 ) {
-					$post_ids[ 'featured2' ] = $post->ID;
-				}
-			}
-		endwhile; wp_reset_postdata(); endif;
-
-			$client_name = get_the_title(get_field( 'client_name', $post_ids['featured1'] )[0]);
-			$campaign_title = get_field( 'campaign_title', $post_ids['featured1'] );
-			$campaign_image = get_field( 'campaign_image', $post_ids['featured1'] )['url'];
-			$permalink = get_permalink( $post_ids['featured1'] );
-			$bg_color = get_field( 'campaign_bg_color', $post_ids[ 'featured1' ] );
-
+		
 		if( get_field( 'featured_work_1' ) ) :
 
 			$id = get_field( 'featured_work_1' )->ID;
