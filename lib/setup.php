@@ -100,6 +100,8 @@ function display_sidebar() {
     is_page_template('template-view-more-industry-work.php'),
     is_tax( 'work-categories' ),
     is_category(),
+    is_search(),
+    is_author(),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

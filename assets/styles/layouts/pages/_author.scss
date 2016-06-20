@@ -1,0 +1,51 @@
+.author-archive-container,
+.search-page-container {
+	margin-top: 50px;
+	min-height: calc(100vh - 250px);
+
+	@include MQ(M) {
+		margin-top: 80px;
+		min-height: calc(100vh - 280px);
+	}
+
+	.page-header {
+
+		h1 {
+			font-size: 38px;
+			font-weight: 700;
+			color: #593171;
+		}
+	}
+
+	.entry-title {
+		
+		a {
+			font-size: 38px;
+			font-weight: 700;
+			color: #939598;
+		}
+	}
+
+	.entry-summary {
+
+		p {
+			font-weight: 300;
+			font-size: 14px;
+			color: #58595b;
+
+			@include MQ(M) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.navigation {
+
+		p {
+			text-align: center;
+			font-size: 28px;
+			font-weight: 300;
+			color: $skar-black;
+		}
+	}
+}

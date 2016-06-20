@@ -98,7 +98,7 @@
 
 						if( !empty($image) ) :
 				?>
-					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 logo-img-container">
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 logo-img-container">
 					<?php if( $post->campaigns ) : ?>
 						<a data-toggle="tooltip" data-placement="top" title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo wp_get_attachment_image($image); ?>" /></a>
 					<?php else : ?>

@@ -33,6 +33,9 @@ jQuery(document).ready(function($){
 // fullscreen video player that scales height and width correctly at all screen widths
 	if ($('body').hasClass('frontend')) {
 		$(".campaign-row-content").fitVids();
+
+		var assign_name = $('.fluid-width-video-wrapper iframe').closest('.campaign-row-content').closest('.campaign-row').closest( 'section' ).attr( 'id' );
+		$('.fluid-width-video-wrapper iframe').attr('name', assign_name);
 	}
 
 	// scroll down arrow click controller
